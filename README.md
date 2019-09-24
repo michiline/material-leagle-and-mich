@@ -1,7 +1,7 @@
 ## Leagle & Mich Travel Blog
 
-React website showcasing image slideshow, travel blog and image gallery.
-This version is influenced by Google's Material design.
+React website showcasing image slideshow, travel blog and image gallery.<br>
+This version of the website is influenced by Google's Material design.
 
 ### Live preview
 
