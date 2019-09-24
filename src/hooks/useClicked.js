@@ -7,6 +7,9 @@ const useClicked = ({ yesRef, noRefs }) => {
   useEffect(() => {
     const mouseDownListener = (e) => {
       if (yesRef.current.contains(e.target) && checkNoRefs({e, refs: noRefs})) {
+        if (!clicked) {
+          yesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
         setClicked(!clicked)
       } else if (!yesRef.current.contains(e.target)) {
         setClicked(false)

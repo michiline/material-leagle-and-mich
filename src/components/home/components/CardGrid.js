@@ -31,6 +31,18 @@ const Home = () => {
       title: 'The Emerald River',
       subtitle: 'Soča, Slovenia',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      img: `${process.env.REACT_APP_SERVER}/images/slideshow/5.jpg`,
+      title: 'The Emerald River',
+      subtitle: 'Soča, Slovenia',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      img: `${process.env.REACT_APP_SERVER}/images/slideshow/6.jpg`,
+      title: 'The Emerald River',
+      subtitle: 'Soča, Slovenia',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
   ]
   return (

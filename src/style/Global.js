@@ -16,6 +16,7 @@ const Global = createGlobalStyle`
   body {
     box-sizing: border-box;
   }
+
 `
 
 // font-family: 'Roboto', 'Source Serif Pro','Source Code Pro', monospace;
