@@ -42,6 +42,7 @@ const Container = styled.div`
     box-shadow: ${shadow.dp8};
     z-index: 8;
   `}
+  user-select: none;
 `
 
 // &:hover {
