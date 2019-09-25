@@ -1,3 +1,4 @@
-import Home from './Home'
+import Header from './general/Header'
+import Home from './home'
 
-export { Home }
+export { Header, Home }

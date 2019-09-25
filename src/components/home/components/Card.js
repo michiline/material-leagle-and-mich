@@ -21,8 +21,8 @@ const Card = ({ img, title, subtitle, description }) => {
           <Description>{description}</Description>
         </SupportingText>
         <Actions>
-          <RippleComponent Component={Button} value={'Read More'} componentRef={readButtonRef}/>
-          <RippleComponent Component={ShareIcon} img={`${process.env.PUBLIC_URL}/img/share-24px.svg`} componentRef={shareIconRef}/>
+          <RippleComponent Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
+          <RippleComponent Component={ShareIcon} img={`${process.env.PUBLIC_URL}/img/share-24px.svg`} color={'#8B4608'} componentRef={shareIconRef}/>
         </Actions>
       </Secondary>
     </Container>
@@ -40,7 +40,7 @@ const Container = styled.div`
   transition: all 0.2s ease-in-out;
   ${props => props.clicked && css`
     box-shadow: ${shadow.dp8};
-    z-index: 8;
+    z-index: 2;
   `}
   user-select: none;
 `

@@ -4,13 +4,14 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
 
 import { Global } from './style'
-import Home from './components/home'
+import { Header, Home} from './components'
 
 const App = () => {
   return (
     <BrowserRouter>
       <>
         <Global />
+        <Header />
         <Route exact path='/' component={Home} />
       </>
     </BrowserRouter>

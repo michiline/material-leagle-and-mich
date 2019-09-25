@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import _ from 'lodash'
 import styled, { css, keyframes } from 'styled-components'
 
-const RippleComponent = ({ Component, componentRef, value, ...props }) => {
+const RippleComponent = ({ Component, componentRef, value, color, ...props }) => {
   const [ripples, setRipples] = useState([])
   useEffect(() => {
     const showRipple = (e) => {
@@ -37,13 +37,13 @@ const RippleComponent = ({ Component, componentRef, value, ...props }) => {
   if (value) {
     return (
       <Component ref={componentRef} {...props}>{value}
-        {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} key={index}/>)}
+        {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
       </Component>
     )
   } else {
     return (
       <Component ref={componentRef} {...props}>
-        {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} key={index}/>)}
+        {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
       </Component>
     )
   }
@@ -60,9 +60,9 @@ const Ripple = styled.span`
   position: absolute;
   transform: scale(0);
   opacity: 0.75;
-  background-color: #8B46087D;
+  background-color: ${props => `${props.color}7D`};
   border-radius: 100%;
-  animation: ${ripple} 400ms;
+  animation: ${ripple} 500ms;
   top: ${props => props.y}px;
   left: ${props => props.x}px;
   width: ${props => props.width}px;
