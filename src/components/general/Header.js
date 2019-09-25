@@ -7,12 +7,12 @@ import { padding, shadow } from '../../style'
 
 const Header = ({ history }) => {
   const menuRef = useRef()
-  const [scrollDirection] = useScrolledDirection()
+  const [scrolled] = useScrolledDirection()
   return (
-    <Container scrolled={scrollDirection !== 'up'}>
-      <RippleComponent color={'#094694'} Component={MenuIcon} img={`${process.env.PUBLIC_URL}/img/menu-24px.svg`} componentRef={menuRef}/>
+    <Container scrolled={scrolled}>
+      <RippleComponent color={'#8B4608'} Component={MenuIcon} img={`${process.env.PUBLIC_URL}/img/menu-24px.svg`} componentRef={menuRef}/>
       <Title>Little Eagle & Mich</Title>
-      <Logo img={`${process.env.PUBLIC_URL}/img/logo-header-small.png`}/>
+      <Logo onClick={ e => window.scrollTo({ top: 0, behavior: 'smooth' })}img={`${process.env.PUBLIC_URL}/img/logo-header-small.png`}/>
     </Container>
   )
 }
@@ -66,7 +66,7 @@ const Title = styled(G.H6)`
 const MenuIcon = styled(G.Icon)`
   border-radius: 50%;
   &:hover {
-    background-color: #07A5FD;
+    background-color: #8B46081E;
   }
   &:focus {
     outline: none;
