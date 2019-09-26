@@ -46,16 +46,30 @@ const Home = () => {
     }
   ]
   return (
-    <Grid>
-      {content.map((cardContent, index) => <Card {...cardContent} key={index} />)}
-    </Grid>
+    <Container>
+      <Header>Travel Blogs</Header>
+      <Grid>
+        {content.map((cardContent, index) => <Card {...cardContent} key={index} />)}
+      </Grid>
+    </Container>
   )
 }
           // <RippleComponent Component={ShareIcon} img={{ src: `${process.env.PUBLIC_URL}/img/share-24px.svg`}} />
 //
 
-const Grid = styled.div`
+const Container = styled.div`
   padding: ${padding.small};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const Header = styled(G.H4)`
+  padding: ${padding.medium};
+`
+
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, 100%);
   grid-gap: 1rem;

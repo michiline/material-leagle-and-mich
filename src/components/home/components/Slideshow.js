@@ -2,24 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSlide } from '../../../hooks'
 import { arrow, slideshow } from '../../../images'
+import { shadow } from '../../../style'
 
 const Slideshow = ({ slideshowRef }) => {
   const imagesCount = 5
   const [activeId, setActiveId] = useSlide(imagesCount)
   return (
-    <Container {...theme}>
-      <PreviousArrow img={Previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)} {...theme}/>
+    <Container>
+      <PreviousArrow img={arrow.previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)}/>
       <Img img={slideshow[0]} activeId={activeId}/>
       <Img img={slideshow[1]} activeId={activeId}/>
       <Img img={slideshow[2]} activeId={activeId}/>
       <Img img={slideshow[3]} activeId={activeId}/>
       <Img img={slideshow[4]} activeId={activeId}/>
-      <NextArrow img={Next} onClick={e => setActiveId((activeId + 1) % imagesCount)}  {...theme}/>
+      <NextArrow img={arrow.next} onClick={e => setActiveId((activeId + 1) % imagesCount)} />
     </Container>
   )
 }
-
-
 
 const Container = styled.div`
   width: 100%;
@@ -30,11 +29,12 @@ const Container = styled.div`
   display: grid;
   gird-template-columns: 1fr 100% 1fr;
   grid-template-rows: 1fr min-content 1fr;
+  box-shadow: ${shadow.dp1};
 `
 
 const Arrow = styled.div`
-  height: ${props => props.arrow.height};
-  width: ${props => props.arrow.width};
+  height: 4rem;
+  width: 4rem;
   background-position: center;
   background-size: cover;
   background-image: url(${props => props.img.src});

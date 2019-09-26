@@ -9,14 +9,14 @@ import { menu, logoSmall } from '../../images'
 
 const Header = ({ history }) => {
   const menuRef = useRef()
-  const [scrollY, scrolled] = useScrolledDirection()
+  const [scrollY, scrolled] = useScrolledDirection({ boundary: 15 })
   const [toggled, setToggled] = useState(false)
   return (
     <>
       <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
         <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
         <Title>Little Eagle & Mich</Title>
-        <Logo onClick={ e => to({ history, url: '/', setToggled })}img={logoSmall}/>
+        <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logoSmall}/>
       </Container>
       <Background show={toggled} setToggled={setToggled}/>
     </>
@@ -49,7 +49,6 @@ const Container = styled.div`
 `
 
 const Title = styled(G.H6)`
-  font-family: 'Bubbler';
   letter-spacing: 0.025rem;
 `
 

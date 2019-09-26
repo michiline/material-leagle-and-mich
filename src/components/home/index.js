@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CardGrid } from './components'
+import { Slideshow, CardGrid, Gallery } from './components'
 
 
 const Home = () => {
   return (
     <Container>
+      <Slideshow />
       <CardGrid />
+      <Gallery />
     </Container>
   )
 }

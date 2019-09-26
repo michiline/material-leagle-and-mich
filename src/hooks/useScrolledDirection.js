@@ -1,18 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react'
 import _ from 'lodash'
 
-export const useScrolledDirection = function () {
+export const useScrolledDirection = function ({ boundary }) {
   const [scrollY, setScrollY] = useState(window.scrollY)
-  const [scrolled, setScrolled] = useState(checkScrolled())
+  const [scrolled, setScrolled] = useState(checkScrolled(boundary))
   useEffect(() => {
     const scrollListener = (e) => {
-      if (window.scrollY === 0) {
-        setScrolled(false)
-      } else if (window.scrollY > scrollY) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(checkScrolled(boundary))
       setScrollY(window.scrollY)
     }
     const throttledScrollListener = _.throttle(scrollListener, 100, { leading: true, trailing: true})
@@ -22,10 +16,10 @@ export const useScrolledDirection = function () {
   return [scrollY, scrolled]
 }
 
-const checkScrolled = () => {
+const checkScrolled = (boundary) => {
   if (window.scrollY === 0) {
     return false
-  } else if (window.scrollY > 0) {
+  } else if (window.scrollY > boundary) {
     return true
   } else {
     return false
