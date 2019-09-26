@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import justifiedLayout from 'justified-layout'
 import $ from 'jquery'
 import * as G from '../../general'
-import { padding } from '../../../style'
+import { padding, shadow } from '../../../style'
 
 window.jQuery = $
 window.$ = $
@@ -69,6 +69,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: ${shadow.dp1};
 `
 
 const Header = styled(G.H4)`

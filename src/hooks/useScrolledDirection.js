@@ -3,10 +3,10 @@ import _ from 'lodash'
 
 export const useScrolledDirection = function ({ boundary }) {
   const [scrollY, setScrollY] = useState(window.scrollY)
-  const [scrolled, setScrolled] = useState(checkScrolled(boundary))
+  const [scrolled, setScrolled] = useState(checkScrolled({ boundary, scrollY }))
   useEffect(() => {
     const scrollListener = (e) => {
-      setScrolled(checkScrolled(boundary))
+      setScrolled(checkScrolled({ boundary, scrollY}))
       setScrollY(window.scrollY)
     }
     const throttledScrollListener = _.throttle(scrollListener, 100, { leading: true, trailing: true})
@@ -16,10 +16,10 @@ export const useScrolledDirection = function ({ boundary }) {
   return [scrollY, scrolled]
 }
 
-const checkScrolled = (boundary) => {
+const checkScrolled = ({ boundary, scrollY }) => {
   if (window.scrollY === 0) {
     return false
-  } else if (window.scrollY > boundary) {
+  } else if (window.scrollY > boundary && window.scrollY > scrollY) {
     return true
   } else {
     return false
