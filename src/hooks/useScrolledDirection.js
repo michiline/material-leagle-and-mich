@@ -19,7 +19,7 @@ export const useScrolledDirection = function () {
     window.addEventListener('scroll', throttledScrollListener)
     return () => window.removeEventListener('scroll', throttledScrollListener)
   })
-  return [scrolled]
+  return [scrollY, scrolled]
 }
 
 const checkScrolled = () => {

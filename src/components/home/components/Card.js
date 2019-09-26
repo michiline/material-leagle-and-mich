@@ -40,7 +40,6 @@ const Container = styled.div`
   transition: all 0.2s ease-in-out;
   ${props => props.clicked && css`
     box-shadow: ${shadow.dp8};
-    z-index: 2;
   `}
   user-select: none;
 `
