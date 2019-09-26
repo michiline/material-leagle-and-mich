@@ -3,6 +3,7 @@ import styled, { css, keyframes } from 'styled-components'
 import { RippleComponent, useClicked } from '../../../hooks'
 import { padding, shadow } from '../../../style'
 import * as G from '../../general'
+import { share } from '../../../images'
 
 const Card = ({ img, title, subtitle, description }) => {
   const cardRef = useRef()
@@ -22,7 +23,7 @@ const Card = ({ img, title, subtitle, description }) => {
         </SupportingText>
         <Actions>
           <RippleComponent Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
-          <RippleComponent Component={ShareIcon} img={`${process.env.PUBLIC_URL}/img/share-24px.svg`} color={'#8B4608'} componentRef={shareIconRef}/>
+          <RippleComponent Component={ShareIcon} img={share} color={'#8B4608'} componentRef={shareIconRef}/>
         </Actions>
       </Secondary>
     </Container>
@@ -43,10 +44,6 @@ const Container = styled.div`
   `}
   user-select: none;
 `
-
-// &:hover {
-//   box-shadow: ${shadow.dp0} !important;
-// }
 
 const PrimaryTitle = styled.div`
   padding: ${padding.medium};
@@ -111,7 +108,7 @@ const ShareIcon = styled(G.Icon)`
   overflow: hidden;
 `
 const Img = styled.img.attrs(props => ({
-  src: props.img
+  src: props.img.src
   }))`
   width: 100%;
   object-fit: cover;

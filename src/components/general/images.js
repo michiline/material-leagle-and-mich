@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { padding } from '../../style'
 
-export const Icon = styled.button`
-  background: url(${props => props.img}) center no-repeat;
+const IconBase = styled.button`
+  background: url(${props => props.img.src}) center no-repeat;
   width: 48px;
   height: 48px;
   padding: ${padding.small};
@@ -11,8 +11,21 @@ export const Icon = styled.button`
   cursor: pointer;
 `
 
+export const ToggleIcon = styled(IconBase)`
+  ${props => !props.toggled && css `
+    background: url(${props.img.primary.src}) center no-repeat;
+  `}
+  ${props => props.toggled && css `
+    background: url(${props.img.secondary.src}) center no-repeat;
+  `}
+`
+
+export const Icon = styled(IconBase)`
+  background: url(${props => props.img.src}) center no-repeat;
+`
+
 export const Logo = styled.button`
-  background: url(${props => props.img}) center no-repeat;
+  background: url(${props => props.img.src}) center no-repeat;
   width: 48px;
   height: 48px;
   padding: ${padding.smallest};
@@ -20,3 +33,5 @@ export const Logo = styled.button`
   border: none;
   cursor: pointer;
 `
+  //
+  // background: url(${props => props.img.src}) center no-repeat;
