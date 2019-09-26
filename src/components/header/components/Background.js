@@ -13,7 +13,7 @@ const BackgroundContainer = styled.div`
   opacity: 0;
   visibility: hidden;
   ${props => props.show && css`
-    opacity: 0.9;
+    opacity: 0.97;
     width: 100%;
     visibility: visible !important;
   `}
