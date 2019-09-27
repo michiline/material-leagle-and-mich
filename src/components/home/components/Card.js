@@ -60,7 +60,7 @@ const Secondary = styled.div`
 `
 
 const Title = styled(G.H6)`
-
+  
 `
 
 const Subtitle = styled(G.Subtitle2)`
