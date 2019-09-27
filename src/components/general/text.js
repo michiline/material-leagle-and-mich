@@ -49,7 +49,7 @@ export const H6 = styled.h6`
 `
 
 export const Subtitle1 = styled.p`
-    font-family: 'Helvetica';
+  font-family: 'Helvetica';
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.015rem;

@@ -1,18 +1,20 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
 import { padding, shadow } from '../../style'
-import { RippleComponent } from '../../hooks'
+import { RippleComponentLink } from '../../hooks'
 import * as G from '../general'
-import { facebook, instagram } from '../../images'
+import { facebook, instagram, github } from '../../images'
 
 const Footer = () => {
   const facebookIconRef = useRef()
   const instagramIconRef = useRef()
+  const githubIconRef = useRef()
   return (
     <Container>
       <IconContainer>
-        <RippleComponent Component={FacebookIcon} img={facebook} color={'#FFFFFF'} componentRef={facebookIconRef}/>
-        <RippleComponent Component={InstagramIcon} img={instagram} color={'#FFFFFF'} componentRef={instagramIconRef}/>
+        <RippleComponentLink Component={FacebookIcon} img={facebook} color={'#FFFFFF'} componentRef={facebookIconRef} url={'https://www.facebook.com/littleeaglephoto/'}/>
+        <RippleComponentLink Component={InstagramIcon} img={instagram} color={'#FFFFFF'} componentRef={instagramIconRef} url={'https://www.facebook.com/littleeaglephoto/'}/>
+        <RippleComponentLink Component={GithubIcon} img={github} color={'#FFFFFF'} componentRef={githubIconRef} url={'https://github.com/equidistant/material-leagle-and-mich'}/>
       </IconContainer>
       <Title>© 2019 Little Eagle & Mich </Title>
     </Container>
@@ -31,8 +33,8 @@ const IconContainer = styled.div`
   padding: ${padding.smallest};
 `
 
-const Title = styled(G.Subtitle1)`
-  padding: ${padding.smallest};
+const Title = styled(G.Subtitle2)`
+  padding: ${padding.medium};
   color: white;
 `
 
@@ -49,6 +51,18 @@ const FacebookIcon = styled(G.Icon)`
 `
 
 const InstagramIcon = styled(G.Icon)`
+  border-radius: 50%;
+  &:hover {
+    background-color: #FFFFFF19;
+  }
+  &:focus {
+    outline: none;
+  }
+  position: relative;
+  overflow: hidden;
+`
+
+const GithubIcon = styled(G.Icon)`
   border-radius: 50%;
   &:hover {
     background-color: #FFFFFF19;

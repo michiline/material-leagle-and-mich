@@ -30,6 +30,10 @@ export const instagram = {
   src: `${process.env.PUBLIC_URL}/img/footer/instagram.svg`
 }
 
+export const github = {
+  src: `${process.env.PUBLIC_URL}/img/footer/github.svg`
+}
+
 export const menu = {
   primary: {
     src: `${process.env.PUBLIC_URL}/img/header/menu-primary-24px.svg`

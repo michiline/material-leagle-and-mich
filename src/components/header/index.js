@@ -14,9 +14,9 @@ const Header = ({ history }) => {
   return (
     <>
       <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
-        <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
-        <Title>Little Eagle & Mich</Title>
         <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logoSmall}/>
+        <Title>Little Eagle & Mich</Title>
+        <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
       </Container>
       <Background show={toggled} setToggled={setToggled}/>
     </>
@@ -26,21 +26,22 @@ const Header = ({ history }) => {
 const Container = styled.div`
   width: 100%;
   background-color: #FFFFFF;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   transition: all .2s cubic-bezier(.4,0,.2,.1);
   position: fixed;
   padding: ${padding.small};
   top: 0;
-  height: 6rem;
+  height: 6.5rem;
   box-shadow: ${shadow.dp1};
   z-index: 5;
   ${props => props.scrollY > 0 && css`
     box-shadow: ${shadow.dp6};
   `}
   ${props => props.scrolled && !props.toggled && css`
-    top: -6rem;
+    top: -6.5rem;
   `}
   ${props => props.toggled && css `
     background-color: #24272E;
@@ -50,6 +51,8 @@ const Container = styled.div`
 
 const Title = styled(G.H6)`
   letter-spacing: 0.025rem;
+  justify-self: center;
+  min-width: max-content;
 `
 
 const MenuIcon = styled(G.ToggleIcon)`
@@ -62,7 +65,8 @@ const MenuIcon = styled(G.ToggleIcon)`
   }
   position: relative;
   overflow: hidden;
-
+  align-self: center;
+  justify-self: end;
 `
 
 const Logo = styled(G.Logo)`
@@ -71,6 +75,7 @@ const Logo = styled(G.Logo)`
   }
   position: relative;
   overflow: hidden;
+  align-self: center;
 `
 
 const to = ({ history, url, setToggled}) => {

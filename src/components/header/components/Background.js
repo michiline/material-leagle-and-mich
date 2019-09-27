@@ -32,7 +32,7 @@ const Center = styled.div`
 `
 
 const Link = styled.div`
-  font-family: 'Bubbler One';
+  font-family: 'Helvetica';
   width: max-content;
   color: white;
   text-align: center;
