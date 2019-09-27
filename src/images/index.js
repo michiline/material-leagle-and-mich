@@ -22,6 +22,14 @@ export const share = {
   src: `${process.env.PUBLIC_URL}/img/card/share-24px.svg`
 }
 
+export const facebook = {
+  src: `${process.env.PUBLIC_URL}/img/footer/facebook.svg`
+}
+
+export const instagram = {
+  src: `${process.env.PUBLIC_URL}/img/footer/instagram.svg`
+}
+
 export const menu = {
   primary: {
     src: `${process.env.PUBLIC_URL}/img/header/menu-primary-24px.svg`
@@ -33,4 +41,12 @@ export const menu = {
 
 export const logoSmall = {
   src: `${process.env.PUBLIC_URL}/img/header/logo-header-small.png`
+}
+
+export const ana = {
+  src: `${process.env.PUBLIC_URL}/img/about/ana.jpg`
+}
+
+export const mislav = {
+  src: `${process.env.PUBLIC_URL}/img/about/mislav.jpg`
 }

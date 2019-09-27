@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
 
 import { Global } from './style'
-import { Header, Home} from './components'
+import { Header, Home, Footer } from './components'
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
         <Global />
         <Header />
         <Route exact path='/' component={Home} />
+        <Footer />
       </>
     </BrowserRouter>
   )

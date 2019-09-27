@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Slideshow, CardGrid, Gallery } from './components'
+import { Slideshow, CardGrid, Gallery, About } from './components'
 
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
       <Slideshow />
       <CardGrid />
       <Gallery />
+      <About />
     </Container>
   )
 }

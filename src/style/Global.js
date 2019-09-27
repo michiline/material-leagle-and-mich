@@ -7,6 +7,9 @@ const Global = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
+    @media only screen and (max-width: 400px) {
+      font-size: 56.25%;
+    }
   }
   *, *::after, *::before {
     margin: 0;
