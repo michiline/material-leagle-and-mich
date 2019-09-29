@@ -52,7 +52,7 @@ const Container = styled.div`
 const Title = styled(G.H4)`
   justify-self: center;
   min-width: max-content;
-  font-family: 'Amatic SC';
+  font-family: 'Amatic SC' !important;
   text-align: center;
 `
 
