@@ -34,7 +34,7 @@ const IconContainer = styled.div`
 `
 
 const Title = styled(G.Subtitle2)`
-  padding: ${padding.medium};
+  padding: ${padding.smallest};
   color: white;
 `
 

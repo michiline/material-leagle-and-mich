@@ -61,15 +61,26 @@ const Container = styled(G.flexColumnCenterContainer)`
 
 `
 
+const ContainerCenter = styled.div`
+  display: grid;
+  grid-template-columns: 10rem 100% 10rem;
+  align-items: center;
+`
+
 const Header = styled(G.H4)`
   padding: ${padding.medium};
 `
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100%);
+  grid-template-columns: repeat(auto-fill, 100%);
+  @media only screen and (min-width: 750px) {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 2rem;
+  }
   grid-gap: 1rem;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
 `
 
 

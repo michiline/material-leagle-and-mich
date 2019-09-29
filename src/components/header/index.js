@@ -67,6 +67,8 @@ const MenuIcon = styled(G.ToggleIcon)`
   overflow: hidden;
   align-self: center;
   justify-self: end;
+  width: 48px;
+  height: 48px;
 `
 
 const Logo = styled(G.Logo)`

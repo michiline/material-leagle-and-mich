@@ -54,13 +54,15 @@ const Secondary = styled.div`
   max-height: 600px;
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
-  ${props => props.collapse && css`
-    max-height: 0;
-  `}
+  @media only screen and (max-width: 750px) {
+    ${props => props.collapse && css`
+      max-height: 0;
+    `}
+  }
 `
 
 const Title = styled(G.H6)`
-  
+
 `
 
 const Subtitle = styled(G.Subtitle2)`
