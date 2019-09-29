@@ -14,8 +14,8 @@ const Header = ({ history }) => {
   return (
     <>
       <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
-        <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logoSmall}/>
-        <Title>Little Eagle & Mich</Title>
+        <Logo onClick={ e => to({ setToggled })} img={logoSmall}/>
+        <Title onClick={ e => to({ history, url: '/', setToggled })}>Little Eagle & Mich</Title>
         <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
       </Container>
       <Background show={toggled} setToggled={setToggled}/>
@@ -52,8 +52,13 @@ const Container = styled.div`
 const Title = styled(G.H4)`
   justify-self: center;
   min-width: max-content;
-  font-family: 'Amatic SC' !important;
+  font-family: 'Amatic SC';
   text-align: center;
+  &:active {
+    transform: translateY(2px);
+  }
+  cursor: pointer;
+  user-select: none;
 `
 
 const MenuIcon = styled(G.ToggleIcon)`
@@ -70,6 +75,9 @@ const MenuIcon = styled(G.ToggleIcon)`
   justify-self: end;
   width: 48px;
   height: 48px;
+  &:active {
+    transform: translateY(2px);
+  }
 `
 
 const Logo = styled(G.Logo)`
@@ -79,10 +87,15 @@ const Logo = styled(G.Logo)`
   position: relative;
   overflow: hidden;
   align-self: center;
+  &:active {
+    transform: translateY(2px);
+  }
 `
 
 const to = ({ history, url, setToggled}) => {
-  history.push(url)
+  if (history) {
+    history.push(url)
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' })
   setToggled(false)
 }

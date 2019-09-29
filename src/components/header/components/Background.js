@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { withRouter } from 'react-router-dom'
+import * as G from '../../general'
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -31,14 +32,14 @@ const Center = styled.div`
   justify-content: center;
 `
 
-const Link = styled.div`
-  font-family: 'Helvetica';
+const Link = styled(G.H4)`
+  font-family: 'Amatic SC';
+  font-weight: 700;
   width: max-content;
   color: white;
   text-align: center;
-  font-size: 2rem;
   text-transform: uppercase;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   &:hover {
     cursor: pointer;
   }

@@ -11,7 +11,7 @@ window.$ = $
 
 class Gallery extends Component {
   state = {
-    images: [],
+    images: []
   }
   render () {
     return (
@@ -28,15 +28,12 @@ class Gallery extends Component {
     const ratios = await getRatios({ url: '/gallery/front' })
     const images = getImages({ url: '/gallery/front', length: ratios.data.length })
     this.setState({ images })
-    const rowHeight = window.innerWidth > 800 ? window.innerWidth / 7 : window.innerWidth / 4
-    // window.addEventListener('resize', this.resizeListener.bind(this))
-    // const theme = chooseSize({ window, theme: themeSizes, boundaries: [800, 1100]})
-    // this.setState({ theme })
+    window.addEventListener('resize', this.resizeListener.bind(this))
     try {
-      window.$('#gallery').justifiedGallery({ rowHeight: rowHeight, lastRow: 'hide' })
+      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
     } catch (err) {
       await sleep(250)
-      window.$('#gallery').justifiedGallery({ rowHeight: rowHeight })
+      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight() })
     }
   }
 
@@ -47,15 +44,24 @@ class Gallery extends Component {
       </A>
     )
   })
+
+  resizeListener = () => {
+    window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+  }
 }
 
-const chooseSize = ({ window, theme, boundaries }) => {
-  if (window.innerWidth <= boundaries[0]) {
-    return theme.small
-  } else if (window.innerWidth > boundaries[0] && window.innerWidth < boundaries[1]) {
-    return theme.medium
+const getRowHeight = () => {
+  const width = window.innerWidth
+  if (width < 500) {
+    return 125
+  } else if (width >= 500 && width < 750) {
+    return 150
+  } else if (width >= 750 && width < 1000) {
+    return 175
+  } else if (width >= 1000 && width < 1250) {
+    return 200
   } else {
-    return theme.big
+    return 225
   }
 }
 
@@ -66,8 +72,10 @@ const sleep = (milliseconds) => {
 const Container = styled(G.flexColumnCenterContainer)`
 `
 
-const Header = styled(G.H4)`
+const Header = styled(G.H3)`
   padding: ${padding.medium};
+  font-family: 'Amatic SC';
+  font-weight: 700;
 `
 
 const GalleryContainer = styled.div.attrs({

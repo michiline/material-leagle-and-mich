@@ -61,8 +61,10 @@ const Container = styled(G.flexColumnCenterContainer)`
 
 `
 
-const Header = styled(G.H4)`
+const Header = styled(G.H3)`
   padding: ${padding.medium};
+  font-family: 'Amatic SC';
+  font-weight: 700;
 `
 
 const Grid = styled.div`
