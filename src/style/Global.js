@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500|Source+Code+Pro|Source+Serif+Pro|Bubbler+One');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500|Source+Code+Pro|Source+Serif+Pro|Bubbler+One|Amatic+SC');
   html, body, #root {
     height: 100%;
   }

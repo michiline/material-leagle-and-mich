@@ -34,14 +34,14 @@ const Container = styled.div`
   position: fixed;
   padding: ${padding.small};
   top: 0;
-  height: 6.5rem;
+  height: 7rem;
   box-shadow: ${shadow.dp1};
   z-index: 5;
   ${props => props.scrollY > 0 && css`
     box-shadow: ${shadow.dp6};
   `}
   ${props => props.scrolled && !props.toggled && css`
-    top: -6.5rem;
+    top: -7rem;
   `}
   ${props => props.toggled && css `
     background-color: #24272E;
@@ -49,10 +49,11 @@ const Container = styled.div`
   `}
 `
 
-const Title = styled(G.H6)`
-  letter-spacing: 0.025rem;
+const Title = styled(G.H4)`
   justify-self: center;
   min-width: max-content;
+  font-family: 'Amatic SC';
+  text-align: center;
 `
 
 const MenuIcon = styled(G.ToggleIcon)`
