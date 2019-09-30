@@ -63,13 +63,13 @@ const Secondary = styled.div`
 `
 
 const Title = styled(H6)`
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const Subtitle = styled(Subtitle2)`
   color: rgba(0, 0, 0, 0.54);
   font-weight: 500;
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const SupportingText = styled.div`
@@ -79,7 +79,7 @@ const SupportingText = styled.div`
 
 const Description = styled(Body2)`
   color: rgba(0, 0, 0, 0.54);
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const Tags = styled(Body2)`
@@ -99,7 +99,7 @@ const Button = styled(ButtonTransparent)`
   height: calc(3.4rem + ${padding.small});
   position: relative;
   overflow: hidden;
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const ShareIcon = styled(Icon)`

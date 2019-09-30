@@ -51,14 +51,14 @@ const Header = styled(G.H3)`
 
 const Title = styled(G.H6)`
   padding: ${padding.smallest};
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const Subtitle = styled(G.Body2)`
   color: rgba(0, 0, 0, 0.54);
   padding: ${padding.smallest};
   text-align: center;
-  font-family: 'Quattrocento Sans';
+  font-family: 'Montserrat';
 `
 
 const ContentContainer = styled.div`
