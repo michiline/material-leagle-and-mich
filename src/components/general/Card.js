@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react'
 import styled, { css, keyframes } from 'styled-components'
-import { RippleComponent, useClicked } from '../../../hooks'
-import { padding, shadow } from '../../../style'
-import * as G from '../../general'
-import { share } from '../../../images'
+import { RippleComponent, useClicked } from '../../hooks'
+import { padding, shadow } from '../../style'
+import { share } from '../../images'
+import { H6, Subtitle2, Body2, ButtonTransparent } from './text'
+import { Icon } from './images'
 
 const Card = ({ img, title, subtitle, description }) => {
   const cardRef = useRef()
@@ -61,13 +62,14 @@ const Secondary = styled.div`
   }
 `
 
-const Title = styled(G.H6)`
-
+const Title = styled(H6)`
+  font-family: 'Quattrocento Sans';
 `
 
-const Subtitle = styled(G.Subtitle2)`
+const Subtitle = styled(Subtitle2)`
   color: rgba(0, 0, 0, 0.54);
   font-weight: 500;
+  font-family: 'Quattrocento Sans';
 `
 
 const SupportingText = styled.div`
@@ -75,11 +77,12 @@ const SupportingText = styled.div`
   padding-right: ${padding.medium};
 `
 
-const Description = styled(G.Body2)`
+const Description = styled(Body2)`
   color: rgba(0, 0, 0, 0.54);
+  font-family: 'Quattrocento Sans';
 `
 
-const Tags = styled(G.Body2)`
+const Tags = styled(Body2)`
 
 `
 
@@ -90,7 +93,7 @@ const Actions = styled.div`
   padding: ${padding.small};
 `
 
-const Button = styled(G.ButtonTransparent)`
+const Button = styled(ButtonTransparent)`
   padding-left: ${padding.small};
   padding-right: ${padding.small};
   height: calc(3.4rem + ${padding.small});
@@ -98,7 +101,7 @@ const Button = styled(G.ButtonTransparent)`
   overflow: hidden;
 `
 
-const ShareIcon = styled(G.Icon)`
+const ShareIcon = styled(Icon)`
   border-radius: 50%;
   &:hover {
     background-color: #F5F5F5;

@@ -36,6 +36,7 @@ const IconContainer = styled.div`
 const Title = styled(G.Subtitle2)`
   padding: ${padding.smallest};
   color: white;
+  font-family: 'Quattrocento Sans';
 `
 
 const FacebookIcon = styled(G.Icon)`
