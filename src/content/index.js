@@ -1,11 +1,12 @@
-import { slideshow } from '../images'
+import { slideshow, soca } from '../images'
 
 export const blogsDescription = [
   {
-    img: slideshow[0],
+    img: soca[4],
     title: 'The Emerald River',
     subtitle: 'Soča, Slovenia',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    description: 'Five days of camping in the valley of river Soca. Whether you are an adrenaline seeker or relaxed hiker, you should come and witness the color of Soca for yourself!',
+    url: '/blogs/soca'
   },
   {
     img: slideshow[1],

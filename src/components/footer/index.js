@@ -21,7 +21,7 @@ const Footer = () => {
   )
 }
 
-const Container = styled(G.flexColumnCenterContainer)`
+const Container = styled(G.FlexColumnCenterContainer)`
   background: #1F2126;
   padding: ${padding.small};
 `

@@ -77,7 +77,7 @@ const RowContainer = styled.div`
   padding: ${padding.small};
 `
 
-const TextContainer = styled(G.flexColumnCenterContainer)`
+const TextContainer = styled(G.FlexColumnCenterContainer)`
 
 `
 

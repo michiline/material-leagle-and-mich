@@ -39,5 +39,11 @@ export const Logo = styled.button`
   border: none;
   cursor: pointer;
 `
-  //
-  // background: url(${props => props.img.src}) center no-repeat;
+
+export const CoverImg = styled.img.attrs(props => ({
+  src: props.img.src
+  }))`
+  object-fit: cover;
+  width: 100%;
+  transition: opacity 1.5s ease-in;
+`

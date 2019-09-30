@@ -69,7 +69,7 @@ const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
-const Container = styled(G.flexColumnCenterContainer)`
+const Container = styled(G.FlexColumnCenterContainer)`
 `
 
 const Header = styled(G.H3)`

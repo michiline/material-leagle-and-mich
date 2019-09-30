@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Container>
       <Slideshow />
-      <CardGrid content={blogsDescription.slice(0, 6)}/>
+      <CardGrid header={'Travel Blogs'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
       <Gallery />
       <About />
     </Container>

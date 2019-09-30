@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import styled, { css, keyframes } from 'styled-components'
 import { RippleComponent, useClicked } from '../../hooks'
 import { padding, shadow } from '../../style'
 import Card from './Card'
 import { H3 } from './text'
-import { flexColumnCenterContainer } from './containers'
+import { FlexColumnCenterContainer } from './containers'
 
-const CardGrid = ({ content }) => {
+const CardGrid = ({ history, header, url, content }) => {
   return (
     <Container>
-      <Header>Travel Blogs</Header>
+      <Header onClick={ e => to({ history, url })}>{header}</Header>
       <Grid>
         {content.map((cardContent, index) => <Card {...cardContent} key={index} />)}
       </Grid>
@@ -19,7 +20,7 @@ const CardGrid = ({ content }) => {
           // <RippleComponent Component={ShareIcon} img={{ src: `${process.env.PUBLIC_URL}/img/share-24px.svg`}} />
 //
 
-const Container = styled(flexColumnCenterContainer)`
+const Container = styled(FlexColumnCenterContainer)`
 
 `
 
@@ -27,6 +28,10 @@ const Header = styled(H3)`
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+  }
 `
 
 const Grid = styled.div`
@@ -41,5 +46,10 @@ const Grid = styled.div`
   justify-content: center;
 `
 
+const to = ({ history, url }) => {
+  history.push(url)
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 
-export default CardGrid
+
+export default withRouter(CardGrid)

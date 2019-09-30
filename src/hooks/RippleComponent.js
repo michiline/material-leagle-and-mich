@@ -21,17 +21,17 @@ export const RippleComponent = ({ Component, componentRef, value, color, ...prop
         }
       }
     }
-    const cleanUp = _.debounce(() => {
-      if (ripples.length > 0) {
-        const newRipples = ripples.shift()
-        setRipples(newRipples)
-      }
-    }, 1000)
+    // const cleanUp = _.debounce(() => {
+    //   if (ripples.length > 0) {
+    //     const newRipples = ripples.shift()
+    //     setRipples(newRipples)
+    //   }
+    // }, 1000)
     window.addEventListener('mousedown', showRipple)
-    window.addEventListener('mouseup', cleanUp)
+    // window.addEventListener('mouseup', cleanUp)
     return () => {
       window.removeEventListener('mousedown', showRipple)
-      window.removeEventListener('mouseup', cleanUp)
+      // window.removeEventListener('mouseup', cleanUp)
     }
   })
   if (value) {

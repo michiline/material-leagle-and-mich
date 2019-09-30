@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
+import { withRouter } from 'react-router-dom'
 import styled, { css, keyframes } from 'styled-components'
 import { RippleComponent, useClicked } from '../../hooks'
 import { padding, shadow } from '../../style'
@@ -6,7 +7,7 @@ import { share } from '../../images'
 import { H6, Subtitle2, Body2, ButtonTransparent } from './text'
 import { Icon } from './images'
 
-const Card = ({ img, title, subtitle, description }) => {
+const Card = ({ history, img, title, subtitle, description, url }) => {
   const cardRef = useRef()
   const readButtonRef = useRef()
   const shareIconRef = useRef()
@@ -23,7 +24,7 @@ const Card = ({ img, title, subtitle, description }) => {
           <Description>{description}</Description>
         </SupportingText>
         <Actions>
-          <RippleComponent Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
+          <RippleComponent onClick={ e => to({ history, url })} Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
           <RippleComponent Component={ShareIcon} img={share} color={'#8B4608'} componentRef={shareIconRef}/>
         </Actions>
       </Secondary>
@@ -80,6 +81,7 @@ const SupportingText = styled.div`
 const Description = styled(Body2)`
   color: rgba(0, 0, 0, 0.54);
   font-family: 'Montserrat';
+  text-align: justify;
 `
 
 const Tags = styled(Body2)`
@@ -122,4 +124,9 @@ const Img = styled.img.attrs(props => ({
   border-top-right-radius: 4px;
 `
 
-export default Card
+const to = ({ history, url }) => {
+  history.push(url)
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+export default withRouter(Card)
