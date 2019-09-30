@@ -99,6 +99,7 @@ const Button = styled(ButtonTransparent)`
   height: calc(3.4rem + ${padding.small});
   position: relative;
   overflow: hidden;
+  font-family: 'Quattrocento Sans';
 `
 
 const ShareIcon = styled(Icon)`
