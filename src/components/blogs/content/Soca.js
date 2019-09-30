@@ -35,7 +35,10 @@ const Soca = () => {
             <StarBullet/><Header3>Vintgar Gorges</Header3>
           </BulletHeaderContainer>
           <Text>
-            Slučajno otkrivena lokacija taman na našem putu, 4km od Bleda  vodi mala cesta do korita dugih 1.6km. Parking je besplatan, no ulaz se plaća 10€ po osobi. Kiša će valjda stati. I je, nakon polusatnog spavanja u autu i nakon odluke da nam kiša možda ipak ne može ništa. Tako je naša šetnja u jednom smjeru bila popraćena kapljicama kiše, a u drugom smjeru zrakama sunca. Nije loše vidjeti obje perspektive. Predivno uređena šetnica vodi do slapa Šum i omogućuje divne prizore cijelim putem. Prve postaje su uspješno odrađene i spremni smo za dalje.
+            Slučajno otkrivena lokacija taman na našem putu, 4km od Bleda  vodi mala cesta do korita dugih 1.6km. Parking je besplatan, no ulaz se plaća 10€ po osobi.
+            Kiša će valjda stati.
+            I je, nakon polusatnog spavanja u autu i nakon odluke da nam kiša možda ipak ne može ništa. Tako je naša šetnja u jednom smjeru bila popraćena kapljicama kiše, a u drugom smjeru zrakama sunca.
+            Nije loše vidjeti obje perspektive. Predivno uređena šetnica vodi do slapa Šum i omogućuje divne prizore cijelim putem. Prve postaje su uspješno odrađene i spremni smo za dalje.
           </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
@@ -51,7 +54,8 @@ const Soca = () => {
             <StarBullet/><Header3>Jezero Jasna</Header3>
           </BulletHeaderContainer>
           <Text>
-            Sljedeća postaja bila je jezero Jasna kod Kranjske gore. Malo jezero sa šetnicom i pogledom na Julijske Alpe. Na jezeru je dovoljno zadržati se 30-ak minuta i upiti svu ljepotu prirode koja se nalazi pored.
+            Sljedeća postaja bila je jezero Jasna kod Kranjske gore. Malo jezero sa šetnicom i pogledom na Julijske Alpe.
+            Na jezeru je dovoljno zadržati se 30-ak minuta i upiti svu ljepotu prirode koja se nalazi pored.
           </Text>
           <ImgRow>
             <ImgWrap>
@@ -59,6 +63,56 @@ const Soca = () => {
               <Img img={soca[18]}/>
             </ImgWrap>
           </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Jezero Zelenci</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Prije odlaska u kamp u dolini Soče napravili smo 10 minutu vožnju do predivnog jezera Zelenci, koje je ujedno i izvor dobro nam poznate rijeke Save Dolinke.
+            Izvor je čista suprotnost onoga što se u našim glavama javi kad čujemo riječ Sava.
+            Čist je, bistar, u predivnom malo okruženju, a mjesto je kao stvoreno za kratki predah i divljenje prirodi.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Mir i tišina...</ImgOverlay>
+              <Img img={soca[17]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Vršič Pass</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Do doline Soče odlučili smo putovati Vršič cestom. Postoji kraći put međutim ovaj je prijelaz prepun predivnih prizora koje nismo htjeli propustiti.
+            Cesta je duga 24km i ima 50 označenih velikih zavoja koji daju dodatnu čar cijelom putovanju.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Predah na vrhu</ImgOverlay>
+              <Img img={soca[15]}/>
+            </ImgWrap>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Složili smo svoj "cairn" i nastavili dalje</ImgOverlay>
+              <Img img={soca[16]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Kamp Vodenca</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Kao smještaj nas je dočekala prostrana, zelena livada okružena planinama.
+            Savršeno mjesto za naše prvo duže kampiranje.
+            Uredan i pregledan kamp, idealan za bijeg u prirodu.
+          </Text>
+          <Header2>Petak 21.6.2019.</Header2>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Rafting na Soči</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Naše prvo rafting iskustvo nije moglo imati ljepšu lokaciju.
+            Odlična ekipa iz SportMix Boveca nam je pripremila odličnu turu i atmosferu.
+            Moramo pohvaliti njihovu brigu i trud oko nas, a dodatni plus je što se na kraju dobiju i besplatne slike te cijela avantura ostane zabilježena.
+          </Text>
         </BlogContainer>
       </Container>
     </>
@@ -91,23 +145,20 @@ const Intro = styled(Body2)`
   font-family: 'Montserrat';
   text-align: justify;
   font-style: italic;
-  padding-top: ${padding.small};
-  padding-bottom: ${padding.small};
+  padding: ${padding.medium} 0 ${padding.small} 0;
 `
 
 const Text = styled(Body1)`
   font-family: 'Montserrat';
   text-align: justify;
-  padding-top: ${padding.medium};
-  padding-bottom: ${padding.medium};
+  padding: ${padding.small} 0 ${padding.medium} 0;
 `
 
 const Header2 = styled(H5)`
   font-family: 'Montserrat';
   font-style: italic;
   align-self: start;
-  padding-top: ${padding.medium};
-  padding-bottom: ${padding.medium};
+  padding: ${padding.medium} 0 ${padding.medium} 0;
 `
 
 export const Header3 = styled(H6)`
@@ -119,7 +170,7 @@ export const BulletHeaderContainer = styled.div`
   display: flex;
   align-self: flex-start;
   width: max-content;
-  padding-top: ${padding.medium};
+  padding: ${padding.medium} 0 ${padding.small} 0;
 `
 
 export const StarBullet = styled.div`
@@ -134,7 +185,7 @@ export const StarBullet = styled.div`
 
 export const ImgRow = styled.div`
   display: flex;
-  padding-bottom: ${padding.small};
+  padding: ${padding.small} 0 ${padding.small} 0;
 `
 
 export const ImgWrap = styled.div`
