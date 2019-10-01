@@ -13,14 +13,14 @@ export const blogsDescription = [
     img: krka[10],
     title: 'Slapovi Krke',
     subtitle: 'Krka, Hrvatska',
-    description: 'Posjet nacionalnom parku van sezone. Nema ništa ljepše od toga!',
+    description: 'Saznajte zašto smo odgađali posjet ovom nacionalnom za kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'
   },
   {
     img: kuba[0],
     title: 'Viva La Revolución!',
     subtitle: 'Kuba',
-    description: 'Dvotjedni roadtrip u zemlji u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
     url: '/blogs/kuba'
   }
 ]
