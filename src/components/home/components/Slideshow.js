@@ -5,7 +5,7 @@ import { arrow, slideshow } from '../../../images'
 import { shadow } from '../../../style'
 
 const Slideshow = ({ slideshowRef }) => {
-  const imagesCount = 5
+  const imagesCount = 6
   const [activeId, setActiveId] = useSlide(imagesCount)
   return (
     <Container>
@@ -15,6 +15,7 @@ const Slideshow = ({ slideshowRef }) => {
       <Img img={slideshow[2]} activeId={activeId}/>
       <Img img={slideshow[3]} activeId={activeId}/>
       <Img img={slideshow[4]} activeId={activeId}/>
+      <Img img={slideshow[5]} activeId={activeId}/>
       <NextArrow img={arrow.next} onClick={e => setActiveId((activeId + 1) % imagesCount)} />
     </Container>
   )

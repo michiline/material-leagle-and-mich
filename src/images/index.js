@@ -5,8 +5,6 @@ export const slideshow = [
   { id: 3, src: `${process.env.PUBLIC_URL}/img/slideshow/4.jpg` },
   { id: 4, src: `${process.env.PUBLIC_URL}/img/slideshow/5.jpg` },
   { id: 5, src: `${process.env.PUBLIC_URL}/img/slideshow/6.jpg` },
-  { id: 6, src: `${process.env.PUBLIC_URL}/img/slideshow/7.jpg` },
-  { id: 7, src: `${process.env.PUBLIC_URL}/img/slideshow/8.jpg` },
 ]
 
 export const soca = [
