@@ -13,7 +13,7 @@ export const blogsDescription = [
     img: krka[10],
     title: 'Slapovi Krke',
     subtitle: 'Krka, Hrvatska',
-    description: 'Saznajte zašto smo odgađali posjet ovom nacionalnom za kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
+    description: 'Saznajte zašto smo odgađali posjet ovom nacionalnom parku za kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'
   },
   {
