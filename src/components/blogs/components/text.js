@@ -15,18 +15,18 @@ export const Header = styled(H3)`
   text-align: center;
 `
 
-export const Intro = styled(Body2)`
+export const Intro = styled(Body1)`
   color: rgba(0, 0, 0, 0.54);
   font-family: 'Montserrat';
   text-align: justify;
   font-style: italic;
-  padding: ${padding.medium} 0 ${padding.small} 0;
+  padding: ${padding.small} 0 ${padding.small} 0;
 `
 
 export const Text = styled(Body1)`
   font-family: 'Montserrat';
   text-align: justify;
-  padding: ${padding.small} 0 ${padding.medium} 0;
+  padding: ${padding.small} 0 ${padding.small} 0;
 `
 
 export const Header2 = styled(H5)`
@@ -45,7 +45,7 @@ export const BulletHeaderContainer = styled.div`
   display: flex;
   align-self: flex-start;
   width: max-content;
-  padding: ${padding.medium} 0 ${padding.small} 0;
+  padding: ${padding.medium} 0 ${padding.medium} 0;
 `
 
 export const ImgOverlay = styled(Overline)`

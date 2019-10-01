@@ -20,12 +20,12 @@ const Soca = () => {
             Iako danas zbog slika predivnih lokacija koje su nam lako dostupne na internetu možemo dobro isplanirati put, isto tako možemo znati točno što nas čeka i smanjiti si iznenađenje.
             No, unatoč tome, ljepota ovog mjesta je neopisiva i nijedna slika ne može u potpunosti prenijeti osjećaj koji imaš kada si tamo.
           </Intro>
+          <Header2>Četvrtak 20.6.2019.</Header2>
           <Text>
             Naš put započeo je u četvrtak u 8 (čitaj 9) ujutro, s pripremljenom kavom, smoothijem, limunadom, sendvičima, prepunim autom (stvari, ali i dobre volje).
             Zvjezdice koje Ana pripremi na karti bile su tu, kao i okvirna ideja što sve želimo vidjeti, ali smo ostavili i dio spontanosti i planiranja u hodu.
             To se najčešće pokaže kao dobra odluka, ako zbog ničeg drugog onda zbog vremenskih (ne)prilika.
           </Text>
-          <Header2>Četvrtak 20.6.2019.</Header2>
           <BulletHeaderContainer>
             <StarBullet/><Header3>Jezero Bled</Header3>
           </BulletHeaderContainer>
