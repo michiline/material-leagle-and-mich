@@ -53,7 +53,6 @@ const PrimaryTitle = styled.div`
 
 const Secondary = styled.div`
   height: auto;
-  max-height: 600px;
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
   @media only screen and (max-width: 750px) {
@@ -76,6 +75,7 @@ const Subtitle = styled(Subtitle2)`
 const SupportingText = styled.div`
   padding-left: ${padding.medium};
   padding-right: ${padding.medium};
+  height: 6rem;
 `
 
 const Description = styled(Body2)`

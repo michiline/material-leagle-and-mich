@@ -62,7 +62,12 @@ export const krka = [
   { id: 6, src: `${process.env.PUBLIC_URL}/img/blogs/krka/7.jpg` },
   { id: 7, src: `${process.env.PUBLIC_URL}/img/blogs/krka/8.jpg` },
   { id: 8, src: `${process.env.PUBLIC_URL}/img/blogs/krka/9.jpg` },
-  { id: 9, src: `${process.env.PUBLIC_URL}/img/blogs/krka/10.jpg` }
+  { id: 9, src: `${process.env.PUBLIC_URL}/img/blogs/krka/10.jpg` },
+  { id: 10, src: `${process.env.PUBLIC_URL}/img/blogs/krka/11.jpg` }
+]
+
+export const kuba = [
+  { id: 0, src: `${process.env.PUBLIC_URL}/img/blogs/kuba/1.jpg` },
 ]
 
 export const socaCover = {
@@ -70,6 +75,10 @@ export const socaCover = {
 }
 export const krkaCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/krka/cover.jpg`
+}
+
+export const kubaCover = {
+  src: `${process.env.PUBLIC_URL}/img/blogs/kuba/cover.jpg`
 }
 
 export const blogsCover = {
