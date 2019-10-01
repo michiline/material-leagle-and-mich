@@ -20,7 +20,7 @@ export const blogsDescription = [
     img: kuba[0],
     title: 'Viva La Revolución!',
     subtitle: 'Kuba',
-    description: 'Dvotjedan roadtrip u zemlji u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    description: 'Dvotjedni roadtrip u zemlji u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
     url: '/blogs/kuba'
   }
 ]
