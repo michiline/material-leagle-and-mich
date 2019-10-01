@@ -1,3 +1,4 @@
 import Soca from './Soca'
+import Krka from './Krka'
 
-export { Soca }
+export { Soca, Krka }

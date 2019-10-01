@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FlexColumnCenterContainer, CoverImg, H3, H5, H6, Body1, Body2, Overline } from '../../general'
-import { socaCover, soca, star } from '../../../images'
-import { padding, margin } from '../../../style'
+import { CoverImg } from '../../general'
+import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
+import { socaCover, soca } from '../../../images'
+
 const Soca = () => {
   return (
     <>
@@ -334,141 +335,5 @@ const Soca = () => {
     </>
   )
 }
-
-const Container = styled.div`
-  @media only screen and (max-width: 750px) {
-    padding-top: 7rem;
-  }
-`
-
-const Header = styled(H3)`
-  padding: ${padding.medium};
-  font-family: 'Amatic SC';
-  font-weight: 700;
-  cursor: pointer;
-  &:active {
-    transform: translateY(2px);
-  }
-  text-align: center;
-`
-
-const BlogContainer = styled(FlexColumnCenterContainer)`
-  padding: ${padding.medium};
-`
-
-const Intro = styled(Body2)`
-  color: rgba(0, 0, 0, 0.54);
-  font-family: 'Montserrat';
-  text-align: justify;
-  font-style: italic;
-  padding: ${padding.medium} 0 ${padding.small} 0;
-`
-
-const Text = styled(Body1)`
-  font-family: 'Montserrat';
-  text-align: justify;
-  padding: ${padding.small} 0 ${padding.medium} 0;
-`
-
-const Header2 = styled(H5)`
-  font-family: 'Montserrat';
-  font-style: italic;
-  align-self: start;
-  padding: ${padding.medium} 0 ${padding.medium} 0;
-`
-
-export const Header3 = styled(H6)`
-  align-self: center;
-  font-family: 'Montserrat';
-`
-
-export const BulletHeaderContainer = styled.div`
-  display: flex;
-  align-self: flex-start;
-  width: max-content;
-  padding: ${padding.medium} 0 ${padding.small} 0;
-`
-
-export const StarBullet = styled.div`
-  background-position: center;
-  background-size: cover;
-  background-image: url(${star});
-  width: 3rem;
-  height: 3rem;
-  align-self: center;
-  margin-right: ${padding.medium};
-`
-
-export const ImgRow = styled.div`
-  display: flex;
-  padding: ${padding.small} 0 ${padding.small} 0;
-`
-
-export const ImgWrap = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-`
-
-export const ImgWrapPortrait = styled.div`
-  width: 50%;
-  height: auto;
-  position: relative;
-`
-
-export const ImgWrapLandscape = styled.div`
-  width: 50%;
-  height: auto;
-  position: relative;
-`
-
-export const ImgWrapPortraitLeft = styled(ImgWrapPortrait)`
-  margin-right: ${padding.smallest};
-`
-
-export const ImgWrapLandscapeLeft = styled(ImgWrapLandscape)`
-  margin-right: ${padding.smallest};
-`
-
-export const ImgPortraitHalf = styled.img.attrs(props => ({
-  src: props.img.src
-  }))`
-  background-size: cover;
-  overflow: hidden;
-  width: 100%
-  height: 100%;
-  border-radius: 2px;
-`
-
-export const ImgLandscapeHalf = styled.img.attrs(props => ({
-  src: props.img.src
-  }))`
-  background-size: cover;
-  overflow: hidden;
-  width: 100%
-  height: 100%;
-  border-radius: 2px;
-`
-
-export const Img = styled.img.attrs(props => ({
-  src: props.img.src
-  }))`
-  background-size: cover;
-  overflow: hidden;
-  width: 100%
-  height: 100%;
-  border-radius: 2px;
-`
-
-export const ImgOverlay = styled(Overline)`
-  position: absolute;
-  bottom: 0;
-  background-color: #0000007D;
-  width: 100%;
-  color: #B09978;
-  display: flex;
-  justify-content: flex-end;
-  padding: ${padding.smallest};
-`
 
 export default Soca

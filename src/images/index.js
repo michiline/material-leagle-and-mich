@@ -9,10 +9,6 @@ export const slideshow = [
   { id: 7, src: `${process.env.PUBLIC_URL}/img/slideshow/8.jpg` },
 ]
 
-export const socaCover = {
-  src: `${process.env.PUBLIC_URL}/img/blogs/soca/cover.jpg`
-}
-
 export const soca = [
   { id: 0, src: `${process.env.PUBLIC_URL}/img/blogs/soca/1.jpg` },
   { id: 1, src: `${process.env.PUBLIC_URL}/img/blogs/soca/2.jpg` },
@@ -55,6 +51,26 @@ export const soca = [
   { id: 38, src: `${process.env.PUBLIC_URL}/img/blogs/soca/39.jpg` },
   { id: 39, src: `${process.env.PUBLIC_URL}/img/blogs/soca/40.jpg` },
 ]
+
+export const krka = [
+  { id: 0, src: `${process.env.PUBLIC_URL}/img/blogs/krka/1.jpg` },
+  { id: 1, src: `${process.env.PUBLIC_URL}/img/blogs/krka/2.jpg` },
+  { id: 2, src: `${process.env.PUBLIC_URL}/img/blogs/krka/3.jpg` },
+  { id: 3, src: `${process.env.PUBLIC_URL}/img/blogs/krka/4.jpg` },
+  { id: 4, src: `${process.env.PUBLIC_URL}/img/blogs/krka/5.jpg` },
+  { id: 5, src: `${process.env.PUBLIC_URL}/img/blogs/krka/6.jpg` },
+  { id: 6, src: `${process.env.PUBLIC_URL}/img/blogs/krka/7.jpg` },
+  { id: 7, src: `${process.env.PUBLIC_URL}/img/blogs/krka/8.jpg` },
+  { id: 8, src: `${process.env.PUBLIC_URL}/img/blogs/krka/9.jpg` },
+  { id: 9, src: `${process.env.PUBLIC_URL}/img/blogs/krka/10.jpg` }
+]
+
+export const socaCover = {
+  src: `${process.env.PUBLIC_URL}/img/blogs/soca/cover.jpg`
+}
+export const krkaCover = {
+  src: `${process.env.PUBLIC_URL}/img/blogs/krka/cover.jpg`
+}
 
 export const blogsCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/cover.jpg`
