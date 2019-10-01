@@ -113,6 +113,210 @@ const Soca = () => {
             Odlična ekipa iz SportMix Boveca nam je pripremila odličnu turu i atmosferu.
             Moramo pohvaliti njihovu brigu i trud oko nas, a dodatni plus je što se na kraju dobiju i besplatne slike te cijela avantura ostane zabilježena.
           </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Ovo je bilo zabavno!</ImgOverlay>
+              <Img img={soca[19]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Slap Virje</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Čekajući na naš temin za rafting, otišli smo u posjet obližnjem slapu Virje.
+            Do njega je potrebno hodati cca 5min pješke i preporuka je stići malo ranije da se izbjegne veća gužva koja se stvori oko njega.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Vrlo osvježavajuće</ImgOverlay>
+              <Img img={soca[6]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Header2>Subota 22.6.2019.</Header2>
+          <Text>
+            U subotu nas je dočekala kiša te smo odlučili prepustiti se vremenskim prilikama i prvi dio dana provesti pod šatorom.
+            Nismo očajavali. Dapače odmor na odmoru je dobro došao, a i sve je stvar perspektive.
+            Tako smo pretvorili to u pozitivno iskustvu.
+            Izguglali možemo li kuhati kavu u šatoru, jer kava je ipak najvažnija.
+            Ostatak nam  je dana u šatoru bilo uživanje u trenutku.
+          </Text>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Slap Kozjak</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Popodne nam je ipak dozvolilo skitanje pa smo se odlučili za vožnju do Kobarida.
+            Tamo smo otišli do slapa Kozjak koji se nalazi na rubu Triglavskog Nacionalnog Parka.
+            Šetnja traje ukupno oko 1h i 15minuta.
+            Kao i na ostalim dijelovima na kojima smo bili, šetnica je jako uređena, pogled na svakom koraku ostavlja bez daha, a slapu se možeš samo diviti.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Ekspozicija</ImgOverlay>
+              <Img img={soca[5]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Napolenov most</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Kratka stanice između centra Kobarida i parkinga za početak šetnje prema slapu Kozjak. Pruža jedan od ljepših pogleda na rijeku Soču.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Pogled s mosta</ImgOverlay>
+              <ImgPortraitHalf img={soca[20]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Jedva čekam probat!</ImgOverlay>
+              <ImgPortraitHalf img={soca[21]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Slap Boka</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Na povratku u kamp izdvojili smo još 30 minuta za kratko stajanje na vidikovcu za slap Boka. Slika s naslovnice ovog bloga prikazuje svu moć i ljepotu tog slapa.
+            Svakako vrijedno mjesto za pogledati, a najhrabriji i oni željni avanture mogu se odlučiti i na dužu rutu hodanja do samog slapa. Mi smo ga ovaj put posjetili samo s udaljenosti.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Njegovo veličanstvo, 106m visok slap Boka</ImgOverlay>
+              <Img img={soca[24]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Header2>Nedjelja 23.6.2019.</Header2>
+          <Text>
+            Nedjelja je bila dan za jedno zanimljivo iskustvo. Odlučili smo se upisati u jednodnevnu školu kajaka i  isprobati ga, ali na rijeci, divljoj rijeci. Ana i dalje nije sigurna što misli o tom iskustvu, osim što joj je drago da je preživjela.
+          </Text>
+          <Text>
+            Kada se nakon 3 sekunde u kajaku prevrneš, zaboraviš sve upute o tome kako da se izvučeš pa pomahnitalo uzimaš zrak i čekaš da netko dođe do tebe, nije ti baš svejedno i nisi siguran želiš li to iskustvo ponoviti. Tj. želiš, ali možda u nekim sigurnijim i mirnijim uvjetima.
+          </Text>
+          <Text>
+            Ipak, odustajanja nije bilo, staza je uspješno prijeđena, a rijeka Soča i ovaj put, baš kao i na raftingu ostavlja bez daha. Dobro je sve.
+            Samo, nakon ovoga, jedino što smo bili sposobni jest zaspati u kampu i prepustiti se slatkom osjećaju umora i uspjeha.
+          </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Ćorkica u hammocku</ImgOverlay>
+              <ImgLandscapeHalf img={soca[22]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>I pod je sasvim ok...</ImgOverlay>
+              <ImgLandscapeHalf img={soca[23]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Šunikov vodni gaj</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Ova zvjezdica se nalazi kod Lepene i možda je najmanje turistička od svih, a podjednako zanimljiva.
+            Ima nekoliko stajališta-vidikovaca poput brdašaca koji prelaze bazene i slapove, ostatke starog mlina te moćna i velika stabla, kao i mostić preko kojeg se prelazi tijekom šetnje.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Viče da pazim jer je sklisko</ImgOverlay>
+              <ImgPortraitHalf img={soca[25]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Behind the scenes</ImgOverlay>
+              <ImgPortraitHalf img={soca[26]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Most i ć (i šuma)</ImgOverlay>
+              <Img img={soca[27]}/>
+            </ImgWrap>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Napokon neka ravna podloga da se slikamo</ImgOverlay>
+              <Img img={soca[28]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Header2>Ponedjeljak 24.6.2019.</Header2>
+          <Text>
+            Ponedjeljak je bio još jedan putni dan, gdje smo odlučili isprobati kako je to SUP-ati. Rezervirali smo 2 SUP-a za 15h u Soča SUP-u kod Mosta na Soči (rezervacija se obavlja telefonski), a u međuvremenu smo obišli obližnje pripremljene zvjezdice.
+          </Text>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Tolminska korita</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Tolminska korita su još jedna posebna priča, još jedna slična, a posebna šetnica i još jedan pogled u ljepotu oko sebe. Uz korita je besplatan parking, iako dosta popunjen, ulaznica je 5 eura, a šetnja od otprilike sat vremena puna prizora za prepričavanje. Čak je moguće piti vodu izravno iz stijena. Ne sjećamo se kada smo zadnji put to napravili. Osjećaj je super, a voda osvježavajuća.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Pogled na Đavolji most (popularno ime za most u kanjonu)</ImgOverlay>
+              <ImgPortraitHalf img={soca[29]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Pogled sa Đavoljeg mosta</ImgOverlay>
+              <ImgPortraitHalf img={soca[30]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet /><Header3>Ušče Tolminke</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Prije SUP-a čekalo nas je Sotočje, mjesto za kupanje, plažu, još jedan ručak od tjestenine i kukuruza i radikalne odluke o kupanju u hladnoj vodi. Ali kada je okoliš toliko privlačan nema druge! Mjesto bez puno ljudi, s dosta mjesta za osamu i mir i s lijepim prilazima vodi. A oko nas 2 rijeke, neobičnih boja…
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Bistra i hladna</ImgOverlay>
+              <Img img={soca[31]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet /><Header3>SUP na Soči</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Anino prvo stajanje na SUP je prošlo puno bolje od prvog kajaka na divljim vodama. Mir cijele okoline daje mir i duši. SUP je, bilo zbog okoline, bilo zbog osjećaja dok stojiš na njemu ušao u naša srca. Vozili smo se mirnim dijelom rijeke Soče, ali i dlaje nizvodno gdje se Soča spaja s rijekom Idrijcom. Na tom mjestu nalazi se i Most na Soči, koji smo obišli iz ove perspektive, kao i predivan zeleni dio rijeke, nalik jezeru. Potpuno drukčije od Soče koju smo do sada gledali – bez velikih brzaca, na jugu Triglavskog nacionalnog parka. I ekipa iz Soča SUP-a je za samu pohvalu, dragi par koji je svoju ljubav pretvorio u posao i to se osjeti u komunikaciji s njima.
+          </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgLandscapeHalf img={soca[35]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgLandscapeHalf img={soca[34]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Boja rijeke sa slike je stvarna</ImgOverlay>
+              <Img img={soca[32]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Header2>Utorak 25.6.2019.</Header2>
+          <Text>
+            Iako smo za zadnji dan planirali Bohinj i slap Savicu, odlučili smo to zbog dužine puta ostaviti za neku drugu priliku. Stoga smo se za kraj našeg uspješnog 6-dnevnog kampiranja odlučili počastiti kupanjem u ledenoj vodi velikih korita rijeke Soče. Iako smo znali da je hladno, kristalno čista voda i njena predivna smaragdna boja, bile su previše primamljive te smo odlučili dopustiti nogama da nam utrnu i preći vlastite granice. Nekoliko skokova, puno zaveslaja uzvodno, tek koji nizvodno i malo grijanja na suncu bilo je savršen kraj naše male avanture. Koja, kako se priča ima puni potencijal preći u tradiciju. Put smo nastavili kroz Ljubljanu, i kratko stajanje, tek toliko da nas postepeno vrati u civilizaciju.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Ah ta boja</ImgOverlay>
+              <ImgPortraitHalf img={soca[38]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Idealno za kupanac</ImgOverlay>
+              <ImgPortraitHalf img={soca[39]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Sjedni tu da te slikam, dobra je pozadina</ImgOverlay>
+              <Img img={soca[36]}/>
+            </ImgWrap>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Jedna za kraj...</ImgOverlay>
+              <Img img={soca[37]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Intro>
+            Često poželimo ići u daleke i neobične krajeve, a zapravo nas baš tu, iza ugla, čekaju neke od najljepših prirodnih ljepota ovoga planeta.
+          </Intro>
         </BlogContainer>
       </Container>
     </>
@@ -200,11 +404,31 @@ export const ImgWrapPortrait = styled.div`
   position: relative;
 `
 
+export const ImgWrapLandscape = styled.div`
+  width: 50%;
+  height: auto;
+  position: relative;
+`
+
 export const ImgWrapPortraitLeft = styled(ImgWrapPortrait)`
   margin-right: ${padding.smallest};
 `
 
+export const ImgWrapLandscapeLeft = styled(ImgWrapLandscape)`
+  margin-right: ${padding.smallest};
+`
+
 export const ImgPortraitHalf = styled.img.attrs(props => ({
+  src: props.img.src
+  }))`
+  background-size: cover;
+  overflow: hidden;
+  width: 100%
+  height: 100%;
+  border-radius: 2px;
+`
+
+export const ImgLandscapeHalf = styled.img.attrs(props => ({
   src: props.img.src
   }))`
   background-size: cover;
