@@ -126,7 +126,7 @@ const Img = styled.img.attrs(props => ({
 
 const to = ({ history, url }) => {
   history.push(url)
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 export default withRouter(Card)

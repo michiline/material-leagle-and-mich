@@ -96,7 +96,7 @@ const to = ({ history, url, setToggled}) => {
   if (history) {
     history.push(url)
   }
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
   setToggled(false)
 }
 

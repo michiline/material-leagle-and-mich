@@ -48,7 +48,7 @@ const Grid = styled.div`
 
 const to = ({ history, url }) => {
   history.push(url)
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 

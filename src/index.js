@@ -5,11 +5,13 @@ import * as serviceWorker from './serviceWorker'
 
 import { Global } from './style'
 import { Header, Home, Blogs, Footer } from './components'
+import { ScrollToTop } from './hooks'
 
 const App = () => {
   return (
     <BrowserRouter>
       <>
+        <ScrollToTop />
         <Global />
         <Header />
         <Route exact path='/' component={Home} />

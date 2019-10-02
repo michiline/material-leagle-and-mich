@@ -61,7 +61,7 @@ const Background = ({ history, show, setToggled }) =>
 
 const to = ({ history, url, setToggled}) => {
   history.push(url)
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
   setToggled(false)
 }
 

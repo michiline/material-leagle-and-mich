@@ -22,7 +22,7 @@ const Soca = () => {
           </Intro>
           <Header2>Četvrtak 20.6.2019.</Header2>
           <Text>
-            Naš put započeo je u četvrtak u 8 (čitaj 9) ujutro, s pripremljenom kavom, smoothijem, limunadom, sendvičima, prepunim autom (stvari, ali i dobre volje).
+            Naš put započeo je u četvrtak u 8 (čitaj 9) ujutro, s pripremljenom kavom, smoothiejem, limunadom, sendvičima, prepunim autom (stvari, ali i dobre volje).
             Zvjezdice koje Ana pripremi na karti bile su tu, kao i okvirna ideja što sve želimo vidjeti, ali smo ostavili i dio spontanosti i planiranja u hodu.
             To se najčešće pokaže kao dobra odluka, ako zbog ničeg drugog onda zbog vremenskih (ne)prilika.
           </Text>
@@ -124,7 +124,7 @@ const Soca = () => {
             <StarBullet/><Header3>Slap Virje</Header3>
           </BulletHeaderContainer>
           <Text>
-            Čekajući na naš temin za rafting, otišli smo u posjet obližnjem slapu Virje.
+            Čekajući na naš termin za rafting, otišli smo u posjet obližnjem slapu Virje.
             Do njega je potrebno hodati cca 5min pješke i preporuka je stići malo ranije da se izbjegne veća gužva koja se stvori oko njega.
           </Text>
           <ImgRow>
@@ -147,7 +147,7 @@ const Soca = () => {
           <Text>
             Popodne nam je ipak dozvolilo skitanje pa smo se odlučili za vožnju do Kobarida.
             Tamo smo otišli do slapa Kozjak koji se nalazi na rubu Triglavskog Nacionalnog Parka.
-            Šetnja traje ukupno oko 1h i 15minuta.
+            Šetnja traje ukupno oko 1h i 15min.
             Kao i na ostalim dijelovima na kojima smo bili, šetnica je jako uređena, pogled na svakom koraku ostavlja bez daha, a slapu se možeš samo diviti.
           </Text>
           <ImgRow>
@@ -300,10 +300,10 @@ const Soca = () => {
           </ImgRow>
           <Header2>Utorak 25.6.2019.</Header2>
           <Text>
-            Iako smo za zadnji dan planirali Bohinj i slap Savicu, odlučili smo to zbog dužine puta ostaviti za neku drugu priliku. Stoga smo se za kraj našeg uspješnog 6-dnevnog kampiranja odlučili počastiti kupanjem u ledenoj vodi velikih korita rijeke Soče. Iako smo znali da je hladno, kristalno čista voda i njena predivna smaragdna boja, bile su previše primamljive te smo odlučili dopustiti nogama da nam utrnu i preći vlastite granice.
+            Iako smo za zadnji dan planirali Bohinj i slap Savicu, odlučili smo to zbog dužine puta ostaviti za neku drugu priliku. Stoga smo se za kraj našeg uspješnog 6-dnevnog kampiranja odlučili počastiti kupanjem u ledenoj vodi velikih korita rijeke Soče. Iako smo znali da je hladno, kristalno čista voda i njena predivna smaragdna boja, bile su previše primamljive te smo odlučili dopustiti nogama da nam utrnu i prijeći vlastite granice.
           </Text>
           <Text>
-            Nekoliko skokova, puno zaveslaja uzvodno, tek koji nizvodno i malo grijanja na suncu bilo je savršen kraj naše male avanture. Koja, kako se priča ima puni potencijal preći u tradiciju. Put smo nastavili kroz Ljubljanu, i kratko stajanje, tek toliko da nas postepeno vrati u civilizaciju.
+            Nekoliko skokova, puno zaveslaja uzvodno, tek koji nizvodno i malo grijanja na suncu bilo je savršen kraj naše male avanture. Koja, kako se priča ima puni potencijal pretvoriti u tradiciju. Put smo nastavili kroz Ljubljanu, i kratko stajanje, tek toliko da nas postepeno vrati u civilizaciju.
           </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
