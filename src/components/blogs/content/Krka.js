@@ -40,6 +40,16 @@ const Krka = () => {
               <ImgPortraitHalf img={krka[7]}/>
             </ImgWrapPortrait>
           </ImgRow>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Ćorkica u hammocku</ImgOverlay>
+              <ImgLandscapeHalf img={krka[8]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>I pod je sasvim ok...</ImgOverlay>
+              <ImgLandscapeHalf img={krka[9]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
           <BulletHeaderContainer>
             <StarBullet/><Header3>Otok Zlarin</Header3>
           </BulletHeaderContainer>
@@ -55,6 +65,16 @@ const Krka = () => {
           <Text>
             Već nakon prvih nekoliko zavoja shvatili smo da je druga strana vrlo stjenovita i neprilagođena odmoru pa smo se okrenuli i nasukali na jednu od već viđenih uvala. Smjestili smo se u hammock i ulovili još malo mira.  Divan li je taj naš Jadran u rujnu. Avantura s kayakom na moru bila je uspješna. Sigurno ćemo ponoviti!
           </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Ćorkica u hammocku</ImgOverlay>
+              <ImgLandscapeHalf img={krka[0]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>I pod je sasvim ok...</ImgOverlay>
+              <ImgLandscapeHalf img={krka[1]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
           <BulletHeaderContainer>
             <StarBullet/><Header3>NP Krka</Header3>
           </BulletHeaderContainer>
@@ -64,9 +84,25 @@ const Krka = () => {
           <Text>
             Preferiramo osamu i divljinu, ali čini se da je ovo mjesto prepopularno da bismo to doživjeli i s tim smo se morali pomiriti. Jedino što za drugi put možemo popraviti je da se ne uspavamo toliko i da stignemo ranije. (veslali smo s rupom na kayaku!)
           </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Ćorkica u hammocku</ImgOverlay>
+              <ImgLandscapeHalf img={krka[3]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>I pod je sasvim ok...</ImgOverlay>
+              <ImgLandscapeHalf img={krka[4]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
           <Text>
             Krka je svakako mjesto koje svojom ljepotom zaslužuje tu pažnju. No, nismo mogli a da se ne zapitamo u kojem smjeru vodi tolika količina ljudi na jednom mjestu i hoće li priroda ispaštati za to u budućnosti. Vrijeme će pokazati. Nama je ipak drago što živimo tu, nadomak ovih silnih prirodnih ljepota.
           </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Napokon neka ravna podloga da se slikamo</ImgOverlay>
+              <Img img={krka[5]}/>
+            </ImgWrap>
+          </ImgRow>
           <Intro>
             Još jedan uspješan vikend iza nas. Često čujemo komentare da stalno putujemo. A kako ne bi kad imamo toliko toga za vidjeti i doživjeti a tako malo vremena.
           </Intro>
