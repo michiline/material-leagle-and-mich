@@ -31,18 +31,14 @@ const Krka = () => {
             Preporučujemo dočekati izlazak sunca na ovoj lokaciji jer je taman orijentirana prema istoku i sunčeve zrake u rano jutro daju mu posebnu čar.
           </Text>
           <ImgRow>
-            <ImgWrapPortraitLeft>
-              <ImgOverlay>Mir</ImgOverlay>
-              <ImgPortraitHalf img={krka[6]}/>
-            </ImgWrapPortraitLeft>
-            <ImgWrapPortrait>
-              <ImgOverlay>Detalj</ImgOverlay>
-              <ImgPortraitHalf img={krka[7]}/>
-            </ImgWrapPortrait>
+            <ImgWrap>
+              <ImgOverlay>Dobro jutro</ImgOverlay>
+              <Img img={krka[6]}/>
+            </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Patkice idu na spavanje</ImgOverlay>
+              <ImgOverlay>Patkice</ImgOverlay>
               <ImgLandscapeHalf img={krka[8]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
