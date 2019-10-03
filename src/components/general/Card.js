@@ -20,9 +20,7 @@ const Card = ({ history, img, title, subtitle, description, url }) => {
         <Subtitle>{subtitle}</Subtitle>
       </PrimaryTitle>
       <Secondary collapse={!clicked}>
-        <SupportingText>
-          <Description>{description}</Description>
-        </SupportingText>
+        <SupportingText>{description}</SupportingText>
         <Actions>
           <RippleComponent onClick={ e => to({ history, url })} Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
           <RippleComponent Component={ShareIcon} img={share} color={'#8B4608'} componentRef={shareIconRef}/>
@@ -45,6 +43,7 @@ const Container = styled.div`
     box-shadow: ${shadow.dp8};
   `}
   user-select: none;
+  height: 100%;
 `
 
 const PrimaryTitle = styled.div`
@@ -52,10 +51,13 @@ const PrimaryTitle = styled.div`
 `
 
 const Secondary = styled.div`
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
+  justify-content: space-between;
   transition: max-height 0.4s ease-in-out;
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 600px) {
     ${props => props.collapse && css`
       max-height: 0;
     `}
@@ -72,16 +74,13 @@ const Subtitle = styled(Subtitle2)`
   font-family: 'Montserrat';
 `
 
-const SupportingText = styled.div`
-  padding-left: ${padding.medium};
-  padding-right: ${padding.medium};
-  height: 6rem;
-`
-
-const Description = styled(Body2)`
+const SupportingText = styled(Body2)`
   color: rgba(0, 0, 0, 0.54);
   font-family: 'Montserrat';
   text-align: justify;
+  padding-left: ${padding.medium};
+  padding-right: ${padding.medium};
+  height: min-content;
 `
 
 const Tags = styled(Body2)`

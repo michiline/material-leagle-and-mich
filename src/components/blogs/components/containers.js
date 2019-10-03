@@ -4,7 +4,7 @@ import { FlexColumnCenterContainer} from '../../general'
 import { padding } from '../../../style'
 
 export const Container = styled.div`
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 600px) {
     padding-top: 7rem;
   }
   display: flex;

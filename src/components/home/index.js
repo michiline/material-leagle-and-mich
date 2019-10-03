@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Slideshow, Gallery, About } from './components'
-import { CardGrid } from '../general'
+import { Slideshow, About } from './components'
+import { CardGrid, Gallery } from '../general'
 import { blogsDescription } from '../../content'
 
 const Home = () => {
@@ -9,14 +9,14 @@ const Home = () => {
     <Container>
       <Slideshow />
       <CardGrid header={'Travel Blogs'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
-      <Gallery />
+      <Gallery header={'Travel Gallery'} url={'/gallery'} imgUrl={'/gallery/home'} />
       <About />
     </Container>
   )
 }
 
 const Container = styled.div`
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 600px) {
     padding-top: 7rem;
   }
 `

@@ -11,7 +11,7 @@ export const blogsDescription = [
   // description: 'Five days of camping in the valley of river Soca. Whether you are an adrenaline seeker or relaxed hiker, you should come and witness the color of Soca for yourself!',
   {
     img: krka[10],
-    title: 'Rujanska avantura oko Krke',
+    title: 'Slapovi Krke',
     subtitle: 'Krka, Hrvatska',
     description: 'Saznajte zašto smo odgađali posjet ovom nacionalnom parku za sam kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'
@@ -22,5 +22,59 @@ export const blogsDescription = [
     subtitle: 'Kuba',
     description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
     url: '/blogs/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Viva La Revolución!',
+    subtitle: 'Kuba',
+    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    url: '/blogs/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Viva La Revolución!',
+    subtitle: 'Kuba',
+    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    url: '/blogs/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Viva La Revolución!',
+    subtitle: 'Kuba',
+    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    url: '/blogs/kuba'
   }
+]
+
+export const galleryDescription = [
+  {
+    img: soca[4],
+    title: 'Soča',
+    url: '/gallery/soca'
+  },
+  {
+    img: krka[10],
+    title: 'Krka',
+    url: '/gallery/krka'
+  },
+  {
+    img: kuba[0],
+    title: 'Kuba',
+    url: '/gallery/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Kuba',
+    url: '/gallery/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Kuba',
+    url: '/gallery/kuba'
+  },
+  {
+    img: kuba[0],
+    title: 'Kuba',
+    url: '/gallery/kuba'
+  },
 ]

@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
 
 import { Global } from './style'
-import { Header, Home, Blogs, Footer } from './components'
+import { Header, Home, Blogs, Gallery, Footer } from './components'
 import { ScrollToTop } from './hooks'
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
         <Header />
         <Route exact path='/' component={Home} />
         <Route path='/blogs' component={Blogs} />
+        <Route path='/gallery' component={Gallery} />
         <Footer />
       </>
     </BrowserRouter>

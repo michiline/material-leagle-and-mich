@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import styled, { css } from 'styled-components'
 import justifiedLayout from 'justified-layout'
 import $ from 'jquery'
-import * as G from '../../general'
-import { padding, shadow } from '../../../style'
+import { FlexColumnCenterContainer } from './containers'
+import { H3 } from './text'
+import { padding, shadow } from '../../style'
 
 window.jQuery = $
 window.$ = $
@@ -14,9 +16,12 @@ class Gallery extends Component {
     images: []
   }
   render () {
+    const history = this.props.history
+    const url = this.props.url
+    const header = this.props.header
     return (
       <Container>
-        <Header>Travel Gallery</Header>
+        <Header onClick={ e => to({ history, url })}>{header}</Header>
         <GalleryContainer>
           {this.state.images && this.state.images.length !== 0 && this.renderImages(this.state.images)}
         </GalleryContainer>
@@ -24,9 +29,12 @@ class Gallery extends Component {
     )
   }
 
+          // <Header onClick={ e => to({ this.props.history, this.props.url })}>{this.props.header}</Header>
+
   async componentDidMount() {
-    const ratios = await getRatios({ url: '/gallery/front' })
-    const images = getImages({ url: '/gallery/front', length: ratios.data.length })
+    const imgUrl = this.props.imgUrl
+    const ratios = await getRatios({ imgUrl })
+    const images = getImages({ imgUrl, length: ratios.data.length })
     this.setState({ images })
     window.addEventListener('resize', this.resizeListener.bind(this))
     try {
@@ -69,13 +77,17 @@ const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
-const Container = styled(G.FlexColumnCenterContainer)`
+const Container = styled(FlexColumnCenterContainer)`
 `
 
-const Header = styled(G.H3)`
+const Header = styled(H3)`
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+  }
 `
 
 const GalleryContainer = styled.div.attrs({
@@ -94,11 +106,15 @@ const A = styled.a.attrs(props => ({
   href: props.img.src
 }))``
 
-const getImages = ({ url, length}) => [...Array(length)].map((img, index) => {return { id: index, alt: 'Image', src: `${process.env.REACT_APP_SERVER}/images/${url}/${index + 1}.jpg` }})
+const getImages = ({ imgUrl, length}) => [...Array(length)].map((img, index) => {return { id: index, alt: 'Image', src: `${process.env.REACT_APP_SERVER}/images/${imgUrl}/${index + 1}.jpg` }})
 
-const getRatios = ({ url }) => axios({
+const getRatios = ({ imgUrl }) => axios({
   method: 'get',
-  url: `${process.env.REACT_APP_SERVER}/sizes${url}`
+  url: `${process.env.REACT_APP_SERVER}/sizes${imgUrl}`
 })
 
-export default Gallery
+const to = ({ history, url }) => {
+  history.push(url)
+}
+
+export default withRouter(Gallery)

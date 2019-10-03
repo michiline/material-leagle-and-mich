@@ -82,6 +82,10 @@ export const blogsCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/cover.jpg`
 }
 
+export const galleryCover = {
+  src: `${process.env.PUBLIC_URL}/img/gallery/cover.jpg`
+}
+
 export const arrow = {
   previous: {
     src: `${process.env.PUBLIC_URL}/img/slideshow/previous.svg`

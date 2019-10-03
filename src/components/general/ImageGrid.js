@@ -1,24 +1,20 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import styled, { css, keyframes } from 'styled-components'
-import { RippleComponent, useClicked } from '../../hooks'
-import { padding, shadow } from '../../style'
-import Card from './Card'
 import { H3 } from './text'
 import { FlexColumnCenterContainer } from './containers'
+import { padding } from '../../style'
 
-const CardGrid = ({ history, header, url, content }) => {
+const ImageGrid = ({ history, header, url, content }) => {
   return (
     <Container>
       <Header onClick={ e => to({ history, url })}>{header}</Header>
       <Grid>
-        {content.map((cardContent, index) => <Card {...cardContent} key={index} />)}
+        {content.map((image, index) => <Image {...image} key={index} />)}
       </Grid>
     </Container>
   )
 }
-          // <RippleComponent Component={ShareIcon} img={{ src: `${process.env.PUBLIC_URL}/img/share-24px.svg`}} />
-//
 
 const Container = styled(FlexColumnCenterContainer)`
 
@@ -36,7 +32,7 @@ const Header = styled(H3)`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 100%
+  grid-template-columns: repeat(auto-fill, 100%);
   @media only screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -51,9 +47,28 @@ const Grid = styled.div`
   justify-content: center;
 `
 
+const ImgContainer = styled.div`
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+`
+
+const Img = styled.img.attrs(props => ({
+  src: props.img.src
+  }))`
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+`
+
+const Image = (props) =>
+  <ImgContainer>
+    <Img img={props.img}/>
+  </ImgContainer>
+
 const to = ({ history, url }) => {
   history.push(url)
 }
 
 
-export default withRouter(CardGrid)
+export default withRouter(ImageGrid)
