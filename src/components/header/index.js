@@ -5,7 +5,7 @@ import { RippleComponent, useScrolledDirection } from '../../hooks'
 import { Background } from './components'
 import * as G from '../general'
 import { padding, shadow } from '../../style'
-import { menu, logoSmall } from '../../images'
+import { menu, logo } from '../../images'
 
 const Header = ({ history }) => {
   const menuRef = useRef()
@@ -14,7 +14,7 @@ const Header = ({ history }) => {
   return (
     <>
       <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
-        <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logoSmall}/>
+        <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logo}/>
         <Title onClick={ e => to({ setToggled })}>Little Eagle & Mich</Title>
         <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
       </Container>
@@ -34,14 +34,13 @@ const Container = styled.div`
   position: fixed;
   padding: ${padding.small};
   top: 0;
-  height: 7rem;
-  box-shadow: ${shadow.dp1};
+  height: 8.6rem;
   z-index: 5;
   ${props => props.scrollY > 0 && css`
     box-shadow: ${shadow.dp6};
   `}
   ${props => props.scrolled && !props.toggled && css`
-    top: -7rem;
+    top: -8.6rem;
   `}
   ${props => props.toggled && css `
     background-color: #24272E;

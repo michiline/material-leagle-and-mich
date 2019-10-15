@@ -3,7 +3,6 @@ import { padding } from '../../style'
 
 const IconBase = styled.button`
   background: url(${props => props.img.src}) center no-repeat;
-  padding: ${padding.small};
   object-fit: cover;
   border: none;
   cursor: pointer;
@@ -32,9 +31,8 @@ export const BigIcon = styled(IconBase)`
 
 export const Logo = styled.button`
   background: url(${props => props.img.src}) center no-repeat;
-  width: 48px;
-  height: 48px;
-  padding: ${padding.smallest};
+  width: 75px;
+  height: 66px;
   object-fit: cover;
   border: none;
   cursor: pointer;

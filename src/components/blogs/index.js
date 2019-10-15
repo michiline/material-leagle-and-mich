@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
 import { Home } from './components'
-import { Soca, Krka, Kuba } from './content'
+import { Soca, Krka, Tara, Kuba } from './content'
 
 const Blogs = ({ match }) => {
   return (
@@ -11,6 +11,7 @@ const Blogs = ({ match }) => {
       <Route exact path={match.path} component={Home} />
       <Route exact path={`${match.path}/soca`} component={Soca} />
       <Route exact path={`${match.path}/krka`} component={Krka} />
+      <Route exact path={`${match.path}/tara`} component={Tara} />
       <Route exact path={`${match.path}/kuba`} component={Kuba} />
     </Switch>
   )

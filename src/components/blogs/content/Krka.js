@@ -10,7 +10,7 @@ const Krka = () => {
       <Container>
         <CoverImg img={krkaCover}/>
         <BlogContainer>
-          <Header>Rujanska avantura oko Krke</Header>
+          <Header>Slapovi Krke</Header>
           <Intro>
             Želimo obići sve nacionalne parkove u Hrvatskoj.
             Sunčani rujanski vikend idealna je prilika da obiđemo još jedan, naš 6.

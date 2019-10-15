@@ -30,11 +30,11 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${padding.smallest};
+  padding: ${padding.small};
 `
 
 const Title = styled(G.Subtitle2)`
-  padding: ${padding.smallest};
+  padding: ${padding.small};
   color: white;
   font-family: 'Montserrat';
 `
@@ -49,6 +49,7 @@ const FacebookIcon = styled(G.Icon)`
   }
   position: relative;
   overflow: hidden;
+  margin-right: -3px;
 `
 
 const InstagramIcon = styled(G.Icon)`

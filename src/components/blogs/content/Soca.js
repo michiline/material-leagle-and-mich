@@ -10,7 +10,7 @@ const Soca = () => {
       <Container>
         <CoverImg img={socaCover}/>
         <BlogContainer>
-          <Header>Kampiranje na Soči</Header>
+          <Header>Smaragdna Rijeka</Header>
           <Intro>
             Svaki produženi vikend idealna je prilika za putovanje.
             Tako smo mi za ovaj odlučili skočiti do susjedne nam Slovenije. Htjeli smo nešto, blizu, zanimljivo, u prirodi i odluka je pala na predivnu dolinu rijeke Soče.

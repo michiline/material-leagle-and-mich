@@ -63,6 +63,29 @@ export const krka = [
   { id: 10, src: `${process.env.PUBLIC_URL}/img/blogs/krka/11.jpg` }
 ]
 
+export const tara = [
+  { id: 0, src: `${process.env.PUBLIC_URL}/img/blogs/tara/1.jpg` },
+  { id: 1, src: `${process.env.PUBLIC_URL}/img/blogs/tara/2.jpg` },
+  { id: 2, src: `${process.env.PUBLIC_URL}/img/blogs/tara/3.jpg` },
+  { id: 3, src: `${process.env.PUBLIC_URL}/img/blogs/tara/4.jpg` },
+  { id: 4, src: `${process.env.PUBLIC_URL}/img/blogs/tara/5.jpg` },
+  { id: 5, src: `${process.env.PUBLIC_URL}/img/blogs/tara/6.jpg` },
+  { id: 6, src: `${process.env.PUBLIC_URL}/img/blogs/tara/7.jpg` },
+  { id: 7, src: `${process.env.PUBLIC_URL}/img/blogs/tara/8.jpg` },
+  { id: 8, src: `${process.env.PUBLIC_URL}/img/blogs/tara/9.jpg` },
+  { id: 9, src: `${process.env.PUBLIC_URL}/img/blogs/tara/10.jpg` },
+  { id: 10, src: `${process.env.PUBLIC_URL}/img/blogs/tara/11.jpg` },
+  { id: 11, src: `${process.env.PUBLIC_URL}/img/blogs/tara/12.jpg` },
+  { id: 12, src: `${process.env.PUBLIC_URL}/img/blogs/tara/13.jpg` },
+  { id: 13, src: `${process.env.PUBLIC_URL}/img/blogs/tara/14.jpg` },
+  { id: 14, src: `${process.env.PUBLIC_URL}/img/blogs/tara/15.jpg` },
+  { id: 15, src: `${process.env.PUBLIC_URL}/img/blogs/tara/16.jpg` },
+  { id: 16, src: `${process.env.PUBLIC_URL}/img/blogs/tara/17.jpg` },
+  { id: 17, src: `${process.env.PUBLIC_URL}/img/blogs/tara/18.jpg` },
+  { id: 18, src: `${process.env.PUBLIC_URL}/img/blogs/tara/19.jpg` },
+  { id: 19, src: `${process.env.PUBLIC_URL}/img/blogs/tara/20.jpg` }
+]
+
 export const kuba = [
   { id: 0, src: `${process.env.PUBLIC_URL}/img/blogs/kuba/1.jpg` },
 ]
@@ -73,7 +96,9 @@ export const socaCover = {
 export const krkaCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/krka/cover.jpg`
 }
-
+export const taraCover = {
+  src: `${process.env.PUBLIC_URL}/img/blogs/tara/cover.jpg`
+}
 export const kubaCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/kuba/cover.jpg`
 }
@@ -122,6 +147,10 @@ export const menu = {
 
 export const logoSmall = {
   src: `${process.env.PUBLIC_URL}/img/header/logo-header-small.png`
+}
+
+export const logo = {
+  src: `${process.env.PUBLIC_URL}/img/header/logo.png`
 }
 
 export const ana = {

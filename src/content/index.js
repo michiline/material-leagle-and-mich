@@ -1,4 +1,4 @@
-import { slideshow, soca, krka, kuba } from '../images'
+import { slideshow, soca, krka, tara, kuba } from '../images'
 
 export const blogsDescription = [
   {
@@ -17,25 +17,11 @@ export const blogsDescription = [
     url: '/blogs/krka'
   },
   {
-    img: kuba[0],
-    title: 'Viva La Revolución!',
-    subtitle: 'Kuba',
-    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
-    url: '/blogs/kuba'
-  },
-  {
-    img: kuba[0],
-    title: 'Viva La Revolución!',
-    subtitle: 'Kuba',
-    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
-    url: '/blogs/kuba'
-  },
-  {
-    img: kuba[0],
-    title: 'Viva La Revolución!',
-    subtitle: 'Kuba',
-    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
-    url: '/blogs/kuba'
+    img: tara[19],
+    title: 'Najlepša planina',
+    subtitle: 'Tara',
+    description: 'Moram smislit neki tekst. Trenutno neka samo stoji nesto, mozda jos malo duze posto su ostali tekstovi duzi.',
+    url: '/blogs/tara'
   },
   {
     img: kuba[0],
@@ -58,23 +44,13 @@ export const galleryDescription = [
     url: '/gallery/krka'
   },
   {
-    img: kuba[0],
-    title: 'Kuba',
-    url: '/gallery/kuba'
+    img: tara[0],
+    title: 'Tara',
+    url: '/gallery/tara'
   },
   {
     img: kuba[0],
     title: 'Kuba',
     url: '/gallery/kuba'
-  },
-  {
-    img: kuba[0],
-    title: 'Kuba',
-    url: '/gallery/kuba'
-  },
-  {
-    img: kuba[0],
-    title: 'Kuba',
-    url: '/gallery/kuba'
-  },
+  }
 ]

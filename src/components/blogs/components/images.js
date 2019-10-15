@@ -5,7 +5,7 @@ import { padding } from '../../../style'
 
 export const ImgRow = styled.div`
   display: flex;
-  padding: ${padding.smallest} 0 ${padding.smallest} 0;
+  padding: 0 0 ${padding.smallest} 0;
 `
 
 export const ImgWrap = styled.div`

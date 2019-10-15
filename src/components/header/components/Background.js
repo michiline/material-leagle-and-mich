@@ -5,7 +5,7 @@ import * as G from '../../general'
 
 const BackgroundContainer = styled.div`
   position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0; right: 0; bottom: 0;
   width: 0;
   height: 100vh;
   background-color: #24272E;
