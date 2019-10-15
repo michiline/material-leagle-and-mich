@@ -10,14 +10,14 @@ const Tara = () => {
       <Container>
         <CoverImg img={taraCover}/>
         <BlogContainer>
-          <Header>Najlepša planina</Header>
+          <Header>Najlepša Planina</Header>
           <Intro>
             „Mislave kad ćemo na Taru? Mislave, a Tara?
             Daaaj idemo na Taru, izgleda divno!
             Uuuu Ana, Tara stvarno izgleda divno.“
-            I tako mi o Tari već mjesecima. A i više.
+            I tako mi o Tari već mjesecima. Možda i duže.
             Ja bih to sve sad i odmah posjetila, ali ne ide to baš tako pa moramo čekati da se prilike stvore.
-            A ovoga puta i jesu.
+            Napokon i jesu!
           </Intro>
           <Text>
             Što radiš kad ideš na vjenčanje u Mladenovac, u Hrvatskoj je produženi vikend i imaš rodbinu u Sremskoj Mitrovici s vikendicom na Tari?
@@ -43,10 +43,10 @@ const Tara = () => {
           </ImgRow>
           <Text>
             Obilazak Tare smo počeli šetnjom po okolnoj šumi.
-            Leo (pas) je bio posebno oduševljen time.
-            S potpunim pravom ja bih rekla, jer šetnja šumom u jesen je najljepša šetnja šumom.
-            Na jednu stranu sela smo išli do vidikovca s pogledom na jezero.
-            U zraku se osjeća da smo na planini i da možemo disati punim plućima.
+            Leo (pas) bio je posebno oduševljen.
+            Rekla bih s potpunim pravom jer je šetnja šumom u jesen najljepša šetnja šumom.
+            Na jednu stranu sela smo pošli smo do vidikovca s pogledom na jezero.
+            U zraku se osjeća da smo na planini i da napokon možemo disati punim plućima.
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
@@ -75,8 +75,8 @@ const Tara = () => {
             </ImgWrap>
           </ImgRow>
           <Text>
-            Druga strana i drugi dio šetnje je uključivao napuštenu staru školu, stare kolibe, i navodno jako poznatu Milicu kod koje se pune zalihe kajmaka i sira.
-            Zanimljiva je informacija da je na ovom mjestu nekad postojala škola i da je puno više ljudi tu obitavalo cijele godine.
+            Druga strana i drugi dio šetnje uključivao je napuštenu staru školu, stare kolibe, i na široko poznatu Milicu kod koje se obnavljaju zalihe kajmaka i sira.
+            Na ovom mjestu je nekad postojala škola i puno više ljudi koji su tu obitavali cijele godine.
             Sada su to uglavnom vikendice uz ponekog starosjedioca koji se neda iz ovog kraja.
           </Text>
           <ImgRow>
@@ -97,7 +97,7 @@ const Tara = () => {
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Korov isprd kolibe</ImgOverlay>
+              <ImgOverlay>Korov ispred kolibe</ImgOverlay>
               <Img img={tara[9]}/>
             </ImgWrap>
           </ImgRow>
@@ -115,11 +115,11 @@ const Tara = () => {
             Popodne je bilo rezervirano za kratki roadtrip.
             Preko parka Tara do parka Mokra gora i Drvengrada.
             Nikad niste čuli za Drvengrad? Bez brige, nismo ni mi.
-            Ako je suditi po količini Kineza na parkiralištu, bili smo na pravom mjestu.
+            Ako je suditi po količini Kineza na parkiralištu, stigli smo na pravo mjesto.
           </Text>
           <Text>
-            Drvengrad iliti Mećavnik je selo koje je izgradio Emir Kusturica za svoj film.
-            Sada se to pretvorilo u mjesto na kojem možete iznajmiti sobu za spavanje prošetati se ulicom Ive Andriće ili Che Guevare.
+            Drvengrad iliti Mećavnik je selo koje je Emir Kusturica izgradio za svoj film.
+            Danas je to mjesto na kojem možete iznajmiti sobu za spavanje ili prošetati se ulicom Ive Andriće ili Che Guevare.
             Drvengrad ima kino, knjižnicu, restoran kao i slastičarnicu u kojem se može probati stari domaći sok – boza.
             Nama se svidio!
           </Text>
@@ -134,7 +134,7 @@ const Tara = () => {
             </ImgWrapLandscape>
           </ImgRow>
           <Text>
-            Ako vas je put već doveo do Drvengrada, zgodno je odmah posjetiti i Šargansku osmicu – pruga uskog kolosjeka na kojoj se nudi zanimljiva 2.5 satna vožnja po planinama i prirodi.
+            Ako vas je put već doveo do Drvengrada, zgodno je odmah posjetiti i Šargansku osmicu – pruga vrlo uskog kolosjeka na kojoj se nudi zanimljiva 2.5 satna vožnja po planinama i prirodi.
             Nažalost ovaj put nismo uspjeli uloviti vlak, ali zato se vraćamo ponovno da doživimo i to iskustvo.
           </Text>
           <ImgRow>
@@ -145,7 +145,7 @@ const Tara = () => {
           </ImgRow>
           <Text>
             Sljedeći dan, na povratku kući, stali smo na još jedno posebno mjesto.
-            Kad netko izgradi vikendicu na sred rijeke, na ogromnom kamenu i to 4 puta (jer Drini naraste vodostaj) to se mora napraviti pauza i uslikati koja fotkica.
+            Kad netko izgradi vikendicu na sred rijeke, na ogromnom kamenu i to 4 puta (jer Drini naraste vodostaj), mora se napraviti pauza i uslikati koja fotkica.
             Kućica na Drini…
           </Text>
           <ImgRow>
@@ -162,7 +162,7 @@ const Tara = () => {
           </ImgRow>
           <Intro>
             Zanimljiv izlet, pun predivnih lokacija, a čuli smo da ih ima još puno u blizini.
-            Jedno je stoga sigurno – vraćamo se opet. („Mislaveee kad ćemo opet na Taru?!“)
+            Stoga jedno je sigurno – vraćamo se opet. („Mislaveee kad ćemo opet na Taru?!“)
           </Intro>
         </BlogContainer>
       </Container>

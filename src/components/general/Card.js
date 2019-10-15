@@ -22,7 +22,7 @@ const Card = ({ history, img, title, subtitle, description, url }) => {
       <Secondary collapse={!clicked}>
         <SupportingText>{description}</SupportingText>
         <Actions>
-          <RippleComponent onClick={ e => to({ history, url })} Component={Button} value={'Read More'} color={'#8B4608'} componentRef={readButtonRef}/>
+          <RippleComponent onClick={ e => to({ history, url })} Component={Button} value={'Pročitaj Više'} color={'#8B4608'} componentRef={readButtonRef}/>
           <RippleComponent Component={ShareIcon} img={share} color={'#8B4608'} componentRef={shareIconRef}/>
         </Actions>
       </Secondary>

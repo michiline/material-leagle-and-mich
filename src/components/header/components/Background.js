@@ -2,10 +2,11 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { withRouter } from 'react-router-dom'
 import * as G from '../../general'
+import { shadow } from '../../../style'
 
 const BackgroundContainer = styled.div`
   position: fixed;
-  top: 0; right: 0; bottom: 0;
+  top: 0; right: 0; left: 0; bottom: 0;
   width: 0;
   height: 100vh;
   background-color: #24272E;
@@ -19,6 +20,8 @@ const BackgroundContainer = styled.div`
     visibility: visible !important;
   `}
 `
+
+    // box-shadow: ${shadow.dp8};
 
 const Center = styled.div`
   display: flex;
