@@ -95,6 +95,7 @@ const MenuIcon = styled(G.ToggleIcon)`
   &:active {
     transform: translateY(2px);
   }
+  margin-left: 20px;
 `
 
 const Logo = styled(G.Logo)`
