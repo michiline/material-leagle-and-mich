@@ -48,7 +48,7 @@ const GreyContainer = styled.div`
   grid-column: 1 / 4;
   grid-row: 1 / 4;
   background-color: #24272E;
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: 1;
   height: 100%;
 `
@@ -68,8 +68,9 @@ const Text = styled.div`
 `
 
 const H1 = styled(G.H1)`
-  font-family: 'Lobster';
   padding: ${padding.large};
+  font-weight: 700 !important;
+  font-family: 'Mansalva';
 `
 
 const H2 = styled(G.H3)`
