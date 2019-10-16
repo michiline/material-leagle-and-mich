@@ -80,6 +80,12 @@ const H2 = styled(G.H3)`
 const H3 = styled(G.H4)`
   color: white;
   font-family: 'Amatic SC';
+  @media only screen and (min-width: 900px) {
+    font-size: 3.45rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.6;
+  }
 `
 
 const Arrow = styled.div`

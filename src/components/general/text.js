@@ -17,10 +17,10 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-family: 'Helvetica';
-  font-size: 3.75rem;
+  font-size: 6rem;
   font-weight: 100;
-  letter-spacing: -0.03125rem;
-  line-height: 1.3;
+  letter-spacing: -0.5rem;
+  line-height: 1.6;
 `
 
 export const H3 = styled.h3`
@@ -33,29 +33,17 @@ export const H3 = styled.h3`
 
 export const H4 = styled.h4`
   font-family: 'Helvetica';
-  font-size: 2.15625rem;
+  font-size: 2.45rem;
   font-weight: 400;
-  letter-spacing: 0.015625rem;
-  line-height: 1.3;
-  @media only screen and (min-width: 900px) {
-    font-size: 3.45rem;
-    font-weight: 400;
-    letter-spacing: 0.025rem;
-    line-height: 1.6;
-  }
+  letter-spacing: 0.025rem;
+  line-height: 1.6;
 `
 
 export const H5 = styled.h5`
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.3;
-  @media only screen and (min-width: 900px) {
-    font-size: 2.4rem;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.6;
-  }
+  line-height: 1.6;
 `
 
 export const H6 = styled.h6`
