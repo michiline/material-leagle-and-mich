@@ -11,7 +11,7 @@ const About = () => {
   const [visible] = useIntersection({ elements: refs, threshold: 0.1 })
   return (
     <Container>
-      <Header>About Us</Header>
+      <Header>O Nama</Header>
       <ContentContainer>
         <RowContainer visible={visible[0]} ref={refs[0]} id={0}>
           <TextContainer>
@@ -62,7 +62,7 @@ const Subtitle = styled(G.Body2)`
 `
 
 const ContentContainer = styled.div`
-  padding-bottom: ${padding.medium};
+  padding: ${padding.small};
 `
 
 const RowContainer = styled.div`

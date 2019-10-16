@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <Container>
       <Slideshow />
-      <CardGrid header={'Travel Blogs'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
-      <Gallery header={'Travel Gallery'} url={'/gallery'} imgUrl={'/gallery/home'} />
+      <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
+      <Gallery header={'Galerija'} url={'/gallery'} imgUrl={'/gallery/home'} />
       <About />
     </Container>
   )

@@ -21,7 +21,7 @@ const CardGrid = ({ history, header, url, content }) => {
 //
 
 const Container = styled(FlexColumnCenterContainer)`
-
+  padding-bottom: 0;
 `
 
 const Header = styled(H3)`
@@ -35,6 +35,7 @@ const Header = styled(H3)`
 `
 
 const Grid = styled.div`
+  padding-top: ${padding.small};
   display: grid;
   grid-template-columns: 100%
   @media only screen and (min-width: 600px) {

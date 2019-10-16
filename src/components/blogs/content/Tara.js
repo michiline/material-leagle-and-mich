@@ -45,7 +45,7 @@ const Tara = () => {
             Obilazak Tare smo počeli šetnjom po okolnoj šumi.
             Leo (pas) bio je posebno oduševljen.
             Rekla bih s potpunim pravom jer je šetnja šumom u jesen najljepša šetnja šumom.
-            Na jednu stranu sela smo pošli smo do vidikovca s pogledom na jezero.
+            Na jednu stranu sela pošli smo do vidikovca s pogledom na jezero.
             U zraku se osjeća da smo na planini i da napokon možemo disati punim plućima.
           </Text>
           <ImgRow>

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Container>
       <CoverImg img={blogsCover}/>
-      <CardGrid header={'Travel Blogs'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
+      <CardGrid header={'Putopisi'} url={'/blogs'} content={blogsDescription}/>
     </Container>
   )
 }

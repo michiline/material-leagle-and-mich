@@ -54,11 +54,11 @@ const Link = styled(G.H4)`
 const Background = ({ history, show, setToggled }) =>
   <BackgroundContainer show={show}>
     <Center>
-      <Link onClick={e => to({ history, url: '/', setToggled})}>Home</Link>
-      <Link onClick={e => to({ history, url: '/blogs', setToggled})}>Travel Blogs</Link>
-      <Link onClick={e => to({ history, url: '/gallery', setToggled})}>Travel Gallery</Link>
-      <Link>Ana's portfolio</Link>
-      <Link>About us</Link>
+      <Link onClick={e => to({ history, url: '/', setToggled})}>Početna</Link>
+      <Link onClick={e => to({ history, url: '/blogs', setToggled})}>Putopisi</Link>
+      <Link onClick={e => to({ history, url: '/gallery', setToggled})}>Galerija</Link>
+      <Link>Anin portfolio</Link>
+      <Link>O Nama</Link>
     </Center>
   </BackgroundContainer>
 

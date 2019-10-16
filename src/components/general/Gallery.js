@@ -94,6 +94,7 @@ const GalleryContainer = styled.div.attrs({
   id: 'gallery'
   })
 `
+  margin-top: calc(${padding.small} - 2px);
 `
 
 const Image = styled.img.attrs(props => ({

@@ -17,7 +17,9 @@ const ImageGrid = ({ history, header, url, content }) => {
 }
 
 const Container = styled(FlexColumnCenterContainer)`
-
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: ${padding.large};
 `
 
 const Header = styled(H3)`
@@ -39,26 +41,25 @@ const Grid = styled.div`
   @media only screen and (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media only screen and (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @media only screen and (min-width: 1400px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
 `
 
 const ImgContainer = styled.div`
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  width: 100%;
+  height: 100%;
 `
 
 const Img = styled.img.attrs(props => ({
   src: props.img.src
   }))`
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+
 `
 
 const Image = (props) =>

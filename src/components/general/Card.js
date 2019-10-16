@@ -57,11 +57,6 @@ const Secondary = styled.div`
   overflow: hidden;
   justify-content: space-between;
   transition: max-height 0.4s ease-in-out;
-  @media only screen and (max-width: 600px) {
-    ${props => props.collapse && css`
-      max-height: 0;
-    `}
-  }
 `
 
 const Title = styled(H6)`
