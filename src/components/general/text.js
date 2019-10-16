@@ -6,7 +6,7 @@ export const H1 = styled.h1`
   font-size: 2.5rem;
   font-weight: 100;
   letter-spacing: -0.09375rem;
-  line-height: 1.3;
+  line-height: 1;
   @media only screen and (min-width: 500px) {
     font-size: 4rem;
     font-weight: 100;
@@ -45,13 +45,13 @@ export const H3 = styled.h3`
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.6;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 800px) {
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 1.6;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 1050px) {
     font-size: 4.8rem;
@@ -66,18 +66,18 @@ export const H4 = styled.h4`
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.025rem;
-  line-height: 1.6;
+  line-height: 1;
   @media only screen and (min-width: 500px) {
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 0.025rem;
-    line-height: 1.6;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 800px) {
     font-size: 3rem;
     font-weight: 400;
     letter-spacing: 0.025rem;
-    line-height: 1.6;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 1050px) {
     font-size: 3.45rem;
