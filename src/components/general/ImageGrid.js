@@ -17,9 +17,7 @@ const ImageGrid = ({ history, header, url, content }) => {
 }
 
 const Container = styled(FlexColumnCenterContainer)`
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: ${padding.large};
+
 `
 
 const Header = styled(H3)`
@@ -33,19 +31,23 @@ const Header = styled(H3)`
 `
 
 const Grid = styled.div`
+  padding: ${padding.small};
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100%);
-  @media only screen and (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media only screen and (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, calc((100vw - 5*${padding.small}) / 2));
+  grid-template-rows: repeat(4, calc((100vw - 5*${padding.small}) / 2));
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: repeat(3, calc((100vw - 6*${padding.small}) / 3));
+    grid-template-rows: repeat(3, calc((100vw - 6*${padding.small}) / 3));
   }
   @media only screen and (min-width: 1400px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, calc((100vw - 7*${padding.small}) / 4));
+    grid-template-rows: repeat(2, calc((100vw - 7*${padding.small}) / 4));
   }
+  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  height: min-content;
 `
 
 const ImgContainer = styled.div`
