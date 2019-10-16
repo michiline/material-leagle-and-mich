@@ -2,13 +2,25 @@ import styled from 'styled-components'
 import { padding } from '../../style'
 
 export const H1 = styled.h1`
-  font-family: 'Helvetica';
-  font-size: 6rem;
+  font-family: 'Helvetica Neue';
+  font-size: 2.5rem;
   font-weight: 100;
   letter-spacing: -0.09375rem;
   line-height: 1.3;
-  @media only screen and (min-width: 900px) {
-    font-size: 9.6rem;
+  @media only screen and (min-width: 500px) {
+    font-size: 4rem;
+    font-weight: 100;
+    letter-spacing: -0.09375rem;
+    line-height: 1.3;
+  }
+  @media only screen and (min-width: 800px) {
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: -0.09375rem;
+    line-height: 1.3;
+  }
+  @media only screen and (min-width: 1050px) {
+    font-size: 8rem;
     font-weight: 100;
     letter-spacing: -0.15rem;
     line-height: 1.6;
@@ -16,7 +28,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 6rem;
   font-weight: 100;
   letter-spacing: -0.5rem;
@@ -24,19 +36,55 @@ export const H2 = styled.h2`
 `
 
 export const H3 = styled.h3`
-  font-family: 'Helvetica';
-  font-size: 4.8rem;
+  font-family: 'Helvetica Neue';
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6;
+  @media only screen and (min-width: 500px) {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+  @media only screen and (min-width: 800px) {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+  @media only screen and (min-width: 1050px) {
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
 `
 
 export const H4 = styled.h4`
-  font-family: 'Helvetica';
-  font-size: 2.45rem;
+  font-family: 'Helvetica Neue';
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.025rem;
   line-height: 1.6;
+  @media only screen and (min-width: 500px) {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.6;
+  }
+  @media only screen and (min-width: 800px) {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.6;
+  }
+  @media only screen and (min-width: 1050px) {
+    font-size: 3.45rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.6;
+  }
 `
 
 export const H5 = styled.h5`
@@ -47,7 +95,7 @@ export const H5 = styled.h5`
 `
 
 export const H6 = styled.h6`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.0125rem;
@@ -55,7 +103,7 @@ export const H6 = styled.h6`
 `
 
 export const Subtitle1 = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.015rem;
@@ -63,7 +111,7 @@ export const Subtitle1 = styled.p`
 `
 
 export const Subtitle2 = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.01rem;
@@ -71,7 +119,7 @@ export const Subtitle2 = styled.p`
 `
 
 export const Body1 = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
@@ -79,7 +127,7 @@ export const Body1 = styled.p`
 `
 
 export const Body2 = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.025rem;
@@ -87,7 +135,7 @@ export const Body2 = styled.p`
 `
 
 export const Button = styled.button`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.125rem;
@@ -110,7 +158,7 @@ export const ButtonTransparent = styled(Button)`
 `
 
 export const Caption = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.04rem;
@@ -118,7 +166,7 @@ export const Caption = styled.p`
 `
 
 export const Overline = styled.p`
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.15rem;

@@ -14,7 +14,7 @@ const Slideshow = ({ slideshowRef }) => {
       <Text>
         <H1>Little Eagle & Mich</H1>
         <H2>Dobrodošli na našu putopisnu stranicu!</H2>
-        <H3>(Mjesto gdje dijelimo iskustva s putovanja u obliku teksta, slike i koda.)</H3>
+        <H3>(Mjesto gdje dijelimo iskustva s putovanja u obliku teksta, slike i koda)</H3>
         <IWrap>
           <I/>
         </IWrap>
@@ -63,12 +63,11 @@ const Text = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  width: 100%;
   min-width: max-content;
 `
 
 const H1 = styled(G.H1)`
-  padding: ${padding.large};
+  padding: ${padding.medium};
   font-weight: 700 !important;
   font-family: 'Mansalva';
 `
@@ -81,12 +80,6 @@ const H2 = styled(G.H3)`
 const H3 = styled(G.H4)`
   color: white;
   font-family: 'Amatic SC';
-  @media only screen and (min-width: 900px) {
-    font-size: 3.45rem;
-    font-weight: 400;
-    letter-spacing: 0.025rem;
-    line-height: 1.6;
-  }
 `
 
 const Arrow = styled.div`

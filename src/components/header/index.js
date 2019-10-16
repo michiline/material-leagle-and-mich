@@ -15,7 +15,7 @@ const Header = ({ history }) => {
     <>
       <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
         <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logo}/>
-        <Title onClick={ e => to({ setToggled })}>LITTLE EAGLE & MICH</Title>
+        <Title onClick={ e => to({ setToggled })}>Little Eagle & Mich</Title>
         <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
       </Container>
       <Background show={toggled} setToggled={setToggled}/>
