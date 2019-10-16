@@ -16,7 +16,7 @@ const Home = () => {
 }
 
 const Container = styled.div`
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1100px) {
     padding-top: 8.6rem;
   }
 `

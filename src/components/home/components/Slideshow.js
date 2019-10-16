@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSlide } from '../../../hooks'
 import { arrow, slideshow } from '../../../images'
-import { shadow } from '../../../style'
+import { shadow, padding } from '../../../style'
+import * as G from '../../general'
 
 const Slideshow = ({ slideshowRef }) => {
   const imagesCount = slideshow.length
@@ -10,12 +11,22 @@ const Slideshow = ({ slideshowRef }) => {
   return (
     <Container>
       <PreviousArrow img={arrow.previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)}/>
+      <Text>
+        <H1>Little Eagle & Mich</H1>
+        <H2>Dobrodošli na našu putopisnu stranicu!</H2>
+        <H3>(Mjesto gdje dijelimo iskustva s putovanja u obliku teksta, slike i koda.)</H3>
+        <IWrap>
+          <I/>
+        </IWrap>
+      </Text>
+
       <Img img={slideshow[0]} activeId={activeId}/>
       <Img img={slideshow[1]} activeId={activeId}/>
       <Img img={slideshow[2]} activeId={activeId}/>
       <Img img={slideshow[3]} activeId={activeId}/>
       <Img img={slideshow[4]} activeId={activeId}/>
       <NextArrow img={arrow.next} onClick={e => setActiveId((activeId + 1) % imagesCount)} />
+      <GreyContainer />
     </Container>
   )
 }
@@ -29,7 +40,46 @@ const Container = styled.div`
   display: grid;
   gird-template-columns: 1fr 100% 1fr;
   grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
   box-shadow: ${shadow.dp1};
+`
+
+const GreyContainer = styled.div`
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  background-color: #24272E;
+  opacity: 0.3;
+  z-index: 1;
+  height: 100%;
+`
+
+const Text = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  z-index: 2;
+  opacity: 1;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 100%;
+  min-width: max-content;
+`
+
+const H1 = styled(G.H1)`
+  font-family: 'Lobster';
+  padding: ${padding.large};
+`
+
+const H2 = styled(G.H3)`
+  color: white;
+  font-family: 'Amatic SC';
+`
+
+const H3 = styled(G.H4)`
+  color: white;
+  font-family: 'Amatic SC';
 `
 
 const Arrow = styled.div`
@@ -59,6 +109,22 @@ const NextArrow = styled(Arrow)`
   grid-column: 3 / 4;
   grid-row: 2 / 3;
   justify-self: end;
+`
+
+const I = styled.i`
+  margin-top: ${padding.small};
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 12px;
+  transform: rotate(45deg);
+`
+
+const IWrap = styled.div`
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: ${G.bounce};
+  animation-timing-function: ease;
 `
 
 const Img = styled.img.attrs(props => ({
