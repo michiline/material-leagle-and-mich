@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { withRouter } from 'react-router-dom'
 import * as G from '../../general'
-import { shadow } from '../../../style'
+import { shadow, padding } from '../../../style'
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -35,14 +35,17 @@ const Center = styled.div`
   justify-content: center;
 `
 
-const Link = styled(G.H4)`
+const Link = styled.p`
+  font-size: 4rem;
+  letter-spacing: 0;
+  line-height: 1.3;
+  padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
   width: max-content;
   color: white;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 2rem;
   &:hover {
     cursor: pointer;
   }
