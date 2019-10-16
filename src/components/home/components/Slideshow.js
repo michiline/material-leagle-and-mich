@@ -63,18 +63,20 @@ const Text = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
-  min-width: max-content;
+  text-align: center;
 `
 
 const H1 = styled(G.H1)`
   padding: ${padding.medium};
   font-weight: 700 !important;
   font-family: 'Mansalva';
+  min-width: max-content;
 `
 
 const H2 = styled(G.H3)`
   color: white;
   font-family: 'Amatic SC';
+  min-width: max-content;
 `
 
 const H3 = styled(G.H4)`
