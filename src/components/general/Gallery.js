@@ -90,6 +90,7 @@ const Header = styled.p`
   &:active {
     transform: translateY(2px);
   }
+  cursor: pointer;
 `
 
 const GalleryContainer = styled.div.attrs({

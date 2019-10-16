@@ -4,15 +4,17 @@ import { H3, H5, H6, Body1, Body2, Overline } from '../../general'
 import {  star } from '../../../images'
 import { padding, margin } from '../../../style'
 
-export const Header = styled(H3)`
+export const Header = styled.p`
+  font-size: 4.8rem;
+  letter-spacing: 0;
+  line-height: 1.6;
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
-  cursor: pointer;
   &:active {
     transform: translateY(2px);
   }
-  text-align: center;
+  cursor: pointer;
 `
 
 export const Intro = styled(Body1)`

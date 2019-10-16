@@ -31,6 +31,7 @@ const Header = styled.p`
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
+  cursor: pointer;
   &:active {
     transform: translateY(2px);
   }
