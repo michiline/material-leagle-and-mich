@@ -34,13 +34,13 @@ const Container = styled.div`
   position: fixed;
   padding: ${padding.small};
   top: 0;
-  height: 8.6rem;
+  height: 9rem;
   z-index: 5;
   ${props => props.scrollY > 0 && css`
     box-shadow: ${shadow.dp6};
   `}
   ${props => props.scrolled && !props.toggled && css`
-    top: -8.6rem;
+    top: -9rem;
   `}
   ${props => props.toggled && css `
     background-color: #24272E;
@@ -48,7 +48,7 @@ const Container = styled.div`
   `}
 `
 
-const Title = styled(G.H4)`
+const Title = styled(G.H3)`
   justify-self: center;
   min-width: max-content;
   font-family: 'Amatic SC';
