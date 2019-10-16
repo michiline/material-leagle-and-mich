@@ -43,7 +43,11 @@ const Container = styled.div`
 
   // background-image: linear-gradient(-45deg, #EEF0F3 0%, #F6F5F3 100%);
 
-const Header = styled(G.H3)`
+// h3
+const Header = styled.p`
+  font-size: 4.8rem;
+  letter-spacing: 0;
+  line-height: 1.6;
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;

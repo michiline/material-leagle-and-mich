@@ -27,7 +27,7 @@ const Container = styled.div`
   width: 100%;
   background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: min-content 1fr min-content;
   align-items: center;
   justify-content: center;
   transition: all .2s cubic-bezier(.4,0,.2,.1);
@@ -48,7 +48,25 @@ const Container = styled.div`
   `}
 `
 
-const Title = styled(G.H3)`
+// h3
+const Title = styled.p`
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  @media only screen and (min-width: 500px) {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
+  @media only screen and (min-width: 1050px) {
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
   justify-self: center;
   min-width: max-content;
   font-family: 'Amatic SC';
@@ -72,8 +90,8 @@ const MenuIcon = styled(G.ToggleIcon)`
   overflow: hidden;
   align-self: center;
   justify-self: end;
-  width: 48px;
-  height: 48px;
+  width: 55px;
+  height: 55px;
   &:active {
     transform: translateY(2px);
   }

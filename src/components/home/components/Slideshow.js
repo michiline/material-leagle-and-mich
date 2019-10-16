@@ -13,13 +13,12 @@ const Slideshow = ({ slideshowRef }) => {
       <PreviousArrow img={arrow.previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)}/>
       <Text>
         <H1>Little Eagle & Mich</H1>
-        <H2>Dobrodošli na našu putopisnu stranicu!</H2>
-        <H3>(Mjesto gdje dijelimo iskustva s putovanja u obliku teksta, slike i koda)</H3>
+        <H2>Dobrodošli na putopisnu stranicu!</H2>
+        <H3>(U nastavku su iskustva s naših putovanja u obliku teksta, slika i videa)</H3>
         <IWrap>
           <I/>
         </IWrap>
       </Text>
-
       <Img img={slideshow[0]} activeId={activeId}/>
       <Img img={slideshow[1]} activeId={activeId}/>
       <Img img={slideshow[2]} activeId={activeId}/>
@@ -76,7 +75,7 @@ const H1 = styled(G.H1)`
 const H2 = styled(G.H3)`
   color: white;
   font-family: 'Amatic SC';
-
+  width: max-content;
 `
 
 const H3 = styled(G.H4)`

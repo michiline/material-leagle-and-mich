@@ -80,11 +80,13 @@ const sleep = (milliseconds) => {
 const Container = styled(FlexColumnCenterContainer)`
 `
 
-const Header = styled(H3)`
+const Header = styled.p`
+  font-size: 4.8rem;
+  letter-spacing: 0;
+  line-height: 1.6;
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
-  cursor: pointer;
   &:active {
     transform: translateY(2px);
   }
