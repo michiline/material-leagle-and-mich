@@ -70,7 +70,7 @@ const H1 = styled(G.H1)`
   padding: ${padding.medium};
   font-weight: 700 !important;
   font-family: 'Mansalva';
-  min-width: max-content;
+  width: max-content;
 `
 
 const H2 = styled(G.H3)`
