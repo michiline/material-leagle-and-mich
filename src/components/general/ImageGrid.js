@@ -95,7 +95,10 @@ const ImgOverlay = styled.button`
 
 const OverlayRow = styled.p`
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
   font-size: 4.8rem;
   letter-spacing: 0;
   line-height: 1.6;
