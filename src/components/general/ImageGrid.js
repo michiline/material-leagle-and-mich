@@ -10,11 +10,13 @@ const ImageGrid = ({ history, header, url, content }) => {
     <Container>
       <Header onClick={ e => to({ history, url })}>{header}</Header>
       <Grid>
-        {content.map((image, index) =>
-          <ImgContainer>
-            <ImgOverlay />
-            <OverlayRow>Cuba</OverlayRow>
-            <Image {...image} key={index} />
+        {content.map(({url, ...rest}, index) =>
+          <ImgContainer onClick={e => to({ history, url })} key={index}>
+            <OverlayGrey />
+            <OverlayCentered>
+              <OverlayRow>{rest.title}</OverlayRow>
+            </OverlayCentered>
+            <Img {...rest}/>
           </ImgContainer>
         )}
       </Grid>
@@ -68,6 +70,10 @@ const ImgContainer = styled.div`
   height: 100%;
   position: relative;
   border: ${shadow.dp1};
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
 `
 
 const Img = styled.img.attrs(props => ({
@@ -78,7 +84,7 @@ const Img = styled.img.attrs(props => ({
   object-fit: cover;
 `
 
-const ImgOverlay = styled.button`
+const OverlayGrey = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -86,36 +92,39 @@ const ImgOverlay = styled.button`
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
-  cursor: pointer;
   z-index: 1;
   opacity: 0.3;
   background-color: #24272E;
-  border: none;
 `
 
 const OverlayRow = styled.p`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
   font-size: 4.8rem;
   letter-spacing: 0;
   line-height: 1.6;
   padding: ${padding.medium};
   font-family: 'Amatic SC';
   font-weight: 700;
-  &:active {
-    transform: translateY(2px);
-  }
   color: white;
   z-index: 1;
+  user-select: none;
 `
 
-const Image = (props) =>
-  <ImgContainer>
-    <Img img={props.img}/>
-  </ImgContainer>
+const OverlayCentered = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  &:active ${OverlayRow} {
+    transform: translateY(2px);
+  }
+`
 
 const to = ({ history, url }) => {
   history.push(url)
