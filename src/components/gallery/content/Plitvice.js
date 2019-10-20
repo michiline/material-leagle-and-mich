@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CoverImg, Gallery } from '../../general'
-import { socaCover } from '../../../images'
+import { plitviceCover } from '../../../images'
 import { galleryDescription } from '../../../content'
 
-const Soca = () => {
+const Plitvice = () => {
   return (
     <Container>
-      <CoverImg img={socaCover}/>
-      <Gallery header={'Soča'} url={'/gallery/soca'} imgUrl={'/home'} />
+      <CoverImg img={plitviceCover}/>
+      <Gallery header={'Plitvička jezera'} url={'/gallery/plitvice'} imgUrl={'/plitvice'} />
     </Container>
   )
 }
@@ -19,4 +19,4 @@ const Container = styled.div`
   }
 `
 
-export default Soca
+export default Plitvice

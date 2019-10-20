@@ -1,4 +1,7 @@
-import { slideshow, soca, krka, tara, kuba } from '../images'
+import { slideshow, soca, krka, tara, kuba,
+  brijuniCover, dugiCover, barcelonaCover, budimpestaCover, fuzineCover, krupaCover, lastovoCover, londonCover,
+  mitrovicaCover, mljetCover, nassfeldCover, noviCover, parizCover, plitviceCover, taborCover, trakoscanCover, vranskoCover, zagrebCover, kubaCover
+ } from '../images'
 
 export const blogsDescription = [
   {
@@ -51,28 +54,98 @@ export const galleryDescription = [
     url: '/gallery/soca'
   },
   {
-    img: kuba[0],
+    img: brijuniCover,
+    title: 'Brijuni',
+    url: '/gallery/brijuni'
+  },
+  {
+    img: dugiCover,
+    title: 'Dugi Otok',
+    url: '/gallery/dugi'
+  },
+  {
+    img: barcelonaCover,
+    title: 'Barcelona',
+    url: '/gallery/barcelona'
+  },
+  {
+    img: budimpestaCover,
+    title: 'Budimpešta',
+    url: '/gallery/budimpesta'
+  },
+  {
+    img: fuzineCover,
+    title: 'Fužine',
+    url: '/gallery/fuzine'
+  },
+  {
+    img: kubaCover,
     title: 'Kuba',
     url: '/gallery/kuba'
   },
   {
-    img: tara[19],
-    title: 'Tara',
-    url: '/gallery/tara'
+    img: krupaCover,
+    title: 'Krupa',
+    url: '/gallery/krupa'
   },
   {
-    img: kuba[0],
-    title: 'Kuba',
-    url: '/gallery/kuba'
+    img: lastovoCover,
+    title: 'Lastovo',
+    url: '/gallery/lastovo'
   },
   {
-    img: krka[10],
-    title: 'Krka',
-    url: '/gallery/krka'
+    img: londonCover,
+    title: 'London',
+    url: '/gallery/london'
   },
   {
-    img: soca[4],
-    title: 'Soča',
-    url: '/gallery/soca'
+    img: mitrovicaCover,
+    title: 'Sremska Mitrovica',
+    url: '/gallery/mitrovica'
+  },
+  {
+    img: mljetCover,
+    title: 'Mljet',
+    url: '/gallery/mljet'
+  },
+  {
+    img: nassfeldCover,
+    title: 'Nassfeld',
+    url: '/gallery/nassfeld'
+  },
+  {
+    img: noviCover,
+    title: 'Novi Vinodolski',
+    url: '/gallery/novi'
+  },
+  {
+    img: parizCover,
+    title: 'Pariz',
+    url: '/gallery/pariz'
+  },
+  {
+    img: plitviceCover,
+    title: 'Plitvička Jezera',
+    url: '/gallery/plitvice'
+  },
+  {
+    img: taborCover,
+    title: 'Veliki Tabor',
+    url: '/gallery/tabor'
+  },
+  {
+    img: trakoscanCover,
+    title: 'Trakošćan',
+    url: '/gallery/trakoscan'
+  },
+  {
+    img: vranskoCover,
+    title: 'Vransko Jezero',
+    url: '/gallery/vransko'
+  },
+  {
+    img: zagrebCover,
+    title: 'Zagreb',
+    url: '/gallery/zagreb'
   },
 ]

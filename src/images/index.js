@@ -102,7 +102,6 @@ export const taraCover = {
 export const kubaCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/kuba/cover.jpg`
 }
-
 export const blogsCover = {
   src: `${process.env.PUBLIC_URL}/img/blogs/cover.jpg`
 }
@@ -162,3 +161,78 @@ export const mislav = {
 }
 
 export const star = `${process.env.PUBLIC_URL}/img/blogs/star.svg`
+
+
+// gallery photos
+
+export const brijuniCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/brijuni/img7.jpg`
+}
+
+export const dugiCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/dugi/img17.jpg`
+}
+
+export const budimpestaCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/budimpesta/img57.jpg`
+}
+
+export const barcelonaCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/barcelona/img34.jpg`
+}
+
+export const fuzineCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/fuzine/img3.jpg`
+}
+
+export const krupaCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/krupa/img3.jpg`
+}
+
+export const lastovoCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/lastovo/img23.jpg`
+}
+
+export const londonCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/london/img18.jpg`
+}
+
+export const mitrovicaCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/mitrovica/img11.jpg`
+}
+
+export const mljetCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/mljet/img62.jpg`
+}
+
+export const nassfeldCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/nassfeld/img7.jpg`
+}
+
+export const noviCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/novi/img112.jpg`
+}
+
+export const parizCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/pariz/img63.jpg`
+}
+
+export const plitviceCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/plitvice/img19.jpg`
+}
+
+export const taborCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/tabor/img3.jpg`
+}
+
+export const trakoscanCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/trakoscan/img0.jpg`
+}
+
+export const vranskoCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/vransko/img2.jpg`
+}
+
+export const zagrebCover = {
+  src: `${process.env.REACT_APP_SERVER}/images/zagreb/img53.jpg`
+}

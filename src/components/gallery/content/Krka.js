@@ -8,7 +8,7 @@ const Krka = () => {
   return (
     <Container>
       <CoverImg img={krkaCover}/>
-      <Gallery header={'Krka'} url={'/gallery/krka'} imgUrl={'/gallery/home'} />
+      <Gallery header={'Krka'} url={'/gallery/krka'} imgUrl={'/krka'} />
     </Container>
   )
 }

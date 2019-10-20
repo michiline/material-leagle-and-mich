@@ -110,7 +110,9 @@ const A = styled.a.attrs(props => ({
   href: props.img.src
 }))``
 
-const getImages = ({ imgUrl, length}) => [...Array(length)].map((img, index) => {return { id: index, alt: 'Image', src: `${process.env.REACT_APP_SERVER}/images${imgUrl}/${index + 1}.jpg` }})
+const getImages = ({ imgUrl, length}) =>
+  [...Array(length)].map((img, index) =>
+  {return { id: index, alt: 'Image', src: `${process.env.REACT_APP_SERVER}/images${imgUrl}/img${index}.jpg` }})
 
 const getRatios = ({ imgUrl }) => axios({
   method: 'get',

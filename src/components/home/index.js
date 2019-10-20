@@ -9,7 +9,7 @@ const Home = () => {
     <Container>
       <Slideshow />
       <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
-      <Gallery header={'Galerija'} url={'/gallery'} imgUrl={'/gallery/home'} />
+      <Gallery header={'Galerija'} url={'/gallery'} imgUrl={'/home'} />
       <About />
     </Container>
   )

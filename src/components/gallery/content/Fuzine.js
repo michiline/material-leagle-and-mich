@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CoverImg, Gallery } from '../../general'
-import { socaCover } from '../../../images'
+import { fuzineCover } from '../../../images'
 import { galleryDescription } from '../../../content'
 
-const Soca = () => {
+const Fuzine = () => {
   return (
     <Container>
-      <CoverImg img={socaCover}/>
-      <Gallery header={'Soča'} url={'/gallery/soca'} imgUrl={'/home'} />
+      <CoverImg img={fuzineCover}/>
+      <Gallery header={'Fužine'} url={'/gallery/fuzine'} imgUrl={'/fuzine'} />
     </Container>
   )
 }
@@ -19,4 +19,4 @@ const Container = styled.div`
   }
 `
 
-export default Soca
+export default Fuzine

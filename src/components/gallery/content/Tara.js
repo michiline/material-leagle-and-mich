@@ -8,7 +8,7 @@ const Tara = () => {
   return (
     <Container>
       <CoverImg img={taraCover}/>
-      <Gallery header={'Tara'} url={'/gallery/tara'} imgUrl={'/gallery/home'} />
+      <Gallery header={'Tara'} url={'/gallery/tara'} imgUrl={'/tara'} />
     </Container>
   )
 }

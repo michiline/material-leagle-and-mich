@@ -32,7 +32,7 @@ const Header = styled.p`
   font-size: 4.8rem;
   letter-spacing: 0;
   line-height: 1.6;
-  padding: ${padding.medium};
+  padding: ${padding.small};
   font-family: 'Amatic SC';
   font-weight: 700;
   &:active {
@@ -42,21 +42,28 @@ const Header = styled.p`
 `
 
 const Grid = styled.div`
-  padding: ${padding.small};
   display: grid;
   grid-template-columns: repeat(2, calc((100vw - 5*${padding.small}) / 2));
   grid-template-rows: repeat(4, calc((100vw - 5*${padding.small}) / 2));
+  grid-auto-columns: calc((100vw - 5*${padding.small}) / 2);
+  grid-auto-rows: calc((100vw - 5*${padding.small}) / 2);
   @media only screen and (min-width: 600px) {
     grid-template-columns: repeat(3, calc((100vw - 6*${padding.small}) / 3));
     grid-template-rows: repeat(3, calc((100vw - 6*${padding.small}) / 3));
+    grid-auto-columns: calc((100vw - 6*${padding.small}) / 3);
+    grid-auto-rows: calc((100vw - 6*${padding.small}) / 3);
   }
   @media only screen and (min-width: 1000px) {
     grid-template-columns: repeat(4, calc((100vw - 7*${padding.small}) / 4));
     grid-template-rows: repeat(2, calc((100vw - 7*${padding.small}) / 4));
+    grid-auto-columns: calc((100vw - 7*${padding.small}) / 4);
+    grid-auto-rows: calc((100vw - 7*${padding.small}) / 4);
   }
   @media only screen and (min-width: 1400px) {
     grid-template-columns: repeat(5, calc((100vw - 8*${padding.small}) / 5));
     grid-template-rows: repeat(2, calc((100vw - 8*${padding.small}) / 5));
+    grid-auto-columns:calc((100vw - 8*${padding.small}) / 5);
+    grid-auto-rows: calc((100vw - 8*${padding.small}) / 5);
   }
   grid-gap: 1rem;
   align-items: center;
