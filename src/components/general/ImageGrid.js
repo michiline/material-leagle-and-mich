@@ -105,7 +105,7 @@ const OverlayGrey = styled.div`
 `
 
 const OverlayRow = styled.p`
-  font-size: 4.8rem;
+  font-size: 4rem;
   letter-spacing: 0;
   line-height: 1.6;
   padding: ${padding.medium};
