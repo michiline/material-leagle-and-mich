@@ -14,7 +14,7 @@ export const blogsDescription = [
   // description: 'Five days of camping in the valley of river Soca. Whether you are an adrenaline seeker or relaxed hiker, you should come and witness the color of Soca for yourself!',
   {
     img: krka[10],
-    title: 'Teče Teče Jedan Slap',
+    title: 'Sedam Veličanstvenih',
     subtitle: 'Krka, Hrvatska',
     description: 'Saznajte zašto smo odgađali posjet ovom prirodnom dragulju za sam kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'

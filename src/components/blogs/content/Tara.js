@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImg } from '../../general'
+import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { taraCover, tara, star } from '../../../images'
 
@@ -8,7 +8,7 @@ const Tara = () => {
   return (
     <>
       <Container>
-        <CoverImg img={taraCover}/>
+        <CoverImgCenterText h1Text={'Najlepsa Planina'} h2Text={'Netaknuta Priroda Nacionalnog Parka Tara - "Pluća Srbije"'} img={taraCover}/>
         <BlogContainer>
           <Header>Najlepša Planina</Header>
           <Intro>

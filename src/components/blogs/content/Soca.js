@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImg } from '../../general'
+import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { socaCover, soca } from '../../../images'
 
@@ -8,7 +8,7 @@ const Soca = () => {
   return (
     <>
       <Container>
-        <CoverImg img={socaCover}/>
+        <CoverImgCenterText h1Text={'Smaragdna Rijeka'} h2Text={'Brzaci, Slapovi i Viseći Mostovi - Dolina Soče'} img={socaCover}/>
         <BlogContainer>
           <Header>Smaragdna Rijeka</Header>
           <Intro>

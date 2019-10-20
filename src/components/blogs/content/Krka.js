@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImg } from '../../general'
+import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { krkaCover, krka, star } from '../../../images'
 
@@ -8,9 +8,9 @@ const Krka = () => {
   return (
     <>
       <Container>
-        <CoverImg img={krkaCover}/>
+        <CoverImgCenterText h1Text={'Sedam Velicanstvenih'} h2Text={'Krš, Sedra I Slapovi Krke - Mjesto Nestvarne Ljepote'} img={krkaCover}/>
         <BlogContainer>
-          <Header>Slapovi Krke</Header>
+          <Header>Sedam Veličanstvenih</Header>
           <Intro>
             Želimo obići sve nacionalne parkove u Hrvatskoj.
             Sunčani rujanski vikend idealna je prilika da obiđemo još jedan, naš 6.
