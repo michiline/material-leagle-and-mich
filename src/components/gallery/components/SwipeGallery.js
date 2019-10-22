@@ -127,7 +127,6 @@ const Container = styled.div.attrs({
   width: 100%;
   width: calc(var(--n)*100%);
   height: 100%;
-  max-height: 100vh;
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 `
 
