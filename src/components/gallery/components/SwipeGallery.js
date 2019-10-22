@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 
 const NF = 30
@@ -125,7 +126,8 @@ const Container = styled.div.attrs({
   overflow-y: hidden;
   width: 100%;
   width: calc(var(--n)*100%);
-  height: 50vw; max-height: 100vh;
+  height: 100%;
+  max-height: 100vh;
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 `
 
@@ -136,4 +138,4 @@ const Img = styled.img`
   pointer-events: none;
 `
 
-export default SwipeGallery
+export default withRouter(SwipeGallery)
