@@ -1,2 +1,3 @@
 import Home from './Home'
-export { Home }
+import SwipeGallery from './SwipeGallery'
+export { Home, SwipeGallery }

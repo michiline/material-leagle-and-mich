@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
-import { Home } from './components'
+import { Home, SwipeGallery } from './components'
 import { Soca, Krka, Tara, Brijuni, Dugi, Budimpesta, Barcelona, Krupa, Kuba, Fuzine, Lastovo, London, Mitrovica, Mljet, Nassfeld, Novi, Pariz, Plitvice, Tabor, Trakoscan, Vransko, Zagreb } from './content'
 
 const Gallery = ({ match }) => {
@@ -31,6 +31,7 @@ const Gallery = ({ match }) => {
       <Route exact path={`${match.path}/trakoscan`} component={Trakoscan} />
       <Route exact path={`${match.path}/vransko`} component={Vransko} />
       <Route exact path={`${match.path}/zagreb`} component={Zagreb} />
+      <Route exact path={`${match.path}/swipe`} component={SwipeGallery} />
     </Switch>
   )
 }
