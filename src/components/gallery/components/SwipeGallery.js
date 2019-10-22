@@ -126,7 +126,6 @@ const Container = styled.div.attrs({
   display: flex;
   align-items: center;
   overflow-y: hidden;
-	overflow-x: hidden;
   width: 100%;
   width: calc(var(--n)*100%);
   height: 100%;
