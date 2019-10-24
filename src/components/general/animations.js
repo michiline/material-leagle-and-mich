@@ -25,3 +25,14 @@ export const bounce = () => {
     100% { transform: scale(1,1)      translateY(0); }
   `
 }
+
+export const slide = ({ start, end }) => {
+  return keyframes`
+    0%   {
+      left: ${start}px;
+    }
+    100% {
+      left: ${end}px;
+    }
+  `
+}

@@ -1,24 +1,29 @@
 import React, { useRef } from 'react'
+import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import { padding, shadow } from '../../style'
 import { RippleComponentLink } from '../../hooks'
 import * as G from '../general'
 import { facebook, instagram, github } from '../../images'
 
-const Footer = () => {
+const Footer = ({ history }) => {
   const facebookIconRef = useRef()
   const instagramIconRef = useRef()
   const githubIconRef = useRef()
-  return (
-    <Container>
-      <IconContainer>
-        <RippleComponentLink Component={FacebookIcon} img={facebook} color={'#FFFFFF'} componentRef={facebookIconRef} url={'https://www.facebook.com/littleeaglephoto'}/>
-        <RippleComponentLink Component={InstagramIcon} img={instagram} color={'#FFFFFF'} componentRef={instagramIconRef} url={'https://www.instagram.com/littleeaglephoto'}/>
-        <RippleComponentLink Component={GithubIcon} img={github} color={'#FFFFFF'} componentRef={githubIconRef} url={'https://github.com/equidistant/material-leagle-and-mich'}/>
-      </IconContainer>
-      <Title>© 2019 Little Eagle & Mich </Title>
-    </Container>
-  )
+  if (!history.location.pathname.startsWith('/gallery/testswipe')) {
+    return (
+      <Container>
+        <IconContainer>
+          <RippleComponentLink Component={FacebookIcon} img={facebook} color={'#FFFFFF'} componentRef={facebookIconRef} url={'https://www.facebook.com/littleeaglephoto'}/>
+          <RippleComponentLink Component={InstagramIcon} img={instagram} color={'#FFFFFF'} componentRef={instagramIconRef} url={'https://www.instagram.com/littleeaglephoto'}/>
+          <RippleComponentLink Component={GithubIcon} img={github} color={'#FFFFFF'} componentRef={githubIconRef} url={'https://github.com/equidistant/material-leagle-and-mich'}/>
+        </IconContainer>
+        <Title>© 2019 Little Eagle & Mich </Title>
+      </Container>
+    )
+  } else {
+    return <></>
+  }
 }
 
 const Container = styled(G.FlexColumnCenterContainer)`
@@ -77,4 +82,4 @@ const GithubIcon = styled(G.Icon)`
 `
 
 
-export default Footer
+export default withRouter(Footer)

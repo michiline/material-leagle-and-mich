@@ -125,10 +125,8 @@ const Container = styled.div.attrs({
   --n: 1;
   display: flex;
   align-items: center;
-  overflow-y: hidden;
   width: 100%;
   width: calc(var(--n)*100%);
-  height: 100%;
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 `
 

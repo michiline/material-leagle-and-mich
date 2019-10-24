@@ -11,16 +11,20 @@ const Header = ({ history }) => {
   const menuRef = useRef()
   const [scrollY, scrolled] = useScrolledDirection({ boundary: 15 })
   const [toggled, setToggled] = useState(false)
-  return (
-    <>
-      <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
-        <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logo}/>
-        <Title onClick={ e => to({ setToggled })}>Little Eagle & Mich</Title>
-        <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
-      </Container>
-      <Background show={toggled} setToggled={setToggled}/>
-    </>
-  )
+  if (!history.location.pathname.startsWith('/gallery/testswipe')) {
+    return (
+      <>
+        <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>
+          <Logo onClick={ e => to({ history, url: '/', setToggled })} img={logo}/>
+          <Title onClick={ e => to({ setToggled })}>Little Eagle & Mich</Title>
+          <RippleComponent toggled={toggled} color={'#8B4608'} Component={MenuIcon} img={menu} componentRef={menuRef} onClick={e => setToggled(!toggled)}/>
+        </Container>
+        <Background show={toggled} setToggled={setToggled}/>
+      </>
+    )
+  } else {
+    return <></>
+  }
 }
 
 const Container = styled.div`
