@@ -34,13 +34,13 @@ const useDimensions = ({ refs, imagesLength }) => {
   let [dimensions, setDimensions] = useState([...Array(refs.length)].map(() => {}))
   const previousImage = async () => {
     setPrevious(true)
-    await sleep(500)
+    await sleep(495)
     setActiveId((activeId - 1 + imagesLength) % imagesLength)
     setPrevious(false)
   }
   const nextImage = async () => {
     setNext(true)
-    await sleep(500)
+    await sleep(495)
     setActiveId((activeId + 1) % imagesLength)
     setNext(false)
   }
