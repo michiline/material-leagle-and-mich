@@ -7,7 +7,6 @@ import { galleryDescription } from '../../../content'
 import { slide } from '../../general'
 
 const SwipeGalleryMy = ({ history, match }) => {
-  console.log(history)
   const images = galleryImages[match.params.galleryName]
   const refs = [useRef(), useRef(), useRef()]
   let [activeId, previous, next, dimensions, previousImage, nextImage] = useDimensions({ refs, imagesLength: images.length })
@@ -69,7 +68,7 @@ const useDimensions = ({ refs, imagesLength }) => {
 }
 
 const Container = styled.div`
-
+  
 `
 
 const Gallery = styled.div`

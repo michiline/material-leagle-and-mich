@@ -11,7 +11,7 @@ const Header = ({ history }) => {
   const menuRef = useRef()
   const [scrollY, scrolled] = useScrolledDirection({ boundary: 15 })
   const [toggled, setToggled] = useState(false)
-  if (!history.location.pathname.startsWith('/gallery/testswipe')) {
+  if (!history.location.pathname.startsWith('/gallery/swipe')) {
     return (
       <>
         <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>

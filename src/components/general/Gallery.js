@@ -116,7 +116,7 @@ const getImages = ({ imgUrl, length}) =>
 
 const getRatios = ({ imgUrl }) => axios({
   method: 'get',
-  url: `${process.env.REACT_APP_SERVER}/sizes${imgUrl}`
+  url: `${process.env.REACT_APP_SERVER}/ratios{imgUrl}`
 })
 
 const to = ({ history, url }) => {

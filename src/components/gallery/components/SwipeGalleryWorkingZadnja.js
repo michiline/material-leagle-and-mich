@@ -63,29 +63,8 @@ class SwipeGallery extends Component {
     _C.addEventListener('touchend', this.move.bind(this), false)
 		_C.addEventListener('mouseup', this.updateUrl.bind(this), false)
 		_C.addEventListener('touchend', this.updateUrl.bind(this), false)
-		window.addEventListener('resize', this.setSizes.bind(this))
     this.setState({ _C, N })
   }
-
-	setSizes = async () => {
-		const ratios = await getRatios({ imgUrl: '/soca' })
-		const sizes = ratios.data.map(ratio => {
-			if (ratio < 1) {
-				return { width: (window.innerHeight - 20) * ratio, height: window.innerHeight - 20, margin: (window.innerWidth - (window.innerHeight - 20) * ratio) / 2 }
-			}
-			else {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (width > window.innerWidth) {
-					height = height - 10
-					width = height * ratio
-				}
-				return { width, height, margin: (window.innerWidth - width) / 2}
-			}
-		})
-		this.setState({ sizes })
-		this.state._C.style.setProperty('--i', parseInt(this.props.match.params.id))
-	}
 
 	renderImages = ({ images, sizes }) => {
 		if (sizes.length !== 0) {
@@ -95,7 +74,7 @@ class SwipeGallery extends Component {
 		}
 	}
 
-	updateUrl = async () => {
+	updateUrl =  async () => {
 		await sleep(200)
 		this.props.history.push(`/gallery/swipe/${this.state.i}`)
 	}
@@ -107,10 +86,7 @@ class SwipeGallery extends Component {
   }
 
   ani = (cf = 0) => {
-		const i = this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf)
-		if (i) {
-			 this.state._C.style.setProperty('--i', this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf))
-		}
+    this.state._C.style.setProperty('--i', this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf))
 
     if(cf ===  this.state.anf) {
       this.stopAni()

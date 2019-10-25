@@ -10,7 +10,7 @@ const Footer = ({ history }) => {
   const facebookIconRef = useRef()
   const instagramIconRef = useRef()
   const githubIconRef = useRef()
-  if (!history.location.pathname.startsWith('/gallery/testswipe')) {
+  if (!history.location.pathname.startsWith('/gallery/swipe')) {
     return (
       <Container>
         <IconContainer>

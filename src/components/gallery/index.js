@@ -31,7 +31,7 @@ const Gallery = ({ match }) => {
       <Route exact path={`${match.path}/trakoscan`} component={Trakoscan} />
       <Route exact path={`${match.path}/vransko`} component={Vransko} />
       <Route exact path={`${match.path}/zagreb`} component={Zagreb} />
-      <Route exact path={`${match.path}/swipe`} component={SwipeGallery} />
+      <Route exact path={`${match.path}/swipe/:id`} component={SwipeGallery} />
       <Route exact path={`${match.path}/testswipe/:galleryName`} component={SwipeGalleryMy} />
     </Switch>
   )

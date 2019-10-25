@@ -13,7 +13,7 @@ class SwipeGallery extends Component {
   state = {
     _C: '',
     N: '',
-    i: parseInt(this.props.match.params.id),
+    i: 0,
     x0: null,
     locked: false,
     w: window.innerWidth,
@@ -33,26 +33,14 @@ class SwipeGallery extends Component {
     )
   }
   async componentDidMount() {
-		const ratios = await getRatios({ imgUrl: '/soca' })
-		const sizes = ratios.data.map(ratio => {
-			if (ratio < 1) {
-				return { width: (window.innerHeight - 20) * ratio, height: window.innerHeight - 20, margin: (window.innerWidth - (window.innerHeight - 20) * ratio) / 2 }
-			}
-			else {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (width > window.innerWidth) {
-					height = height - 10
-					width = height * ratio
-				}
-				return { width, height, margin: (window.innerWidth - width) / 2}
-			}
+		const sizes = await getSizes({ imgUrl: '/soca' })
+		const marginSizes = sizes.data.map(size => {
+			return { width: size.width, height: size.height, margin: (window.innerWidth - size.width) / 2 }
 		})
-		this.setState({ sizes })
+		this.setState({ sizes: marginSizes})
     const _C = document.querySelector('#container')
     const N = _C.children.length
     _C.style.setProperty('--n', _C.children.length)
-		_C.style.setProperty('--i', parseInt(this.props.match.params.id))
     _C.addEventListener('mousedown', this.lock.bind(this), false)
     _C.addEventListener('touchstart', this.lock.bind(this), false)
 
@@ -61,31 +49,8 @@ class SwipeGallery extends Component {
 
     _C.addEventListener('mouseup', this.move.bind(this), false)
     _C.addEventListener('touchend', this.move.bind(this), false)
-		_C.addEventListener('mouseup', this.updateUrl.bind(this), false)
-		_C.addEventListener('touchend', this.updateUrl.bind(this), false)
-		window.addEventListener('resize', this.setSizes.bind(this))
     this.setState({ _C, N })
   }
-
-	setSizes = async () => {
-		const ratios = await getRatios({ imgUrl: '/soca' })
-		const sizes = ratios.data.map(ratio => {
-			if (ratio < 1) {
-				return { width: (window.innerHeight - 20) * ratio, height: window.innerHeight - 20, margin: (window.innerWidth - (window.innerHeight - 20) * ratio) / 2 }
-			}
-			else {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (width > window.innerWidth) {
-					height = height - 10
-					width = height * ratio
-				}
-				return { width, height, margin: (window.innerWidth - width) / 2}
-			}
-		})
-		this.setState({ sizes })
-		this.state._C.style.setProperty('--i', parseInt(this.props.match.params.id))
-	}
 
 	renderImages = ({ images, sizes }) => {
 		if (sizes.length !== 0) {
@@ -95,11 +60,6 @@ class SwipeGallery extends Component {
 		}
 	}
 
-	updateUrl = async () => {
-		await sleep(200)
-		this.props.history.push(`/gallery/swipe/${this.state.i}`)
-	}
-
 
   stopAni = () => {
     cancelAnimationFrame(this.state.rID)
@@ -107,10 +67,7 @@ class SwipeGallery extends Component {
   }
 
   ani = (cf = 0) => {
-		const i = this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf)
-		if (i) {
-			 this.state._C.style.setProperty('--i', this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf))
-		}
+    this.state._C.style.setProperty('--i', this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf))
 
     if(cf ===  this.state.anf) {
       this.stopAni()
@@ -189,6 +146,8 @@ const Img = styled.img.attrs(props => ({
   }))`
 	width: ${props => props.size.width}px;
 	height: ${props => props.size.height}px;
+  max-width: 95% !important;
+  max-height: 90% !important;
   object-fit: cover;
   user-select: none;
   pointer-events: none;
@@ -198,13 +157,9 @@ const Img = styled.img.attrs(props => ({
 
 // width: auto;
 
-const getRatios = ({ imgUrl }) => axios({
+const getSizes = ({ imgUrl }) => axios({
 	method: 'get',
-	url: `${process.env.REACT_APP_SERVER}/ratios${imgUrl}`
+	url: `${process.env.REACT_APP_SERVER}/sizes${imgUrl}`
 })
-
-const sleep = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
 
 export default withRouter(SwipeGallery)
