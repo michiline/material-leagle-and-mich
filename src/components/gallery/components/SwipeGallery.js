@@ -67,24 +67,8 @@ class SwipeGallery extends Component {
     this.setState({ _C, N })
   }
 
-	setSizes = async () => {
-		const ratios = await getRatios({ imgUrl: '/soca' })
-		const sizes = ratios.data.map(ratio => {
-			if (ratio < 1) {
-				return { width: (window.innerHeight - 20) * ratio, height: window.innerHeight - 20, margin: (window.innerWidth - (window.innerHeight - 20) * ratio) / 2 }
-			}
-			else {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (width > window.innerWidth) {
-					height = height - 10
-					width = height * ratio
-				}
-				return { width, height, margin: (window.innerWidth - width) / 2}
-			}
-		})
-		this.setState({ sizes })
-		this.state._C.style.setProperty('--i', parseInt(this.props.match.params.id))
+	setSizes = () => {
+		window.location.href = window.location.href
 	}
 
 	renderImages = ({ images, sizes }) => {
