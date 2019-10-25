@@ -36,13 +36,19 @@ class SwipeGallery extends Component {
 		const ratios = await getRatios({ imgUrl: '/soca' })
 		const sizes = ratios.data.map(ratio => {
 			if (ratio < 1) {
-				return { width: (window.innerHeight - 20) * ratio, height: window.innerHeight - 20, margin: (window.innerWidth - (window.innerHeight - 20) * ratio) / 2 }
+				let height = window.innerHeight - 20
+				let width = height * ratio
+				while (height > window.innerHeight || width > window.innerWidth) {
+					height = height * 0.99
+					width = height * ratio
+				}
+				return { width: height * ratio, height: height, margin: (window.innerWidth - width) / 2 }
 			}
 			else {
 				let height = window.innerHeight - 20
 				let width = height * ratio
-				while (width > window.innerWidth) {
-					height = height - 10
+				while (height > window.innerHeight || width > window.innerWidth) {
+					height = height * 0.99
 					width = height * ratio
 				}
 				return { width, height, margin: (window.innerWidth - width) / 2}
