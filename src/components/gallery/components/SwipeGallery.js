@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import { galleryImages } from '../../../images'
+import { galleryImageBundle } from '../../../images'
 import styled from 'styled-components'
 import axios from 'axios'
 
@@ -22,19 +22,23 @@ class SwipeGallery extends Component {
     rID: null,
     anf: '',
     n: '',
-		images: galleryImages['soca'],
+		images: galleryImageBundle(this.props.match.params.galleryName).images,
 		sizes: []
   }
   render () {
     return (
-      <Container>
-				 {this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
-      </Container>
+			<>
+				<Container>
+					 {this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
+		    </Container>
+				<CloseContainer onClick={e => this.props.history.push(`/gallery/${this.props.match.params.galleryName}`)}>✖</CloseContainer>
+			</>
     )
   }
   async componentDidMount() {
-		const ratios = await getRatios({ imgUrl: '/soca' })
-		const sizes = ratios.data.map(ratio => {
+		await sleep(200)
+		const ratios = galleryImageBundle(this.props.match.params.galleryName).ratios
+		const sizes = ratios.map(ratio => {
 			if (ratio < 1) {
 				let height = window.innerHeight - 20
 				let width = height * ratio
@@ -87,7 +91,7 @@ class SwipeGallery extends Component {
 
 	updateUrl = async () => {
 		await sleep(200)
-		this.props.history.push(`/gallery/swipe/${this.state.i}`)
+		this.props.history.push(`/gallery/${this.props.match.params.galleryName}/swipe/${this.state.i}`)
 	}
 
 
@@ -186,7 +190,30 @@ const Img = styled.img.attrs(props => ({
 	margin-right: ${props => props.size.margin}px;
 `
 
-// width: auto;
+const CloseContainer = styled.div`
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: calc(5rem + 2.5vw);
+  height: calc(5rem + 2.5vw);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6rem + 3vw);
+  color: #24272E;
+  opacity: 0.4;
+  transition: opacity 0.5s ease-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+`
 
 const getRatios = ({ imgUrl }) => axios({
 	method: 'get',

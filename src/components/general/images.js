@@ -48,11 +48,11 @@ export const CoverImg = styled.img.attrs(props => ({
   transition: opacity 1.5s ease-in;
 `
 
-export const CoverImgCenterText = ({ h1Text, h2Text, img}) =>
+export const CoverImgCenterText = ({ h1, h2, img}) =>
   <CoverImgContainer>
     <Text>
-      <CH1>{h1Text}</CH1>
-      <CH2>{h2Text}</CH2>
+      <CH1>{h1}</CH1>
+      <CH2>{h2}</CH2>
     </Text>
     <Img img={img} />
     <GreyContainer />

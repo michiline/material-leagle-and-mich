@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { socaCover, soca } from '../../../images'
+import { blogImageBundle } from '../../../images'
 
 const Soca = () => {
+  const { cover, images } = blogImageBundle('soca')
   return (
     <>
       <Container>
-        <CoverImgCenterText h1Text={'Smaragdna Rijeka'} h2Text={'Brzaci, Slapovi i Viseći Mostovi - Dolina Soče'} img={socaCover}/>
+        <CoverImgCenterText h1={'Smaragdna Rijeka'} h2={'Brzaci, Slapovi i Viseći Mostovi - Dolina Soče'} img={cover}/>
         <BlogContainer>
           <Header>Smaragdna Rijeka</Header>
           <Intro>
@@ -44,11 +45,11 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Kiša je stala!</ImgOverlay>
-              <ImgPortraitHalf img={soca[13]}/>
+              <ImgPortraitHalf img={images[14]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
               <ImgOverlay>Čekam fotografkinju...</ImgOverlay>
-              <ImgPortraitHalf img={soca[14]}/>
+              <ImgPortraitHalf img={images[15]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <BulletHeaderContainer>
@@ -61,7 +62,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Ommmmmmm...</ImgOverlay>
-              <Img img={soca[18]}/>
+              <Img img={images[19]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -75,7 +76,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Mir i tišina...</ImgOverlay>
-              <Img img={soca[17]}/>
+              <Img img={images[18]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -88,13 +89,13 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Predah na vrhu</ImgOverlay>
-              <Img img={soca[15]}/>
+              <Img img={images[16]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Složili smo svoj "cairn" i nastavili dalje</ImgOverlay>
-              <Img img={soca[16]}/>
+              <Img img={images[17]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -117,7 +118,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Ovo je bilo zabavno!</ImgOverlay>
-              <Img img={soca[19]}/>
+              <Img img={images[0]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -130,7 +131,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Vrlo osvježavajuće</ImgOverlay>
-              <Img img={soca[6]}/>
+              <Img img={images[7]}/>
             </ImgWrap>
           </ImgRow>
           <Header2>Subota 22.6.2019.</Header2>
@@ -153,7 +154,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Ekspozicija</ImgOverlay>
-              <Img img={soca[5]}/>
+              <Img img={images[6]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -165,11 +166,11 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Pogled s mosta</ImgOverlay>
-              <ImgPortraitHalf img={soca[20]}/>
+              <ImgPortraitHalf img={images[20]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
               <ImgOverlay>Jedva čekam probat!</ImgOverlay>
-              <ImgPortraitHalf img={soca[21]}/>
+              <ImgPortraitHalf img={images[21]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <BulletHeaderContainer>
@@ -182,7 +183,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Njegovo veličanstvo, 106m visok slap Boka</ImgOverlay>
-              <Img img={soca[24]}/>
+              <Img img={images[24]}/>
             </ImgWrap>
           </ImgRow>
           <Header2>Nedjelja 23.6.2019.</Header2>
@@ -199,11 +200,11 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Ćorkica u hammocku</ImgOverlay>
-              <ImgLandscapeHalf img={soca[22]}/>
+              <ImgLandscapeHalf img={images[22]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>I pod je sasvim ok...</ImgOverlay>
-              <ImgLandscapeHalf img={soca[23]}/>
+              <ImgLandscapeHalf img={images[23]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <BulletHeaderContainer>
@@ -216,23 +217,23 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Viče da pazim jer je sklisko</ImgOverlay>
-              <ImgPortraitHalf img={soca[25]}/>
+              <ImgPortraitHalf img={images[25]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
               <ImgOverlay>Behind the scenes</ImgOverlay>
-              <ImgPortraitHalf img={soca[26]}/>
+              <ImgPortraitHalf img={images[26]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Most i ć (i šuma)</ImgOverlay>
-              <Img img={soca[27]}/>
+              <Img img={images[27]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Napokon neka ravna podloga da se slikamo</ImgOverlay>
-              <Img img={soca[28]}/>
+              <Img img={images[28]}/>
             </ImgWrap>
           </ImgRow>
           <Header2>Ponedjeljak 24.6.2019.</Header2>
@@ -250,12 +251,12 @@ const Soca = () => {
           </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Pogled na Đavolji most (popularno ime za most u kanjonu)</ImgOverlay>
-              <ImgPortraitHalf img={soca[29]}/>
+              <ImgOverlay> Đavolji most (popularno ime za most)</ImgOverlay>
+              <ImgPortraitHalf img={images[29]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
               <ImgOverlay>Pogled sa Đavoljeg mosta</ImgOverlay>
-              <ImgPortraitHalf img={soca[30]}/>
+              <ImgPortraitHalf img={images[30]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <BulletHeaderContainer>
@@ -267,7 +268,7 @@ const Soca = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Bistra i hladna</ImgOverlay>
-              <Img img={soca[31]}/>
+              <Img img={images[31]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -285,17 +286,17 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Upijanje sunca</ImgOverlay>
-              <ImgLandscapeHalf img={soca[35]}/>
+              <ImgLandscapeHalf img={images[35]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Prizori uz rijeku</ImgOverlay>
-              <ImgLandscapeHalf img={soca[34]}/>
+              <ImgLandscapeHalf img={images[34]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Boja rijeke sa slike je stvarna</ImgOverlay>
-              <Img img={soca[32]}/>
+              <Img img={images[32]}/>
             </ImgWrap>
           </ImgRow>
           <Header2>Utorak 25.6.2019.</Header2>
@@ -308,23 +309,23 @@ const Soca = () => {
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Ah ta boja</ImgOverlay>
-              <ImgPortraitHalf img={soca[38]}/>
+              <ImgPortraitHalf img={images[38]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
               <ImgOverlay>Idealno za kupanac</ImgOverlay>
-              <ImgPortraitHalf img={soca[39]}/>
+              <ImgPortraitHalf img={images[39]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Sjedni tu da te slikam, dobra je pozadina</ImgOverlay>
-              <Img img={soca[36]}/>
+              <Img img={images[36]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Jedna za kraj...</ImgOverlay>
-              <Img img={soca[37]}/>
+              <Img img={images[37]}/>
             </ImgWrap>
           </ImgRow>
           <Intro>

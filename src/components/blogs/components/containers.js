@@ -14,5 +14,5 @@ export const Container = styled.div`
 
 export const BlogContainer = styled(FlexColumnCenterContainer)`
   padding: ${padding.small};
-  max-width: 100rem;
+  max-width: 70rem;
 `

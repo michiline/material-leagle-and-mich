@@ -2,14 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { Slideshow, About } from './components'
 import { CardGrid, Gallery } from '../general'
-import { blogsDescription } from '../../content'
+import { galleryImageBundle, blogs } from '../../images'
 
 const Home = () => {
+  const { images } = galleryImageBundle('home')
   return (
     <Container>
       <Slideshow />
-      <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={blogsDescription.slice(0, 6)}/>
-      <Gallery header={'Galerija'} url={'/gallery'} imgUrl={'/home'} />
+      <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={blogs}/>
+      <Gallery text={'Galerija'} url={'/gallery'} galleryName={'home'} images={images} hide={true}/>
       <About />
     </Container>
   )

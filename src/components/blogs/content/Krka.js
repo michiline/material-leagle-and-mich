@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { krkaCover, krka, star } from '../../../images'
+import { blogImageBundle } from '../../../images'
 
 const Krka = () => {
+  const { cover, images } = blogImageBundle('krka')
   return (
     <>
       <Container>
-        <CoverImgCenterText h1Text={'Sedam Velicanstvenih'} h2Text={'Krš, Sedra I Slapovi Krke - Mjesto Nestvarne Ljepote'} img={krkaCover}/>
+        <CoverImgCenterText h1={'Sedam Velicanstvenih'} h2={'Krš, Sedra I Slapovi Krke - Mjesto Nestvarne Ljepote'} img={cover}/>
         <BlogContainer>
           <Header>Sedam Veličanstvenih</Header>
           <Intro>
@@ -33,17 +34,17 @@ const Krka = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Dobro jutro</ImgOverlay>
-              <Img img={krka[6]}/>
+              <Img img={images[6]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Patkice</ImgOverlay>
-              <ImgLandscapeHalf img={krka[8]}/>
+              <ImgLandscapeHalf img={images[8]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Plaža</ImgOverlay>
-              <ImgLandscapeHalf img={krka[9]}/>
+              <ImgLandscapeHalf img={images[9]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <BulletHeaderContainer>
@@ -58,7 +59,7 @@ const Krka = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Tu jos ne znamo da imamo rupu u kayaku!</ImgOverlay>
-              <Img img={krka[0]}/>
+              <Img img={images[0]}/>
             </ImgWrap>
           </ImgRow>
           <Text>
@@ -70,7 +71,7 @@ const Krka = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Mmmmm... to je taj mir</ImgOverlay>
-              <Img img={krka[1]}/>
+              <Img img={images[1]}/>
             </ImgWrap>
           </ImgRow>
           <BulletHeaderContainer>
@@ -85,11 +86,11 @@ const Krka = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Jedna klasična</ImgOverlay>
-              <ImgLandscapeHalf img={krka[3]}/>
+              <ImgLandscapeHalf img={images[3]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Šetamo polako pored rijeke</ImgOverlay>
-              <ImgLandscapeHalf img={krka[4]}/>
+              <ImgLandscapeHalf img={images[4]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <Text>
@@ -98,7 +99,7 @@ const Krka = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Ana je digla drona</ImgOverlay>
-              <Img img={krka[5]}/>
+              <Img img={images[5]}/>
             </ImgWrap>
           </ImgRow>
           <Intro>

@@ -12,7 +12,6 @@ const Blogs = ({ match }) => {
       <Route exact path={`${match.path}/soca`} component={Soca} />
       <Route exact path={`${match.path}/krka`} component={Krka} />
       <Route exact path={`${match.path}/tara`} component={Tara} />
-      <Route exact path={`${match.path}/kuba`} component={Kuba} />
     </Switch>
   )
 }

@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { taraCover, tara, star } from '../../../images'
+import { blogImageBundle } from '../../../images'
 
 const Tara = () => {
+  const { cover, images } = blogImageBundle('tara')
   return (
     <>
       <Container>
-        <CoverImgCenterText h1Text={'Najlepsa Planina'} h2Text={'Netaknuta Priroda Nacionalnog Parka Tara - "Pluća Srbije"'} img={taraCover}/>
+        <CoverImgCenterText h1={'Najlepsa Planina'} h2={'Netaknuta Priroda Nacionalnog Parka Tara - "Pluća Srbije"'} img={cover}/>
         <BlogContainer>
           <Header>Najlepša Planina</Header>
           <Intro>
@@ -26,19 +27,19 @@ const Tara = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Juuuu što je lepo</ImgOverlay>
-              <Img img={tara[4]}/>
+              <Img img={images[4]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Cozy</ImgOverlay>
-              <Img img={tara[18]}/>
+              <Img img={images[18]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Ana će tek saznati da je Nikola dobio dobru kartu...</ImgOverlay>
-              <Img img={tara[17]}/>
+              <Img img={images[17]}/>
             </ImgWrap>
           </ImgRow>
           <Text>
@@ -51,27 +52,27 @@ const Tara = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>I tak ti ja oču biti iron man</ImgOverlay>
-              <ImgLandscapeHalf img={tara[0]}/>
+              <ImgLandscapeHalf img={images[0]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Dođi Leo da te slikam</ImgOverlay>
-              <ImgLandscapeHalf img={tara[1]}/>
+              <ImgLandscapeHalf img={images[1]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>So beautiful I could cry...</ImgOverlay>
-              <ImgLandscapeHalf img={tara[5]}/>
+              <ImgLandscapeHalf img={images[5]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Di su ti tartufi...</ImgOverlay>
-              <ImgLandscapeHalf img={tara[2]}/>
+              <ImgLandscapeHalf img={images[2]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Prvo moram popravit formu u trčanju i kupit novi bajk...</ImgOverlay>
-              <Img img={tara[3]}/>
+              <Img img={images[3]}/>
             </ImgWrap>
           </ImgRow>
           <Text>
@@ -82,33 +83,33 @@ const Tara = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Ajd ti odi prvi za svaki slučaj</ImgOverlay>
-              <ImgLandscapeHalf img={tara[6]}/>
+              <ImgLandscapeHalf img={images[6]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Nema niš al je fora za slikat</ImgOverlay>
-              <ImgLandscapeHalf img={tara[7]}/>
+              <ImgLandscapeHalf img={images[7]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Koliba</ImgOverlay>
-              <Img img={tara[8]}/>
+              <Img img={images[8]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Korov ispred kolibe</ImgOverlay>
-              <Img img={tara[9]}/>
+              <Img img={images[9]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Evo nas do prvih susjeda</ImgOverlay>
-              <ImgLandscapeHalf img={tara[10]}/>
+              <ImgLandscapeHalf img={images[10]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Dečki stanite mi tu malo</ImgOverlay>
-              <ImgLandscapeHalf img={tara[11]}/>
+              <ImgLandscapeHalf img={images[11]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <Text>
@@ -126,11 +127,11 @@ const Tara = () => {
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Prozor prema zalazu</ImgOverlay>
-              <ImgLandscapeHalf img={tara[13]}/>
+              <ImgLandscapeHalf img={images[13]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
               <ImgOverlay>Drvengrad</ImgOverlay>
-              <ImgLandscapeHalf img={tara[14]}/>
+              <ImgLandscapeHalf img={images[14]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <Text>
@@ -140,7 +141,7 @@ const Tara = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Šta reći... Pune proračun Srbije</ImgOverlay>
-              <Img img={tara[15]}/>
+              <Img img={images[15]}/>
             </ImgWrap>
           </ImgRow>
           <Text>
@@ -151,13 +152,13 @@ const Tara = () => {
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Vikendica</ImgOverlay>
-              <Img img={tara[16]}/>
+              <Img img={images[16]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Po ljeti je ovo plaža</ImgOverlay>
-              <Img img={tara[12]}/>
+              <ImgOverlay>Ljeti je ovo plaža</ImgOverlay>
+              <Img img={images[12]}/>
             </ImgWrap>
           </ImgRow>
           <Intro>

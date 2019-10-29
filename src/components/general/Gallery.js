@@ -7,23 +7,19 @@ import $ from 'jquery'
 import { FlexColumnCenterContainer } from './containers'
 import { H3 } from './text'
 import { padding, shadow } from '../../style'
+import { blogImages } from '../../images'
 
 window.jQuery = $
 window.$ = $
 
 class Gallery extends Component {
-  state = {
-    images: []
-  }
   render () {
-    const history = this.props.history
-    const url = this.props.url
-    const header = this.props.header
+    const { history, url, text, images } = this.props
     return (
       <Container>
-        <Header onClick={ e => to({ history, url })}>{header}</Header>
+        <Header onClick={ e => to({ history, url })}>{text}</Header>
         <GalleryContainer>
-          {this.state.images && this.state.images.length !== 0 && this.renderImages(this.state.images)}
+          {this.renderImages(images)}
         </GalleryContainer>
       </Container>
     )
@@ -32,16 +28,21 @@ class Gallery extends Component {
           // <Header onClick={ e => to({ this.props.history, this.props.url })}>{this.props.header}</Header>
 
   async componentDidMount() {
-    const imgUrl = this.props.imgUrl
-    const ratios = await getRatios({ imgUrl })
-    const images = getImages({ imgUrl, length: ratios.data.length })
-    this.setState({ images })
     window.addEventListener('resize', this.resizeListener.bind(this))
     try {
-      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+      await sleep(250)
+      if (this.props.hide) {
+        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+      } else {
+        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+      }
     } catch (err) {
       await sleep(250)
-      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight() })
+      if (this.props.hide) {
+        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+      } else {
+        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+      }
     }
   }
 
@@ -107,7 +108,7 @@ const Image = styled.img.attrs(props => ({
 `
 
 const A = styled.a.attrs(props => ({
-  href: props.img.src
+  href: props.img.url
 }))``
 
 const getImages = ({ imgUrl, length}) =>

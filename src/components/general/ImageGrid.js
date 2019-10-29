@@ -5,10 +5,10 @@ import { H3 } from './text'
 import { FlexColumnCenterContainer } from './containers'
 import { padding, shadow } from '../../style'
 
-const ImageGrid = ({ history, header, url, content }) => {
+const ImageGrid = ({ history, text, url, content }) => {
   return (
     <Container>
-      <Header onClick={ e => to({ history, url })}>{header}</Header>
+      <Header onClick={ e => to({ history, url })}>{text}</Header>
       <Grid>
         {content.map(({url, ...rest}, index) =>
           <ImgContainer onClick={e => to({ history, url })} key={index}>
