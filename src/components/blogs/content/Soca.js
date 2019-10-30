@@ -4,7 +4,7 @@ import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { blogImageBundle } from '../../../images'
 
-const Soca = () => {
+const Blog = () => {
   const { cover, images } = blogImageBundle('soca')
   return (
     <>
@@ -337,4 +337,4 @@ const Soca = () => {
   )
 }
 
-export default Soca
+export default Blog

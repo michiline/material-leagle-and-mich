@@ -4,7 +4,7 @@ import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { blogImageBundle } from '../../../images'
 
-const Tara = () => {
+const Blog = () => {
   const { cover, images } = blogImageBundle('tara')
   return (
     <>
@@ -171,4 +171,4 @@ const Tara = () => {
   )
 }
 
-export default Tara
+export default Blog

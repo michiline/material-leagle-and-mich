@@ -7,6 +7,7 @@ const sizes = {
   krka: 11,
   tara: 20,
   soca: 40,
+  kamacnik: 16
 }
 
 export const imageBundle = ({ type, name }) => [...Array(sizes[name])].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }})
@@ -27,7 +28,6 @@ export const imageBundleRatioHome = ({ length }) => {
     srcs.push(`/gallery/${name}/swipe/${index}`)
     return { src: `${imgUrl}/gallery/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }
   })
-  console.log(images)
   return images
 }
 
@@ -58,9 +58,14 @@ export const galleries = [
     url: '/gallery/krka'
   },
   {
-    img: covers({ type: 'gallery', name: 'kuba'}),
-    title: 'Kuba',
-    url: '/gallery/kuba'
+    img: covers({ type: 'gallery', name: 'cres'}),
+    title: 'Cres',
+    url: '/gallery/cres'
+  },
+  {
+    img: covers({ type: 'gallery', name: 'losinj'}),
+    title: 'Mali Lošinj',
+    url: '/gallery/losinj'
   },
   {
     img: covers({ type: 'gallery', name: 'soca'}),
@@ -81,6 +86,11 @@ export const galleries = [
     img: covers({ type: 'gallery', name: 'gerlitzen'}),
     title: 'Gerlitzen',
     url: '/gallery/gerlitzen'
+  },
+  {
+    img: covers({ type: 'gallery', name: 'kuba'}),
+    title: 'Kuba',
+    url: '/gallery/kuba'
   },
   {
     img: covers({ type: 'gallery', name: 'london'}),
@@ -180,6 +190,13 @@ export const galleries = [
 ]
 
 export const blogs = [
+  {
+    img: imageBundle({ type: 'blogs', name: 'kamacnik'})[15],
+    title: 'Jesenski Kanjon',
+    subtitle: 'Kamačnik, Hrvatska',
+    description: 'Pitate se što raditi za jesenski vikend? Predlažemo vam savršenu destinacija za laganu šetnju kroz prirodu.',
+    url: '/blogs/kamacnik'
+  },
   {
     img: imageBundle({ type: 'blogs', name: 'tara'})[19],
     title: 'Najlepša Planina',

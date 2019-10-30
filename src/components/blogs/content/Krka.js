@@ -4,7 +4,7 @@ import { CoverImgCenterText } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
 import { blogImageBundle } from '../../../images'
 
-const Krka = () => {
+const Blog = () => {
   const { cover, images } = blogImageBundle('krka')
   return (
     <>
@@ -111,4 +111,4 @@ const Krka = () => {
   )
 }
 
-export default Krka
+export default Blog
