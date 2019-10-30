@@ -2,8 +2,8 @@ const imgUrl = `${process.env.PUBLIC_URL}/img`
 
 const sizes = {
   krka: 11,
-  tara: 40,
-  soca: 20,
+  tara: 20,
+  soca: 40,
 }
 
 // const sizes = {
