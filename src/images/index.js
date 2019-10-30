@@ -65,11 +65,16 @@ export const imageBundleRatio = ({ type, name }) => [...Array(ratios[name].lengt
 // export const imageBundleRatioHome = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}` }})
 
 export const imageBundleRatioHome = ({ length }) => {
+  const srcs = []
   const ratioEntries = Object.entries(ratios)
   const images = [...Array(length)].map(elem => {
     const randomEntry = ratioEntries[Math.floor(Math.random() * (ratioEntries.length - 1))]
     const name = randomEntry[0]
-    const index = Math.floor(Math.random() * (randomEntry[1].length - 1))
+    let index = Math.floor(Math.random() * (randomEntry[1].length - 1))
+    while (srcs.includes(`/gallery/${name}/swipe/${index}`)) {
+      index = Math.floor(Math.random() * (randomEntry[1].length - 1))
+    }
+    srcs.push(`/gallery/${name}/swipe/${index}`)
     return { src: `${imgUrl}/gallery/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }
   })
   console.log(images)
