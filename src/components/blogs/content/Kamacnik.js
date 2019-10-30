@@ -70,7 +70,7 @@ const Blog = () => {
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Hello there</ImgOverlay>
+              <ImgOverlay>Hi there :)</ImgOverlay>
               <Img img={images[8]}/>
             </ImgWrap>
           </ImgRow>

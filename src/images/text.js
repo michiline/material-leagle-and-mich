@@ -46,7 +46,7 @@ export default {
   },
   'kuba': {
     h1: 'Kuba',
-    h2: 'Mi novio chiere quiere pagar la cuenta',
+    h2: 'Mi novio quiere pagar la cuenta',
     h3: 'Kuba'
   },
   'london': {

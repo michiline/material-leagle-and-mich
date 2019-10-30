@@ -200,7 +200,7 @@ export const blogs = [
   {
     img: imageBundle({ type: 'blogs', name: 'tara'})[19],
     title: 'Najlepša Planina',
-    subtitle: 'Tara',
+    subtitle: 'Tara, Srbija',
     description: 'Ima li smisla voziti se 1500 km da bi se proveo jedan dan u najljepšoj prirodi Srbije? Ne brinite, mi smo istražili za vas. Pronađite odgovor u nastavku.',
     url: '/blogs/tara'
   },
