@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Slideshow, About } from './components'
 import { CardGrid, Gallery } from '../general'
-import { galleryImageBundle, blogs } from '../../images'
+import { galleryImageBundleHome, blogs } from '../../images'
 
 const Home = () => {
-  const { images } = galleryImageBundle('home')
+  const { images } = galleryImageBundleHome({ length: 30 })
   return (
     <Container>
       <Slideshow />

@@ -61,9 +61,12 @@ class Gallery extends Component {
 
 const getRowHeight = () => {
   const width = window.innerWidth
-  if (width < 500) {
+  if (width < 375) {
+    return 100
+  } else if (width >= 375 && width < 500) {
     return 125
-  } else if (width >= 500 && width < 750) {
+  }
+  else if (width >= 500 && width < 750) {
     return 150
   } else if (width >= 750 && width < 1000) {
     return 175
@@ -73,6 +76,21 @@ const getRowHeight = () => {
     return 225
   }
 }
+
+// const getRowHeight = () => {
+//   const width = window.innerWidth
+//   if (width < 500) {
+//     return 125
+//   } else if (width >= 500 && width < 750) {
+//     return 150
+//   } else if (width >= 750 && width < 1000) {
+//     return 175
+//   } else if (width >= 1000 && width < 1250) {
+//     return 200
+//   } else {
+//     return 225
+//   }
+// }
 
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
