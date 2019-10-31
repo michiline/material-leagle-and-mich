@@ -44,9 +44,6 @@ const Grid = styled.div`
   @media only screen and (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media only screen and (min-width: 900px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
   @media only screen and (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
