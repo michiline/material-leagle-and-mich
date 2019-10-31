@@ -86,9 +86,8 @@ const Text = styled.div`
 `
 
 const CH1 = styled(H1)`
-  padding: ${padding.medium};
   font-weight: 700 !important;
-  font-family: 'Mansalva';
+  font-family: 'Caveat Brush';
   width: max-content;
 `
 

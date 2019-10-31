@@ -3,24 +3,24 @@ import { padding } from '../../style'
 
 export const H1 = styled.h1`
   font-family: 'Helvetica Neue';
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 100;
   letter-spacing: -0.09375rem;
   line-height: 1;
   @media only screen and (min-width: 500px) {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 100;
     letter-spacing: -0.09375rem;
     line-height: 1.3;
   }
   @media only screen and (min-width: 800px) {
-    font-size: 6rem;
+    font-size: 7rem;
     font-weight: 100;
     letter-spacing: -0.09375rem;
     line-height: 1.3;
   }
   @media only screen and (min-width: 1050px) {
-    font-size: 8rem;
+    font-size: 9rem;
     font-weight: 100;
     letter-spacing: -0.15rem;
     line-height: 1.6;
