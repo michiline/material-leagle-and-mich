@@ -11,7 +11,7 @@ const GalleryRoute = ({ match, hide, setHide }) => {
   return (
     <Container show={show}>
       <CoverImgCenterText h1={h1} h2={h2} img={cover}/>
-      <Gallery text={h3} galleryName={match.params.galleryName} url={`/gallery/${match.params.galleryName}`} images={images} showSwipe={showSwipe} />
+      { !show && <Gallery text={h3} galleryName={match.params.galleryName} url={`/gallery/${match.params.galleryName}`} images={images} showSwipe={showSwipe} />}
       { show && <SwipeGallery images={images} ratios={ratios} id={id} hideSwipe={hideSwipe}  id={id} setId={setLocalStorageId}/>}
     </Container>
   )
