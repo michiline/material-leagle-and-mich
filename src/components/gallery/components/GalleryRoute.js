@@ -18,6 +18,18 @@ const GalleryRoute = ({ match, location, hide, setHide }) => {
   )
 }
 
+const useWindowHeight = function () {
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  useEffect(() => {
+    const resizeListener = (e) => {
+      setWindowHeight(e.target.innerHeight)
+    }
+    window.addEventListener('resize', resizeListener)
+    return () => window.removeEventListener('resize', resizeListener)
+  })
+  return [windowHeight, setWindowHeight]
+}
+
 const getId = (searchString) => {
   const split = searchString.substring(1).split('=')
   if (split.length !== 1) {

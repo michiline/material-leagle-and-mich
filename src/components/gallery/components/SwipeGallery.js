@@ -24,12 +24,13 @@ class SwipeGallery extends Component {
     n: '',
 		images: this.props.images,
 		sizes: [],
-		windowSize: document.body.clientWidth
+		windowWidth: document.body.clientWidth,
+		containerRef: React.createRef()
   }
   render () {
     return (
 			<BackgroundContainer show={this.props.show}>
-				<Container show={this.props.show}>
+				<Container show={this.props.show} ref={this.state.containerRef}>
 					{this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
 				</Container>
 				<CloseContainer onClick={e => this.props.setShow(false)}>✖</CloseContainer>
@@ -58,32 +59,43 @@ class SwipeGallery extends Component {
   }
 
 	setSizes = ({ ratios }) => {
+		const windowHeight = window.innerHeight
 		return ratios.map(ratio => {
 			if (ratio < 1) {
-				let height = window.innerHeight - 20
+				let height = windowHeight - 20
 				let width = height * ratio
-				while (height > window.innerHeight || width > document.body.clientWidth) {
+				while (height > windowHeight || width > document.body.clientWidth) {
 					height = height * 0.99
 					width = height * ratio
 				}
-				return { width: height * ratio, height: height, margin: (document.body.clientWidth - width) / 2 }
+				return {
+					width: height * ratio,
+					height: height,
+					marginHorizontal: (document.body.clientWidth - width) / 2,
+					marginVertical: (windowHeight - height) / 2,
+				}
 			}
 			else {
-				let height = window.innerHeight - 20
+				let height = windowHeight - 20
 				let width = height * ratio
-				while (height > window.innerHeight || width > document.body.clientWidth) {
+				while (height > windowHeight || width > document.body.clientWidth) {
 					height = height * 0.99
 					width = height * ratio
 				}
-				return { width, height, margin: (document.body.clientWidth - width) / 2}
+				return {
+					width,
+					height,
+					marginHorizontal: (document.body.clientWidth - width) / 2,
+					marginVertical: (windowHeight - height) / 2,
+				}
 			}
 		})
 	}
 
-	resizeListener = () => {
+	resizeListener = (e) => {
 		// window.location.href = window.location.href
 		this.setState({
-			windowSize: document.body.clientWidth
+			windowWidth: document.body.clientWidth
 		})
 		const sizes = this.setSizes({ ratios: this.props.ratios })
 		this.setState({ sizes })
@@ -174,6 +186,7 @@ const BackgroundContainer = styled.div`
   height: 100vh;
   background-color: #24272EC8;
   z-index: 5;
+
 `
 
 const Container = styled.div.attrs({
@@ -181,14 +194,13 @@ const Container = styled.div.attrs({
   })
 `
   --n: 1;
-	height: 100%;
+	min-height: calc(100vh - 56px);
   display: flex;
   align-items: center;
   width: 100%;
   width: calc(var(--n)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
 	z-index: 7;
-	position: absolute;
 `
 
 const Img = styled.img.attrs(props => ({
@@ -199,8 +211,10 @@ const Img = styled.img.attrs(props => ({
   object-fit: cover;
   user-select: none;
   pointer-events: none;
-	margin-left: ${props => props.size.margin}px;
-	margin-right: ${props => props.size.margin}px;
+	margin-left: ${props => props.size.marginHorizontal}px;
+	margin-right: ${props => props.size.marginHorizontal}px;
+	margin-top: ${props => props.size.marginVertical}px;
+	margin-bottom: ${props => props.size.marginVertical}px;
 `
 
 const CloseContainer = styled.div`
