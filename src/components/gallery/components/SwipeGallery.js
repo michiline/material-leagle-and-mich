@@ -59,12 +59,13 @@ class SwipeGallery extends Component {
   }
 
 	setSizes = ({ ratios }) => {
-		const windowHeight = window.innerHeight
+		const windowHeight = window.innerHeight - 20
+		const windowWidth = document.body.clientWidth
 		return ratios.map(ratio => {
 			if (ratio < 1) {
 				let height = windowHeight - 20
 				let width = height * ratio
-				while (height > windowHeight || width > document.body.clientWidth) {
+				while (height > windowHeight || width > windowWidth) {
 					height = height * 0.99
 					width = height * ratio
 				}
@@ -78,7 +79,7 @@ class SwipeGallery extends Component {
 			else {
 				let height = windowHeight - 20
 				let width = height * ratio
-				while (height > windowHeight || width > document.body.clientWidth) {
+				while (height > windowHeight || width > windowWidth) {
 					height = height * 0.99
 					width = height * ratio
 				}
