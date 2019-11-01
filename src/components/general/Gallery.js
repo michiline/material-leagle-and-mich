@@ -13,9 +13,6 @@ window.jQuery = $
 window.$ = $
 
 class Gallery extends Component {
-  state = {
-    scrollOffset: parseInt(localStorage.getItem('scrollOffset'))
-  }
   render () {
     const { history, url, text, images, showSwipe } = this.props
     return (
