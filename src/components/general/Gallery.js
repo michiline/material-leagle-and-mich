@@ -28,45 +28,56 @@ class Gallery extends Component {
     )
   }
 
-          // <Header onClick={ e => to({ this.props.history, this.props.url })}>{this.props.header}</Header>
-
   async componentDidMount() {
     window.addEventListener('resize', this.resizeListener.bind(this))
-    try {
-      await sleep(250)
-      if (this.props.hide) {
-        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
-      } else {
-        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
-        window.scrollTo({
-          top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
-        })
-      }
-    } catch (err) {
-      await sleep(250)
-      if (this.props.hide) {
-        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
-      } else {
-        window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
-        window.scrollTo({
-          top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
-        })
-      }
+    await sleep(250)
+    if (this.props.hide) {
+      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+    } else {
+      window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+      window.scrollTo({
+        top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+      })
     }
   }
+
+  // async componentDidMount() {
+  //   window.addEventListener('resize', this.resizeListener.bind(this))
+  //   try {
+  //     await sleep(250)
+  //     if (this.props.hide) {
+  //       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+  //     } else {
+  //       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+  //       window.scrollTo({
+  //         top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+  //       })
+  //     }
+  //   } catch (err) {
+  //     await sleep(250)
+  //     if (this.props.hide) {
+  //       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
+  //     } else {
+  //       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+  //       window.scrollTo({
+  //         top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+  //       })
+  //     }
+  //   }
+  // }
 
   renderImages = ({ images, showSwipe, history }) => images.map((image, index) => {
     if (showSwipe) {
       return (
-        <div key={index} onClick={e => this.imageClick({ showSwipe, id: index})}>
+        <ImageContainer key={index} onClick={e => this.imageClick({ showSwipe, id: index})}>
           <Image img={image}/>
-        </div>
+        </ImageContainer>
       )
     } else {
       return (
-        <div key={index} onClick={e => to({ history, url: image.url})}>
+        <ImageContainer key={index} onClick={e => to({ history, url: image.url})}>
           <Image img={image}/>
-        </div>
+        </ImageContainer>
       )
     }
   })
@@ -99,21 +110,6 @@ const getRowHeight = () => {
   }
 }
 
-// const getRowHeight = () => {
-//   const width = window.innerWidth
-//   if (width < 500) {
-//     return 125
-//   } else if (width >= 500 && width < 750) {
-//     return 150
-//   } else if (width >= 750 && width < 1000) {
-//     return 175
-//   } else if (width >= 1000 && width < 1250) {
-//     return 200
-//   } else {
-//     return 225
-//   }
-// }
-
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
@@ -139,6 +135,10 @@ const GalleryContainer = styled.div.attrs({
   })
 `
   margin-top: calc(${padding.small} - 2px);
+`
+
+const ImageContainer = styled.div`
+  cursor: pointer;
 `
 
 const Image = styled.img.attrs(props => ({
