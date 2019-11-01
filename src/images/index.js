@@ -12,7 +12,7 @@ const sizes = {
 
 export const imageBundle = ({ type, name }) => [...Array(sizes[name])].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }})
 
-export const imageBundleRatio = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }})
+export const imageBundleRatio = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`}})
 // export const imageBundleRatioHome = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}` }})
 
 export const imageBundleRatioHome = ({ length }) => {
@@ -26,7 +26,7 @@ export const imageBundleRatioHome = ({ length }) => {
       index = Math.floor(Math.random() * (randomEntry[1].length - 1))
     }
     srcs.push(`/gallery/${name}/swipe/${index}`)
-    return { src: `${imgUrl}/gallery/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }
+    return { src: `${imgUrl}/gallery/${name}/img${index}.jpg`, url: `/gallery/${name}` }
   })
   return images
 }

@@ -13,7 +13,7 @@ class SwipeGallery extends Component {
   state = {
     _C: '',
     N: '',
-    i: parseInt(this.props.match.params.id),
+    i: parseInt(this.props.id),
     x0: null,
     locked: false,
     w: window.innerWidth,
@@ -22,7 +22,7 @@ class SwipeGallery extends Component {
     rID: null,
     anf: '',
     n: '',
-		images: galleryImageBundle(this.props.match.params.galleryName).images,
+		images: this.props.images,
 		sizes: []
   }
   render () {
@@ -31,13 +31,13 @@ class SwipeGallery extends Component {
 				<Container>
 					 {this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
 		    </Container>
-				<CloseContainer onClick={e => this.props.history.push(`/gallery/${this.props.match.params.galleryName}`)}>✖</CloseContainer>
+				<CloseContainer onClick={e => this.props.hideSwipe()}>✖</CloseContainer>
 			</>
     )
   }
   async componentDidMount() {
 		await sleep(200)
-		const ratios = galleryImageBundle(this.props.match.params.galleryName).ratios
+		const ratios = this.props.ratios
 		const sizes = ratios.map(ratio => {
 			if (ratio < 1) {
 				let height = window.innerHeight - 20
@@ -62,20 +62,26 @@ class SwipeGallery extends Component {
     const _C = document.querySelector('#container')
     const N = _C.children.length
     _C.style.setProperty('--n', _C.children.length)
-		_C.style.setProperty('--i', parseInt(this.props.match.params.id))
+		_C.style.setProperty('--i', parseInt(this.props.id))
     _C.addEventListener('mousedown', this.lock.bind(this), false)
     _C.addEventListener('touchstart', this.lock.bind(this), false)
 
     _C.addEventListener('mousemove', this.drag.bind(this), false)
     _C.addEventListener('touchmove', this.drag.bind(this), false)
 
+		_C.addEventListener('mouseup', this.updateId.bind(this), false)
+		_C.addEventListener('touchend', this.updateId.bind(this), false)
+
     _C.addEventListener('mouseup', this.move.bind(this), false)
     _C.addEventListener('touchend', this.move.bind(this), false)
-		_C.addEventListener('mouseup', this.updateUrl.bind(this), false)
-		_C.addEventListener('touchend', this.updateUrl.bind(this), false)
 		window.addEventListener('resize', this.setSizes.bind(this))
     this.setState({ _C, N })
   }
+
+	updateId = async () => {
+		await sleep(200)
+		this.props.setId({ id: this.state.i })
+	}
 
 	setSizes = () => {
 		window.location.href = window.location.href
@@ -88,12 +94,6 @@ class SwipeGallery extends Component {
 			return null
 		}
 	}
-
-	updateUrl = async () => {
-		await sleep(200)
-		this.props.history.push(`/gallery/${this.props.match.params.galleryName}/swipe/${this.state.i}`)
-	}
-
 
   stopAni = () => {
     cancelAnimationFrame(this.state.rID)
@@ -176,6 +176,13 @@ const Container = styled.div.attrs({
   width: 100%;
   width: calc(var(--n)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+	background-color: white;
 `
 
 const Img = styled.img.attrs(props => ({

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useRef } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import styled, { css } from 'styled-components'
@@ -13,13 +13,16 @@ window.jQuery = $
 window.$ = $
 
 class Gallery extends Component {
+  state = {
+    scrollOffset: parseInt(localStorage.getItem('scrollOffset'))
+  }
   render () {
-    const { history, url, text, images } = this.props
+    const { history, url, text, images, showSwipe } = this.props
     return (
       <Container>
         <Header onClick={ e => to({ history, url })}>{text}</Header>
         <GalleryContainer>
-          {this.renderImages(images)}
+          {this.renderImages({ images, showSwipe, history })}
         </GalleryContainer>
       </Container>
     )
@@ -35,6 +38,9 @@ class Gallery extends Component {
         window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
       } else {
         window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+        window.scrollTo({
+          top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+        })
       }
     } catch (err) {
       await sleep(250)
@@ -42,17 +48,33 @@ class Gallery extends Component {
         window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
       } else {
         window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
+        window.scrollTo({
+          top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+        })
       }
     }
   }
 
-  renderImages = (images) => images.map((image, index) => {
-    return (
-      <A img={image} key={index}>
-        <Image img={image} />
-      </A>
-    )
+  renderImages = ({ images, showSwipe, history }) => images.map((image, index) => {
+    if (showSwipe) {
+      return (
+        <div key={index} onClick={e => this.imageClick({ showSwipe, id: index})}>
+          <Image img={image}/>
+        </div>
+      )
+    } else {
+      return (
+        <div key={index} onClick={e => to({ history, url: image.url})}>
+          <Image img={image}/>
+        </div>
+      )
+    }
   })
+
+  imageClick = ({ showSwipe, id }) => {
+    localStorage.setItem('scrollOffset', window.scrollY)
+    showSwipe({ id })
+  }
 
   resizeListener = () => {
     window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })

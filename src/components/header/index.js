@@ -7,11 +7,11 @@ import * as G from '../general'
 import { padding, shadow } from '../../style'
 import { menu, logo } from '../../images'
 
-const Header = ({ history }) => {
+const Header = ({ history, hide }) => {
   const menuRef = useRef()
   const [scrollY, scrolled] = useScrolledDirection({ boundary: 15 })
   const [toggled, setToggled] = useState(false)
-  if (!history.location.pathname.includes('swipe')) {
+  if (!hide) {
     return (
       <>
         <Container toggled={toggled} scrollY={scrollY} scrolled={scrolled}>

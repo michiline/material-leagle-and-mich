@@ -6,11 +6,11 @@ import { RippleComponentLink } from '../../hooks'
 import * as G from '../general'
 import { facebook, instagram, github } from '../../images'
 
-const Footer = ({ history }) => {
+const Footer = ({ history, hide }) => {
   const facebookIconRef = useRef()
   const instagramIconRef = useRef()
   const githubIconRef = useRef()
-  if (!history.location.pathname.includes('swipe')) {
+  if (!hide) {
     return (
       <Container>
         <IconContainer>

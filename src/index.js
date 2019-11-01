@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
@@ -8,16 +8,17 @@ import { Header, Home, Blogs, Gallery, Footer } from './components'
 import { ScrollToTop } from './hooks'
 
 const App = () => {
+  let [hide, setHide] = useState(localStorage.getItem('hide') === 'true')
   return (
     <BrowserRouter>
       <>
         <ScrollToTop />
         <Global />
-        <Header />
+        <Header hide={hide}/>
         <Route exact path='/' component={Home} />
         <Route path='/blogs' component={Blogs} />
-        <Route path='/gallery' component={Gallery} />
-        <Footer />
+        <Route path='/gallery' component={() => <Gallery setHide={setHide} hide={hide}/>} />
+        <Footer hide={hide}/>
       </>
     </BrowserRouter>
   )
