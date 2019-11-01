@@ -32,9 +32,11 @@ class Gallery extends Component {
       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
     } else {
       window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), margins: 5 })
-      window.scrollTo({
-        top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
-      })
+      if (parseInt(localStorage.getItem('scrollOffset')) !== 0) {
+        window.scrollTo({
+          top: parseInt(localStorage.getItem('scrollOffset')), behaviour: 'smooth'
+        })
+      }
     }
   }
 
