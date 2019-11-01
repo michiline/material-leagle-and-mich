@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { galleryImageBundle } from '../../../images'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import axios from 'axios'
 
 const NF = 30
@@ -13,7 +13,7 @@ class SwipeGallery extends Component {
   state = {
     _C: '',
     N: '',
-    i: this.props.imageId,
+    i: parseInt(this.props.id),
     x0: null,
     locked: false,
     w: window.innerWidth,
@@ -23,70 +23,68 @@ class SwipeGallery extends Component {
     anf: '',
     n: '',
 		images: this.props.images,
-		sizes: [],
-		windowSize: document.body.clientWidth
+		sizes: []
   }
   render () {
     return (
-			<BackgroundContainer show={this.props.show}>
-				<Container show={this.props.show}>
-					{this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
-				</Container>
-				<CloseContainer onClick={e => this.props.setShow(false)}>✖</CloseContainer>
-			</BackgroundContainer>
+			<>
+				<Container top={window.scrollY}>
+					 {this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
+		    </Container>
+				<CloseContainer onClick={e => this.props.hideSwipe()}>✖</CloseContainer>
+			</>
     )
   }
-
-	async componentDidMount() {
+  async componentDidMount() {
 		await sleep(200)
-		const sizes = this.setSizes({ ratios: this.props.ratios })
+		const ratios = this.props.ratios
+		const sizes = ratios.map(ratio => {
+			if (ratio < 1) {
+				let height = window.innerHeight - 20
+				let width = height * ratio
+				while (height > window.innerHeight || width > window.innerWidth) {
+					height = height * 0.99
+					width = height * ratio
+				}
+				return { width: height * ratio, height: height, margin: (window.innerWidth - width) / 2 }
+			}
+			else {
+				let height = window.innerHeight - 20
+				let width = height * ratio
+				while (height > window.innerHeight || width > window.innerWidth) {
+					height = height * 0.99
+					width = height * ratio
+				}
+				return { width, height, margin: (window.innerWidth - width) / 2}
+			}
+		})
 		this.setState({ sizes })
     const _C = document.querySelector('#container')
     const N = _C.children.length
     _C.style.setProperty('--n', _C.children.length)
-		_C.style.setProperty('--i', this.props.imageId)
+		_C.style.setProperty('--i', parseInt(this.props.id))
     _C.addEventListener('mousedown', this.lock.bind(this), false)
     _C.addEventListener('touchstart', this.lock.bind(this), false)
 
     _C.addEventListener('mousemove', this.drag.bind(this), false)
     _C.addEventListener('touchmove', this.drag.bind(this), false)
 
+		_C.addEventListener('mouseup', this.updateId.bind(this), false)
+		_C.addEventListener('touchend', this.updateId.bind(this), false)
+
     _C.addEventListener('mouseup', this.move.bind(this), false)
     _C.addEventListener('touchend', this.move.bind(this), false)
-		window.addEventListener('resize', this.resizeListener.bind(this))
+		window.addEventListener('resize', this.setSizes.bind(this))
     this.setState({ _C, N })
   }
 
-	setSizes = ({ ratios }) => {
-		return ratios.map(ratio => {
-			if (ratio < 1) {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (height > window.innerHeight || width > document.body.clientWidth) {
-					height = height * 0.99
-					width = height * ratio
-				}
-				return { width: height * ratio, height: height, margin: (document.body.clientWidth - width) / 2 }
-			}
-			else {
-				let height = window.innerHeight - 20
-				let width = height * ratio
-				while (height > window.innerHeight || width > document.body.clientWidth) {
-					height = height * 0.99
-					width = height * ratio
-				}
-				return { width, height, margin: (document.body.clientWidth - width) / 2}
-			}
-		})
+	updateId = async () => {
+		await sleep(200)
+		this.props.setId({ id: this.state.i })
 	}
 
-	resizeListener = () => {
-		// window.location.href = window.location.href
-		this.setState({
-			windowSize: document.body.clientWidth
-		})
-		const sizes = this.setSizes({ ratios: this.props.ratios })
-		this.setState({ sizes })
+	setSizes = () => {
+		window.location.href = window.location.href
 	}
 
 	renderImages = ({ images, sizes }) => {
@@ -167,15 +165,6 @@ class SwipeGallery extends Component {
   }
 }
 
-const BackgroundContainer = styled.div`
-  position: fixed;
-  top: 0; right: 0; left: 0; bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #24272EC8;
-  z-index: 5;
-`
-
 const Container = styled.div.attrs({
   id: 'container'
   })
@@ -187,8 +176,10 @@ const Container = styled.div.attrs({
   width: 100%;
   width: calc(var(--n)*100%);
   transform: translate(calc(var(--i, 0)/var(--n)*-100%));
-	z-index: 7;
 	position: absolute;
+	top: 0;
+	z-index: 5;
+	background-color: #24272EC8;
 `
 
 const Img = styled.img.attrs(props => ({
@@ -212,13 +203,13 @@ const CloseContainer = styled.div`
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
-  z-index: 8;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(6rem + 3vw);
   color: white;
-  opacity: 0.7;
+  opacity: 0.6;
   transition: opacity 0.3s ease-in-out;
   &:hover {
     opacity: 1;

@@ -13,7 +13,7 @@ class SwipeGallery extends Component {
   state = {
     _C: '',
     N: '',
-    i: this.props.imageId,
+    i: this.props.id,
     x0: null,
     locked: false,
     w: window.innerWidth,
@@ -37,14 +37,18 @@ class SwipeGallery extends Component {
     )
   }
 
-	async componentDidMount() {
+
+
+  async componentDidMount() {
+
 		await sleep(200)
-		const sizes = this.setSizes({ ratios: this.props.ratios })
+		const ratios = this.props.ratios
+		const sizes = this.setSizes({ ratios })
 		this.setState({ sizes })
     const _C = document.querySelector('#container')
     const N = _C.children.length
     _C.style.setProperty('--n', _C.children.length)
-		_C.style.setProperty('--i', this.props.imageId)
+		_C.style.setProperty('--i', parseInt(this.props.id))
     _C.addEventListener('mousedown', this.lock.bind(this), false)
     _C.addEventListener('touchstart', this.lock.bind(this), false)
 
@@ -85,8 +89,6 @@ class SwipeGallery extends Component {
 		this.setState({
 			windowSize: document.body.clientWidth
 		})
-		const sizes = this.setSizes({ ratios: this.props.ratios })
-		this.setState({ sizes })
 	}
 
 	renderImages = ({ images, sizes }) => {
@@ -174,6 +176,10 @@ const BackgroundContainer = styled.div`
   height: 100vh;
   background-color: #24272EC8;
   z-index: 5;
+  visibility: hidden;
+  ${props => props.show && css`
+    visibility: visible !important;
+  `}
 `
 
 const Container = styled.div.attrs({

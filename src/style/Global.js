@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 const Global = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Mansalva:400,700|Montserrat:400,500,700|Caveat+Brush:400,500,700|Just+Me+Again+Down+Here:400,500,700');
-  html, body, #root {
-    height: 100%;
+  html > body > #root {
+    height: min-content;
   }
   html {
     font-size: 62.5%;

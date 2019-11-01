@@ -14,12 +14,12 @@ window.$ = $
 
 class Gallery extends Component {
   render () {
-    const { history, url, text, images, setShow, setImageId } = this.props
+    const { history, url, text, images, showSwipe, hideSwipe } = this.props
     return (
       <Container>
         <Header onClick={ e => to({ history, url })}>{text}</Header>
         <GalleryContainer>
-          {this.renderImages({ images, setShow, setImageId, history })}
+          {this.renderImages({ images, showSwipe, history })}
         </GalleryContainer>
       </Container>
     )
@@ -65,10 +65,10 @@ class Gallery extends Component {
   //   }
   // }
 
-  renderImages = ({ images, setShow, setImageId, history }) => images.map((image, index) => {
-    if (setShow) {
+  renderImages = ({ images, showSwipe, history }) => images.map((image, index) => {
+    if (showSwipe) {
       return (
-        <ImageContainer key={index} onClick={e => imageClick({ setShow, setImageId, id: index })}>
+        <ImageContainer key={index} onClick={e => this.imageClick({ showSwipe, id: index})}>
           <Image img={image}/>
         </ImageContainer>
       )
@@ -81,14 +81,14 @@ class Gallery extends Component {
     }
   })
 
+  imageClick = ({ showSwipe, id }) => {
+    localStorage.setItem('scrollOffset', window.scrollY)
+    showSwipe({ id })
+  }
+
   resizeListener = () => {
     window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
   }
-}
-
-const imageClick = ({ setShow, setImageId, id }) => {
-  setImageId(id)
-  setShow(true)
 }
 
 const getRowHeight = () => {
