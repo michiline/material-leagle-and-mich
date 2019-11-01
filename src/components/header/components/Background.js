@@ -28,7 +28,7 @@ const Center = styled.div`
   height: min-content;
   flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 1rem);
   left: 50%;
   transform: translate(-50%,-50%);
   align-items: center;
@@ -36,10 +36,10 @@ const Center = styled.div`
 `
 
 const Link = styled.p`
-  font-size: 4rem;
+  font-size: calc(1.5rem + 3vh);
   letter-spacing: 0;
-  line-height: 1.3;
-  padding: ${padding.medium};
+  line-height: 1.2;
+  padding: ${padding.smallest};
   font-family: 'Amatic SC';
   font-weight: 700;
   width: max-content;
