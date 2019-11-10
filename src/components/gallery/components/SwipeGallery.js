@@ -113,7 +113,7 @@ class SwipeGallery extends Component {
 	}
 
 	previous = (e) => {
-		if (this.state.i - 1 > 0) {
+		if (this.state.i - 1 < 0) {
 			this.setState({
 				i: this.state.i - 1
 			})
