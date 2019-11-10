@@ -1,32 +1,32 @@
 export default {
   'kamacnik': {
-    h1: 'Kamacnik',
-    h2: 'Kad želite u lijepu prirodu i laganu šetnju ovo je mjesto za posjetiti',
+    h1: 'Kamačnik',
+    h2: 'Lagana šetnja u lijepoj prirodi',
     h3: 'Kamačnik'
   },
   'tara': {
     h1: 'Tara',
-    h2: 'Jedva smo ju dočekali',
+    h2: 'Divlja priroda',
     h3: 'Tara'
   },
   'krka': {
     h1: 'Krka',
-    h2: 'Sad je nama jasno zašto tu ima toliko ljudi stalno',
+    h2: 'Sad je nama jasno zašto je tu stalno toliko ljudi',
     h3: 'Krka'
   },
   'cres': {
     h1: 'Cres',
-    h2: 'Cres',
+    h2: 'Otok s teško pristupačnim plažama',
     h3: 'Cres'
   },
   'losinj': {
-    h1: 'Mali Losinj',
-    h2: 'Mali Losinj',
+    h1: 'Mali Lošinj',
+    h2: 'Otok s najljepšim pogledom',
     h3: 'Mali Lošinj'
   },
   'soca': {
-    h1: 'Soca',
-    h2: 'Ovo je jedan pravi biser',
+    h1: 'Soča',
+    h2: 'Tu smo zavoljeli tirkiznu boju',
     h3: 'Soča'
   },
   'istra': {
@@ -36,17 +36,17 @@ export default {
   },
   'kalnik': {
     h1: 'Kalnik',
-    h2: 'Još jedan spontani i uspješni izlet',
+    h2: 'Kategorija: kratki i slatki izleti',
     h3: 'Kalnik'
   },
   'gerlitzen': {
     h1: 'Gerlitzen',
-    h2: 'Mjesto gdje je Ana shvatila da se ipak može spustiti niz planinu. A i brža je od puža.',
+    h2: 'Mjesto gdje je Ana shvatila da se ipak može spustiti niz planinu.',
     h3: 'Gerlitzen'
   },
   'kuba': {
     h1: 'Kuba',
-    h2: 'Mi novio quiere pagar la cuenta',
+    h2: 'Zemlja koja te vodi u prošlost',
     h3: 'Kuba'
   },
   'london': {
@@ -55,18 +55,18 @@ export default {
     h3: 'London'
   },
   'budimpesta': {
-    h1: 'Budimpesta',
+    h1: 'Budimpešta',
     h2: 'IDEMO NA EMANCIPATORA!',
     h3: 'Budimpešta'
   },
   'novi': {
     h1: 'Novi Vinodolski',
-    h2: '”Ja bih na more!”',
+    h2: '”A ja bih na more!”',
     h3: 'Novi Vinodolski'
   },
   'mljet': {
     h1: 'Mljet',
-    h2: '”E znate li da je tu ona plaža na kojoj se snimao Survivor?”',
+    h2: '”E tu vam je ona plaža na kojoj se snimao Survivor!”',
     h3: 'Mljet'
   },
   'lastovo': {
@@ -86,11 +86,11 @@ export default {
   },
   'tabor': {
     h1: 'Veliki Tabor',
-    h2: 'Što nam je blizu, a jako je lijepo?',
+    h2: '”Daj, što imamo blizu, da iskoristimo dan?',
     h3: 'Veliki Tabor'
   },
   'plitvice': {
-    h1: 'Plitvicka Jezera',
+    h1: 'Plitvička Jezera',
     h2: 'Konačno su i ona došla na red!',
     h3: 'Plitvička Jezera'
   },
@@ -101,27 +101,27 @@ export default {
   },
   'nassfeld': {
     h1: 'Nassfeld',
-    h2: 'Ili mjesto gdje je Ana mislila da će zauvijek ostati na vrhu planine',
+    h2: 'Ili mjesto gdje je Ana mislila da će ostati zarobljena na vrhu planine',
     h3: 'Nassfeld'
   },
   'risnjak': {
     h1: 'Risnjak',
-    h2: 'Kao iza ovih oblaka se nalazi vrh?',
+    h2: 'Dolje sunce, gore magla.',
     h3: 'Risnjak'
   },
   'trakoscan': {
-    h1: 'Trakoscan',
-    h2: 'Trakoscan',
+    h1: 'Trakoščan',
+    h2: 'Samo zeleno',
     h3: 'Trakoščan'
   },
   'barcelona': {
     h1: 'Barcelona',
-    h2: 'Barcelona',
+    h2: 'Tu se barem ne možemo izgubiti',
     h3: 'Barcelona'
   },
   'krupa': {
     h1: 'Krupa',
-    h2: 'Nema ljepše od ovog',
+    h2: 'Naše najdraže',
     h3: 'Krupa'
   },
   'dugi': {
@@ -131,17 +131,17 @@ export default {
   },
   'brijuni': {
     h1: 'Brijuni',
-    h2: 'Naš prvi zajednički posjet nacionalnom parku',
+    h2: 'A zašto ne bi na Brijune kad smo već u Puli?',
     h3: 'Brijuni'
   },
   'mitrovica': {
     h1: 'Sremska Mitrovica',
-    h2: 'Kako pojesti što više u što manje dana',
+    h2: 'Kad skupimo se svi, mal i veliki…',
     h3: 'Sremska Mitrovica'
   },
   'fuzine': {
-    h1: 'Fuzine',
-    h2: 'Naš prvi izlet',
+    h1: 'Fužine',
+    h2: 'Prvi zajednički izlet',
     h3: 'Fužine'
   }
 }
