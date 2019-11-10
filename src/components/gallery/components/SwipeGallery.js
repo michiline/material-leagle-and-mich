@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import { galleryImageBundle } from '../../../images'
+import { galleryImageBundle, arrow } from '../../../images'
 import styled, { css } from 'styled-components'
 import axios from 'axios'
 
@@ -30,10 +30,12 @@ class SwipeGallery extends Component {
   render () {
     return (
 			<BackgroundContainer show={this.props.show}>
+				<Previous onClick={e => this.previous(e)}/>
 				<Container show={this.props.show} ref={this.state.containerRef}>
 					{this.renderImages({ images: this.state.images, sizes: this.state.sizes })}
 				</Container>
 				<CloseContainer onClick={e => this.props.setShow(false)}>✖</CloseContainer>
+				<Next onClick={e => this.next(e)}/>
 			</BackgroundContainer>
     )
   }
@@ -110,7 +112,25 @@ class SwipeGallery extends Component {
 		}
 	}
 
-  stopAni = () => {
+	previous = (e) => {
+		if (this.state.i - 1 > 0) {
+			this.setState({
+				i: this.state.i - 1
+			})
+			this.state._C.style.setProperty('--i', this.state.i - 1)
+		}
+	}
+
+	next = (e) => {
+		if (this.state.i + 1 < this.state.images.length) {
+			this.setState({
+				i: this.state.i + 1
+			})
+			this.state._C.style.setProperty('--i', this.state.i + 1)
+		}
+	}
+
+	 stopAni = () => {
     cancelAnimationFrame(this.state.rID)
     this.state.rID = null
   }
@@ -235,6 +255,46 @@ const CloseContainer = styled.div`
   color: white;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+`
+
+const Previous = styled.div`
+  position: absolute;
+  bottom: calc(50% - 20px);
+  left: 1%;
+  width: calc(5rem + 2.5vw);
+  height: calc(5rem + 2.5vw);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 8;
+  opacity: 0.7;
+	background-image: url(${arrow.previous.src});
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+`
+
+const Next = styled.div`
+  position: absolute;
+  bottom: calc(50% - 20px);
+  right: 1%;
+  width: calc(5rem + 2.5vw);
+  height: calc(5rem + 2.5vw);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 8;
+  opacity: 0.7;
+	background-image: url(${arrow.next.src});
   &:hover {
     opacity: 1;
   }
