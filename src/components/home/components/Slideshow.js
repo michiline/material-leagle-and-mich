@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useSlide } from '../../../hooks'
 import { arrow, slideshow } from '../../../images'
 import { shadow, padding } from '../../../style'
@@ -10,26 +10,24 @@ const Slideshow = ({ slideshowRef }) => {
   const [activeId, setActiveId] = useSlide(imagesCount)
   return (
     <Container>
-      <PreviousArrow img={arrow.previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)}/>
       <Text>
         <H1>Little Eagle & Mich</H1>
         <H2>Dobrodošli na putopisnu stranicu!</H2>
         <H3>(U nastavku su iskustva s naših putovanja u obliku teksta, slika i videa)</H3>
-        <IWrap>
-          <I/>
-        </IWrap>
       </Text>
       <Img img={slideshow[0]} activeId={activeId}/>
       <Img img={slideshow[1]} activeId={activeId}/>
       <Img img={slideshow[2]} activeId={activeId}/>
       <Img img={slideshow[3]} activeId={activeId}/>
       <Img img={slideshow[4]} activeId={activeId}/>
-      <NextArrow img={arrow.next} onClick={e => setActiveId((activeId + 1) % imagesCount)} />
       <GreyContainer />
+      <ScrollDown />
     </Container>
   )
 }
 
+      // <PreviousArrow img={arrow.previous} onClick={e => setActiveId((activeId - 1 + imagesCount) % imagesCount)}/>
+      // <NextArrow img={arrow.next} onClick={e => setActiveId((activeId + 1) % imagesCount)} />
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -41,6 +39,7 @@ const Container = styled.div`
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   box-shadow: ${shadow.dp1};
+  position: relative;
 `
 
 const GreyContainer = styled.div`
@@ -136,6 +135,33 @@ const Img = styled.img.attrs(props => ({
   width: 100%;
   transition: opacity 1.5s ease-in;
   opacity: ${props => props.activeId === props.img.id ? 1 : 0};
+`
+
+const bounce = keyframes`
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-1vw, 1vw);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+`
+
+const ScrollDown = styled.span`
+  position: absolute;
+  bottom: 3vw;
+  left: calc(50% - 7.5px - 1vw);
+  width: calc(15px + 2vw);
+  height: calc(15px + 2vw);
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  animation: ${bounce} 2s infinite;
+  box-sizing: border-box;
+  opacity: 1;
+  z-index: 10;
 `
 
 export default Slideshow
