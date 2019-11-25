@@ -4,11 +4,13 @@ import galleryText from './text'
 const imgUrl = `${process.env.PUBLIC_URL}/img`
 
 const sizes = {
-  krka: 11,
+  motovun: 13,
+  kamacnik: 16,
   tara: 20,
+  krka: 11,
   soca: 40,
-  kamacnik: 16
 }
+
 
 export const imageBundle = ({ type, name }) => [...Array(sizes[name])].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }})
 
@@ -42,6 +44,11 @@ export const galleryCover = {
 }
 
 export const galleries = [
+  {
+    img: covers({ type: 'gallery', name: 'motovun'}),
+    title: 'Motovun',
+    url: '/gallery/motovun'
+  },
   {
     img: covers({ type: 'gallery', name: 'kamacnik'}),
     title: 'Kamačnik',
@@ -190,6 +197,13 @@ export const galleries = [
 ]
 
 export const blogs = [
+  {
+    img: { src: '/img/covers/cards/motovun.jpg' },
+    title: 'Magloviti Grad',
+    subtitle: 'Motovun, Hrvatska',
+    description: 'Ako još niste svjedočili pogledu na dolinu potpuno prekrivenu maglom, ne znate što propuštate!',
+    url: '/blogs/motovun'
+  },
   {
     img: imageBundle({ type: 'blogs', name: 'kamacnik'})[15],
     title: 'Jesenski Kanjon',

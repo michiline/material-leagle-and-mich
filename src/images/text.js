@@ -1,4 +1,9 @@
 export default {
+  'motovun': {
+    h1: 'Motovun',
+    h2: 'Anina prva foto radionica',
+    h3: 'Motovun'
+  },
   'kamacnik': {
     h1: 'Kamačnik',
     h2: 'Lagana šetnja u lijepoj prirodi',
