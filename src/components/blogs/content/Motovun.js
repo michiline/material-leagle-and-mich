@@ -36,11 +36,6 @@ const Blog = () => {
           <Text>
             Krenula sam sa svojim fotografskim usavršavanjima na radionici portretne fotografije koju je organizirala udruga Fotovun, a koju je vodio legendarni Igor Dugandžić – Cigo.
           </Text>
-          <Text>
-            Mislav je služio kao uho za slušanje kad sam se sva entuzijastična vraćala s radionica i prepričavala doživljaje.
-            Kaže mi da je tijekom dana programirao i šetao se gradom pa pretpostavljam da je i njemu bilo lijepo.
-            Čini mi se da nije loše programirati s ovakvim pogledom.
-          </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Kao kodiram ovo ono</ImgOverlay>
@@ -52,7 +47,9 @@ const Blog = () => {
             </ImgWrapPortrait>
           </ImgRow>
           <Text>
-            Većinu vremena provela sam učeći i upijajući znanje ali uspjeli smo odvojiti dio nedjelje pred zalazak sunca za kratku šetnju gradom i opuštanje u krajoliku koji nas okružuje.
+            Mislav je služio kao uho za slušanje kad sam se sva entuzijastična vraćala s radionica i prepričavala doživljaje.
+            Kaže mi da je tijekom dana programirao i šetao se gradom pa pretpostavljam da je i njemu bilo lijepo.
+            Čini mi se da nije loše programirati s ovakvim pogledom.
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
@@ -64,6 +61,9 @@ const Blog = () => {
               <ImgLandscapeHalf img={images[5]}/>
             </ImgWrapLandscape>
           </ImgRow>
+          <Text>
+            Većinu vremena provela sam učeći i upijajući znanje ali uspjeli smo odvojiti dio nedjelje pred zalazak sunca za kratku šetnju gradom i opuštanje u krajoliku koji nas okružuje.
+          </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
               <ImgOverlay>Beli zidići, črjeni krovići</ImgOverlay>
@@ -78,16 +78,16 @@ const Blog = () => {
             Kako smo išli van sezone, imali smo prostora za doživjeti grad bez gužve, i to za vrijeme najljepših boja.
             Ne znam da li sam ikad bila u gradu u kojem možeš napraviti krug od 360 stupnjeva i gdje je na svakom dijelu toliko predivan pogled.
           </Text>
-          <Text>
-            Mislim da je to ono što ga čini toliko specifičnim.
-            Stoji tako ponosno i moćno na tom brdašcu, ujutro se izdiže iznad magle, a navečer pozdravlja zrake sunca i stapa se s prirodom oko sebe.
-          </Text>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Krug oko grada</ImgOverlay>
               <Img img={images[8]}/>
             </ImgWrap>
           </ImgRow>
+          <Text>
+            Mislim da je to ono što ga čini toliko specifičnim.
+            Stoji tako ponosno i moćno na tom brdašcu, ujutro se izdiže iznad magle, a navečer pozdravlja zrake sunca i stapa se s prirodom oko sebe.
+          </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
               <ImgOverlay>Jedna od pet kula</ImgOverlay>

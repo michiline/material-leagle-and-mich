@@ -161,7 +161,7 @@ const ScrollDown = styled.span`
   animation: ${bounce} 2s infinite;
   box-sizing: border-box;
   opacity: 1;
-  z-index: 10;
+  z-index: 2;
 `
 
 export default Slideshow

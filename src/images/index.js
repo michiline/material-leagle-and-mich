@@ -9,6 +9,7 @@ const sizes = {
   tara: 20,
   krka: 11,
   soca: 40,
+  kuba: 41,
 }
 
 
@@ -233,13 +234,13 @@ export const blogs = [
     description: 'Bilo da ste u potrazi za avanturom ili opuštenom šetnjom, Soča ima nešto za vas. Uvjerite se sami da je boja stvarna!',
     url: '/blogs/soca'
   },
-  // {
-  //   img: kuba[0],
-  //   title: 'Viva La Revolución!',
-  //   subtitle: 'Kuba',
-  //   description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
-  //   url: '/blogs/kuba'
-  // }
+  {
+    img: { src: '/img/covers/cards/kuba.jpg' },
+    title: 'Kuba top 10',
+    subtitle: 'Kuba',
+    description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
+    url: '/blogs/kuba'
+  }
 ]
 
 export const blogImageBundle = (name) => {

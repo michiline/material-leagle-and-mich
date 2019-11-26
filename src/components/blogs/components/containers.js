@@ -7,12 +7,12 @@ export const Container = styled.div`
   @media only screen and (max-width: 600px) {
     padding-top: 9rem;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 `
 
 export const BlogContainer = styled(FlexColumnCenterContainer)`
   padding: ${padding.small};
   max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
 `
