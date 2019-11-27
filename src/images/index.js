@@ -236,7 +236,7 @@ export const blogs = [
   },
   {
     img: { src: '/img/covers/cards/kuba.jpg' },
-    title: 'Kuba top 10',
+    title: 'Kubanski Top 10',
     subtitle: 'Kuba',
     description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
     url: '/blogs/kuba'

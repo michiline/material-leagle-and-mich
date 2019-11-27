@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <>
       <Container>
-        <CoverImgCenterText h1={'Kuba Top 10'} h2={'Salsa, Mojito, Kokosi I Sreća - Zemlja U Kojoj Je Vrijeme Stalo'} img={cover}/>
+        <CoverImgCenterText h1={'Kubanski Top 10'} h2={'Salsa, Mojito, Kokosi I Sreća - Zemlja U Kojoj Je Vrijeme Stalo'} img={cover}/>
         <BlogContainer>
           <Header>Kuba Top 10</Header>
           <Intro>
@@ -113,7 +113,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Terasa s pogledom na nac. park</ImgOverlay>
+              <ImgOverlay>Nađi Anu</ImgOverlay>
               <Img img={images[11]}/>
             </ImgWrap>
           </ImgRow>
@@ -127,7 +127,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Ana se zabavlja</ImgOverlay>
+              <ImgOverlay>Ana se opustila</ImgOverlay>
               <ImgPortraitHalf img={images[12]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
@@ -140,7 +140,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Putujemo prema plantažama</ImgOverlay>
+              <ImgOverlay>Put prema plantažama</ImgOverlay>
               <Img img={images[14]}/>
             </ImgWrap>
           </ImgRow>
@@ -155,7 +155,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Stigli smo!</ImgOverlay>
+              <ImgOverlay>Zbog ovog je vrijedilo doći!</ImgOverlay>
               <ImgLandscapeHalf img={images[15]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
@@ -190,12 +190,163 @@ const Blog = () => {
           </BulletHeaderContainer>
           <Text>
             E ovo je bilo kul.
-            Toliko kul da smo zaboravili da smo u moru proveli par sati po najvećem suncu od 11 do 15h i nije nam palo napamet da se namažemo.
-            Što je za posljedicu dovelo do Mislavovih crveni leđa.
-            Ali ako se za razliku od nas sjetite namazati, Cueva de los Peces is a place to be.
+            Toliko kul da smo zaboravili da smo bili u moru nekoliko sati po najvećem suncu.
+            Mene to ne smeta međutim Mislav je osjetljiv i naravno izgorio je.
+            Ako volite roniti, i ne zaboravite se namazati kremom protiv sunca, Cueva de los Peces je mjesto koje morate posjetiti.
           </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Kit</ImgOverlay>
+              <ImgPortraitHalf img={images[21]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Dupin</ImgOverlay>
+              <ImgPortraitHalf img={images[22]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Riba čovjek</ImgOverlay>
+              <Img img={images[23]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Plantaže kave i duhana</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Seljaci su nam pokazali kako beru duhan, objasnili gradaciju listova duhana po kvaliteti, gdje ih suše i koja je najbolja metoda rolanja cigara.
+            Ispričali su nam kako im je kubanska vlada dala zemlju a oni zauzvrat moraju vladi dati 95% uzgojenog duhana.
+            Periodično ih posjećuje inspektor koji provjerava zadovoljava li kvaliteta njihovog duhana visoke standarde.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Naš prijevoz</ImgOverlay>
+              <Img img={images[24]}/>
+            </ImgWrap>
+          </ImgRow>
+          <Text>
+            Cijela dolina je nacionalni park i u njoj nema struje.
+            Znači sve što je izgrađeno i obrađeno u ovoj dolini napravljeno je ručno.
+            Na kraju posjeta popili smo kavu i kupiti domaći med, kavu, cigare i rum.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Nema labavo</ImgOverlay>
+              <ImgPortraitHalf img={images[25]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Svidjela mi se pozadina</ImgOverlay>
+              <ImgPortraitHalf img={images[26]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Polje duhana</ImgOverlay>
+              <Img img={images[27]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Old timeri</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Iako je ovo možda najveći klišej, lagali bismo kad bismo rekli da nam nije bio gušt voziti se u old timeru po Havani.
+            To je jedno od onih iskustava za koje znaš da je preskupo, ali ti svejedno nije žao dati novce za to i iskusiti ga.
+            It's a once in a lifetime thing.
+          </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Guštanje</ImgOverlay>
+              <ImgLandscapeHalf img={images[28]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>Vozač predlaže kadar</ImgOverlay>
+              <ImgLandscapeHalf img={images[29]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Pinkies</ImgOverlay>
+              <ImgLandscapeHalf img={images[30]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>Điranje po gradu</ImgOverlay>
+              <ImgLandscapeHalf img={images[31]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>El Capitolio</ImgOverlay>
+              <Img img={images[32]}/>
+            </ImgWrap>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Mojito</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Iako nismo bili neki ekstremni ljubitelji mojita prije putovanja, Kuba mijenja ljude.
+            Kad ti iskače iz svakog ugla, ne možeš ga zaobići, a onda malo pomalo više ni ne možeš bez njega.
+            A kad nemaju čašu za "to go" onda nagovoriš konobara da ju smisli jer ti baš želiš taj mojito.
+            Mislav ima dobre pregovaračke sposobnosti kad je riječ o bitnim stvarima.
+          </Text>
+          <ImgRow>
+            <ImgWrapPortraitLeft>
+              <ImgOverlay>Ne štede na menti</ImgOverlay>
+              <ImgPortraitHalf img={images[33]}/>
+            </ImgWrapPortraitLeft>
+            <ImgWrapPortrait>
+              <ImgOverlay>Kad ne daju čaše za van</ImgOverlay>
+              <ImgPortraitHalf img={images[34]}/>
+            </ImgWrapPortrait>
+          </ImgRow>
+          <BulletHeaderContainer>
+            <StarBullet/><Header3>Havana</Header3>
+          </BulletHeaderContainer>
+          <Text>
+            Mjesto koje je zastalo u nekom prošlom vremenu.
+            Ono što nam je bilo najljepše u Havani jest doživjeti jedan tako veliki grad bez reklama, bez komercijalizma, bez dostupnog interneta na svakom koraku...
+            Bez ljudi koji gledaju u mobitele, već s ljudima koji se druže na ulicama, gledjau te u oči, pričaju međusobno, s ljudima koji se smiješe i pozdravljaju.
+          </Text>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>Kvart 1</ImgOverlay>
+              <ImgLandscapeHalf img={images[35]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>Kvart 2</ImgOverlay>
+              <ImgLandscapeHalf img={images[36]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrapLandscapeLeft>
+              <ImgOverlay>El Malecon - šetnica</ImgOverlay>
+              <ImgLandscapeHalf img={images[37]}/>
+            </ImgWrapLandscapeLeft>
+            <ImgWrapLandscape>
+              <ImgOverlay>Ribičija</ImgOverlay>
+              <ImgLandscapeHalf img={images[38]}/>
+            </ImgWrapLandscape>
+          </ImgRow>
+          <Text>
+            Havana je mjesto koje nam je pokazalo da ne treba puno za sreću.
+            Ulice siromašne i prljave, a istovremeno prepune životne čarolije.
+          </Text>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Školarke</ImgOverlay>
+              <Img img={images[39]}/>
+            </ImgWrap>
+          </ImgRow>
+          <ImgRow>
+            <ImgWrap>
+              <ImgOverlay>Bela na ulici</ImgOverlay>
+              <Img img={images[40]}/>
+            </ImgWrap>
+          </ImgRow>
           <Intro>
-            Često poželimo ići u daleke i neobične krajeve, a zapravo nas baš tu, iza ugla, čekaju neke od najljepših prirodnih ljepota ovoga planeta.
+            S razlogom smo izabrali Kubu kao naše prvo veće putovanje.
+            Uvjereni smo da će taj donedavno izolirani sustav s vremenom oslabiti i da će se stopiti s ostatkom svijeta.
+            To onda više neće biti Kuba o kojoj svi pričaju i koju bi mi voljeli doživjeti.
+            Nije nas razočarala i predlažemo svima koje zanima da ju posjete što prije.
           </Intro>
         </BlogContainer>
       </Container>
