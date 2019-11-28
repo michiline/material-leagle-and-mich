@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImgCenterText, FlexColumnCenterContainer, H4 } from '../general'
+import { CoverImgCenterText, FlexColumnCenterContainer, H3 } from '../general'
 import { about } from '../../images'
 import { padding } from '../../style'
 
@@ -81,7 +81,7 @@ const Row = styled.div`
   margin-bottom: ${padding.small};
 `
 
-const Text = styled(H4)`
+const Text = styled(H3)`
   font-family: 'Amatic SC';
   width: max-content;
   height: max-content;
