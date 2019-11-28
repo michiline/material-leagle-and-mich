@@ -21,10 +21,6 @@ const Container = styled.div`
   @media only screen and (max-width: 1250px) {
     padding-top: 9rem;
   }
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `
 
 const Header = styled.p`
@@ -32,12 +28,15 @@ const Header = styled.p`
   letter-spacing: 0;
   line-height: 1.6;
   padding: ${padding.medium};
+  width: max-content;
   font-family: 'Amatic SC';
   font-weight: 700;
   &:active {
     transform: translateY(2px);
   }
   cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
 `
 
 const InnerContainer = styled.div`

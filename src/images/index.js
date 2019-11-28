@@ -288,7 +288,7 @@ export const about = {
     { src: `${imgUrl}/about/img0.jpg`, text: 'Ali oboje volimo promatrati svijet naopačke' },
     { src: `${imgUrl}/about/img15.jpg`, text: 'Ovo je naše najdraže mjesto' },
     { src: `${imgUrl}/about/img9.jpg`, text: 'Kiša nam ne smeta' },
-    { src: `${imgUrl}/about/img5.jpg`, text: 'Zalaske ne propuštamo' },
+    { src: `${imgUrl}/about/img5.jpg`, text: 'A Zalaske ne propuštamo' },
     { src: `${imgUrl}/about/img14.jpg`, text: 'Uživamo u koncertima na otvorenom' },
     { src: `${imgUrl}/about/img8.jpg`, text: 'U kino ne idemo, ali kad idemo slikamo selfie' },
     { src: `${imgUrl}/about/img17.jpg`, text: 'Znamo biti lijepi' },
