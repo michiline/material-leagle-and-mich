@@ -274,6 +274,33 @@ export const slideshow = [
   { id: 4, src: `${imgUrl}/slideshow/img4.jpg` },
 ]
 
+export const about = {
+  cover: { src: `${imgUrl}/covers/about.jpg` },
+  images: [
+    { src: `${imgUrl}/about/img21.jpg`, text: 'Želimo obići cijeli svijet' },
+    { src: `${imgUrl}/about/img13.jpg`, text: 'Sa što više kampiranja' },
+    { src: `${imgUrl}/about/img6.jpg`, text: 'I obaveznim hammockom' },
+    { src: `${imgUrl}/about/img18.jpg`, text: 'Volimo zimske radosti' },
+    { src: `${imgUrl}/about/img3.jpg`, text: 'Volimo riječne radosti' },
+    { src: `${imgUrl}/about/img7.jpg`, text: 'Volimo morske radosti' },
+    { src: `${imgUrl}/about/img1.jpg`, text: 'Netko ih ipak voli malo više' },
+    { src: `${imgUrl}/about/img4.jpg`, text: 'Netko malo više voli ples' },
+    { src: `${imgUrl}/about/img0.jpg`, text: 'Ali oboje volimo promatrati svijet naopačke' },
+    { src: `${imgUrl}/about/img15.jpg`, text: 'Ovo je naše najdraže mjesto' },
+    { src: `${imgUrl}/about/img9.jpg`, text: 'Kiša nam ne smeta' },
+    { src: `${imgUrl}/about/img5.jpg`, text: 'Zalaske ne propuštamo' },
+    { src: `${imgUrl}/about/img14.jpg`, text: 'Uživamo u koncertima na otvorenom' },
+    { src: `${imgUrl}/about/img8.jpg`, text: 'U kino ne idemo, ali kad idemo slikamo selfie' },
+    { src: `${imgUrl}/about/img17.jpg`, text: 'Znamo biti lijepi' },
+    { src: `${imgUrl}/about/img11.jpg`, text: 'I slučajno se spariti' },
+    { src: `${imgUrl}/about/img12.jpg`, text: 'Nekad i pretjeramo' },
+    { src: `${imgUrl}/about/img16.jpg`, text: 'Zanimaju nas kojekakve ludosti' },
+    { src: `${imgUrl}/about/img19.jpg`, text: 'Netko skače glavom bez obzira' },
+    { src: `${imgUrl}/about/img20.jpg`, text: 'Netko je ipak malo zabrinut' },
+    { src: `${imgUrl}/about/img2.jpg`, text: 'Ponekad se potučemo' },
+    { src: `${imgUrl}/about/img10.jpg`, text: 'Ali se i dalje volimo' },
+  ]
+}
 
 // MISCELANIOUS
 

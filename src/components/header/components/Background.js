@@ -61,7 +61,7 @@ const Background = ({ history, show, setToggled }) =>
       <Link onClick={e => to({ history, url: '/blogs', setToggled})}>Putopisi</Link>
       <Link onClick={e => to({ history, url: '/gallery', setToggled})}>Galerija</Link>
       <Link>Anin portfolio</Link>
-      <Link>O Nama</Link>
+      <Link onClick={e => to({ history, url: '/about', setToggled})}>O Nama</Link>
     </Center>
   </BackgroundContainer>
 
