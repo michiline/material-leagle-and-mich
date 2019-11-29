@@ -88,7 +88,7 @@ const imageClick = ({ setShow, setImageId, id }) => {
 
 const refreshClick = async ({ setImages }) => {
   setImages([])
-  await sleep(10)
+  await sleep(1)
   setImages(imageBundleRatioHome({ length: 30 }))
   window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
 }
