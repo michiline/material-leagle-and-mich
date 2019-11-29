@@ -3,24 +3,24 @@ import { padding } from '../../style'
 
 export const H1 = styled.h1`
   font-family: 'Helvetica Neue';
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 100;
   letter-spacing: -0.09375rem;
   line-height: 1;
   @media only screen and (min-width: 500px) {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 100;
     letter-spacing: -0.09375rem;
     line-height: 1.3;
   }
   @media only screen and (min-width: 800px) {
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: 100;
     letter-spacing: -0.09375rem;
     line-height: 1.3;
   }
   @media only screen and (min-width: 1050px) {
-    font-size: 9rem;
+    font-size: 10rem;
     font-weight: 100;
     letter-spacing: -0.15rem;
     line-height: 1.6;
@@ -29,10 +29,28 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-family: 'Helvetica Neue';
-  font-size: 6rem;
-  font-weight: 100;
-  letter-spacing: -0.5rem;
-  line-height: 1.6;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0rem;
+  line-height: 1.3;
+  @media only screen and (min-width: 500px) {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.1rem;
+    line-height: 1.4;
+  }
+  @media only screen and (min-width: 800px) {
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: -0.2rem;
+    line-height: 1.5;
+  }
+  @media only screen and (min-width: 1050px) {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: -0.3rem;
+    line-height: 1.6;
+  }
 `
 
 export const H3 = styled.h3`

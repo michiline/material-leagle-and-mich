@@ -12,8 +12,7 @@ const Slideshow = ({ slideshowRef }) => {
     <Container>
       <Text>
         <H1>Little Eagle & Mich</H1>
-        <H2>Dobrodošli na putopisnu stranicu!</H2>
-        <H3>(U nastavku su iskustva s naših putovanja u obliku teksta, slika i videa)</H3>
+        <H2>Dobrodošli na našu putopisnu stranicu!</H2>
       </Text>
       <Img img={slideshow[0]} activeId={activeId}/>
       <Img img={slideshow[1]} activeId={activeId}/>
@@ -60,6 +59,7 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   color: white;
   text-align: center;
 `
@@ -70,10 +70,11 @@ const H1 = styled(G.H1)`
   width: max-content;
 `
 
-const H2 = styled(G.H3)`
+const H2 = styled(G.H2)`
   color: white;
   font-family: 'Amatic SC';
   width: max-content;
+  margin-top: ${padding.medium};
 `
 
 const H3 = styled(G.H4)`
