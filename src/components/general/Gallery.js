@@ -145,6 +145,9 @@ const RefreshIcon = styled(BigIcon)`
   &:focus {
     outline: none;
   }
+  div:not(:focus):hover {
+    background-color: transparent;
+  }
   position: relative;
   overflow: hidden;
   align-self: center;
