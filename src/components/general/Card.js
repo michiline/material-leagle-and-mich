@@ -83,7 +83,6 @@ const SupportingText = styled(Body2)`
   text-align: justify;
   padding-left: ${padding.medium};
   padding-right: ${padding.medium};
-  padding-bottom: ${padding.medium}
   height: min-content;
 `
 
@@ -127,7 +126,6 @@ const Img = styled.img.attrs(props => ({
 `
 
 const to = async ({ history, url, e }) => {
-  console.log(e.target)
   await sleep(200)
   history.push(url)
   // window.scrollTo({ top: 0, behavior: 'smooth' })
