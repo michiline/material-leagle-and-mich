@@ -329,6 +329,10 @@ export const github = {
   src: `${imgUrl}/misc/github.svg`
 }
 
+export const refresh = {
+  src: `${imgUrl}/misc/refresh.png`
+}
+
 export const menu = {
   primary: {
     src: `${imgUrl}/misc/menu-primary-24px.svg`

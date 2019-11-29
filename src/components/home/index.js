@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Slideshow, About } from './components'
 import { CardGrid, Gallery } from '../general'
-import { galleryImageBundleHome, blogs } from '../../images'
+import { imageBundleRatioHome, blogs } from '../../images'
 
 const Home = () => {
-  const { images } = galleryImageBundleHome({ length: 30 })
+  let [images, setImages] = useState(imageBundleRatioHome({ length: 30 }))
   return (
     <Container>
       <Slideshow />
       <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={blogs.slice(0, 4)}/>
-      <Gallery text={'Galerija'} url={'/gallery'} galleryName={'home'} images={images} hide={true}/>
+      <Gallery text={'Nasumične fotke'} url={'/gallery'} galleryName={'home'} images={images} hide={true} setImages={setImages}/>
       <About />
     </Container>
   )

@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <>
       <Container>
-        <CoverImgCenterText h1={'Najlepsa Planina'} h2={'Netaknuta Priroda Nacionalnog Parka Tara - "Pluća Srbije"'} img={cover}/>
+        <CoverImgCenterText h1={'Najlepša Planina'} h2={'Netaknuta Priroda Nacionalnog Parka Tara - "Pluća Srbije"'} img={cover}/>
         <BlogContainer>
           <Header>Najlepša Planina</Header>
           <Intro>
