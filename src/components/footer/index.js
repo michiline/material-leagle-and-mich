@@ -29,6 +29,13 @@ const Footer = ({ history, hide }) => {
 const Container = styled(G.FlexColumnCenterContainer)`
   background: #1F2126;
   padding: ${padding.small};
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const IconContainer = styled.div`

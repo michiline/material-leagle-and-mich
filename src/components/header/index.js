@@ -50,6 +50,13 @@ const Container = styled.div`
     background-color: #24272E;
     color: white;
   `}
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 // h3
