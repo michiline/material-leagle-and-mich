@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Container>
       <CoverImgCenterText h1={'Tko smo mi?'} h2={'Psihologinja i ferovac u potrazi za avanturom'} img={cover}/>
-      <Header> Mi o sebi</Header>
+      <Header> Mi o Nama</Header>
       <InnerContainer>
         {renderRows({ images })}
       </InnerContainer>

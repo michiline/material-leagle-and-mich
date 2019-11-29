@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import styled, { css, keyframes } from 'styled-components'
-import { useRipples } from '../../hooks'
+import { RippleComponent, useClicked } from '../../hooks'
 import { padding, shadow } from '../../style'
 import { share } from '../../images'
 import { H6, Subtitle2, Body2, ButtonTransparent } from './text'
@@ -9,24 +9,28 @@ import { Icon } from './images'
 
 const Card = ({ history, img, title, subtitle, description, url }) => {
   const cardRef = useRef()
-  const [ripples, color] = useRipples({ componentRef: cardRef, color: '#8B4608'})
+  const readButtonRef = useRef()
+  const shareIconRef = useRef()
+  const [clicked] = useClicked({ yesRef: cardRef, noRefs: [readButtonRef, shareIconRef] })
   return (
-    <Container ref={cardRef} onClick={ e => to({ history, url })}>
+    <Container ref={cardRef} clicked={clicked}>
       <Img img={img}/>
       <PrimaryTitle>
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
       </PrimaryTitle>
-      <Secondary>
+      <Secondary collapse={!clicked}>
         <SupportingText>{description}</SupportingText>
+        <Actions>
+          <RippleComponent onClick={ e => to({ history, url })} Component={Button} value={'Pročitaj Više'} color={'#8B4608'} componentRef={readButtonRef}/>
+          <RippleComponent Component={ShareIcon} img={share} color={'#8B4608'} componentRef={shareIconRef}/>
+        </Actions>
       </Secondary>
-      {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
     </Container>
   )
 }
 
 const Container = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -40,7 +44,6 @@ const Container = styled.div`
   `}
   user-select: none;
   height: 100%;
-  overflow: hidden;
 `
 
 const PrimaryTitle = styled.div`
@@ -72,7 +75,6 @@ const SupportingText = styled(Body2)`
   text-align: justify;
   padding-left: ${padding.medium};
   padding-right: ${padding.medium};
-  padding-bottom: ${padding.medium}
   height: min-content;
 `
 
@@ -116,34 +118,9 @@ const Img = styled.img.attrs(props => ({
   border-top-right-radius: 4px;
 `
 
-const to = async ({ history, url }) => {
-  await sleep(200)
+const to = ({ history, url }) => {
   history.push(url)
   // window.scrollTo({ top: 0, behavior: 'smooth' })
 }
-
-const sleep = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
-
-const ripple = keyframes`
-  to {
-    opacity: 0.0;
-    transform: scale(3);
-  }
-`
-
-const Ripple = styled.span`
-  position: absolute;
-  transform: scale(0);
-  opacity: 0.75;
-  background-color: ${props => `${props.color}7D`};
-  border-radius: 100%;
-  animation: ${ripple} 500ms;
-  top: ${props => props.y}px;
-  left: ${props => props.x}px;
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
-`
 
 export default withRouter(Card)
