@@ -13,12 +13,12 @@ const useRipples = ({ componentRef, color, history, url }) => {
         const x = e.pageX - pos.left - (width / 2)
         const y = e.pageY - pos.top - (height / 2) - window.scrollY
         if (ripples.length > 0) {
-          const newRipples = [...ripples, { x, y, width, height}]
+          const newRipples = [...ripples, { x, y, width: 100, height: 100 }]
           setRipples(newRipples)
         }
         else {
           setRipples([{ x, y, width, height}])
-          await sleep(200)
+          await sleep(500)
           history.push(url)
         }
       }

@@ -40,9 +40,6 @@ const Container = styled.div`
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  ${props => props.clicked && css`
-    box-shadow: ${shadow.dp8};
-  `}
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -52,6 +49,9 @@ const Container = styled.div`
   user-select: none;
   height: 100%;
   overflow: hidden;
+  &:hover {
+    box-shadow: ${shadow.dp8};
+  }
 `
 
 const PrimaryTitle = styled.div`
@@ -126,7 +126,7 @@ const Img = styled.img.attrs(props => ({
 `
 
 const to = async ({ history, url, e }) => {
-  await sleep(200)
+  await sleep(250)
   history.push(url)
   // window.scrollTo({ top: 0, behavior: 'smooth' })
 }
@@ -144,11 +144,11 @@ const ripple = keyframes`
 
 const Ripple = styled.span`
   position: absolute;
-  transform: scale(0);
+  transform: scale(0.7);
   opacity: 0.75;
   background-color: ${props => `${props.color}7D`};
   border-radius: 100%;
-  animation: ${ripple} 500ms;
+  animation: ${ripple} 600ms;
   top: ${props => props.y}px;
   left: ${props => props.x}px;
   width: ${props => props.width}px;
