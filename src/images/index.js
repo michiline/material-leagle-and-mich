@@ -201,21 +201,21 @@ export const blogs = [
   {
     img: { src: '/img/covers/cards/motovun.jpg' },
     title: 'Magloviti Grad',
-    subtitle: 'Motovun, Hrvatska',
+    subtitle: '8. – 10.11.2019.',
     description: 'Ako još niste svjedočili pogledu na dolinu potpuno prekrivenu maglom, ne znate što propuštate!',
     url: '/blogs/motovun'
   },
   {
     img: imageBundle({ type: 'blogs', name: 'kamacnik'})[15],
     title: 'Jesenski Kanjon',
-    subtitle: 'Kamačnik, Hrvatska',
+    subtitle: '27.10.2019.',
     description: 'Pitate se što raditi za jesenski vikend? Predlažemo vam savršenu destinacija za laganu šetnju kroz prirodu.',
     url: '/blogs/kamacnik'
   },
   {
     img: imageBundle({ type: 'blogs', name: 'tara'})[19],
     title: 'Najlepša Planina',
-    subtitle: 'Tara, Srbija',
+    subtitle: '6. – 8.10.2019.',
     description: 'Ima li smisla voziti se 1500 km da bi se proveo jedan dan u najljepšoj prirodi Srbije? Ne brinite, mi smo istražili za vas. Pronađite odgovor u nastavku.',
     url: '/blogs/tara'
   },
@@ -223,21 +223,21 @@ export const blogs = [
   {
     img: imageBundle({ type: 'blogs', name: 'krka'})[10],
     title: 'Sedam Veličanstvenih',
-    subtitle: 'Krka, Hrvatska',
+    subtitle: '13. – 15.9.2019.',
     description: 'Saznajte zašto smo odgađali posjet ovom prirodnom dragulju za sam kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'
   },
   {
     img: imageBundle({ type: 'blogs', name: 'soca'})[5],
     title: 'Smaragdna Rijeka',
-    subtitle: 'Soča, Slovenija',
+    subtitle: '20. – 25.6.2019.',
     description: 'Bilo da ste u potrazi za avanturom ili opuštenom šetnjom, Soča ima nešto za vas. Uvjerite se sami da je boja stvarna!',
     url: '/blogs/soca'
   },
   {
     img: { src: '/img/covers/cards/kuba.jpg' },
     title: 'Kubanski Top 10',
-    subtitle: 'Kuba',
+    subtitle: '5. – 19.1.2019.',
     description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
     url: '/blogs/kuba'
   }
