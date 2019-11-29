@@ -38,6 +38,11 @@ const Container = styled.div`
   ${props => props.clicked && css`
     box-shadow: ${shadow.dp8};
   `}
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   height: 100%;
   overflow: hidden;
