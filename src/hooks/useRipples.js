@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from 'react'
 import _ from 'lodash'
 import styled, { css, keyframes } from 'styled-components'
 
-const useRipples = ({ componentRef, color }) => {
+const useRipples = ({ componentRef, color, history, url }) => {
   const [ripples, setRipples] = useState([])
   useEffect(() => {
-    const showRipple = (e) => {
+    const showRipple = async (e) => {
       if (componentRef.current.contains(e.target)) {
         const width = componentRef.current.offsetWidth
         const height = componentRef.current.offsetHeight
@@ -18,6 +18,8 @@ const useRipples = ({ componentRef, color }) => {
         }
         else {
           setRipples([{ x, y, width, height}])
+          await sleep(200)
+          history.push(url)
         }
       }
     }
@@ -36,5 +38,10 @@ const useRipples = ({ componentRef, color }) => {
   })
   return [ripples, color]
 }
+
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
 
 export default useRipples

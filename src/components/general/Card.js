@@ -9,9 +9,9 @@ import { Icon } from './images'
 
 const Card = ({ history, img, title, subtitle, description, url }) => {
   const cardRef = useRef()
-  const [ripples, color] = useRipples({ componentRef: cardRef, color: '#8B4608'})
+  const [ripples, color] = useRipples({ componentRef: cardRef, color: '#8B4608', history, url })
   return (
-    <Container ref={cardRef} onClick={ e => to({ history, url })}>
+    <Container ref={cardRef}>
       <Img img={img}/>
       <PrimaryTitle>
         <Title>{title}</Title>
@@ -19,11 +19,16 @@ const Card = ({ history, img, title, subtitle, description, url }) => {
       </PrimaryTitle>
       <Secondary>
         <SupportingText>{description}</SupportingText>
+        <Actions>
+          <Button>Pročitaj više</Button>
+        </Actions>
       </Secondary>
       {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
     </Container>
   )
 }
+
+// {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
 
 const Container = styled.div`
   position: relative;
@@ -97,7 +102,6 @@ const Button = styled(ButtonTransparent)`
   padding-left: ${padding.small};
   padding-right: ${padding.small};
   height: calc(3.4rem + ${padding.small});
-  position: relative;
   overflow: hidden;
   font-family: 'Montserrat';
 `
@@ -122,7 +126,8 @@ const Img = styled.img.attrs(props => ({
   border-top-right-radius: 4px;
 `
 
-const to = async ({ history, url }) => {
+const to = async ({ history, url, e }) => {
+  console.log(e.target)
   await sleep(200)
   history.push(url)
   // window.scrollTo({ top: 0, behavior: 'smooth' })

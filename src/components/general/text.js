@@ -152,6 +152,9 @@ export const ButtonTransparent = styled(Button)`
   &:hover {
     background-color: #8B46081E;
   }
+  &:active {
+    background-color: #8B460864;
+  }
   &:focus {
     outline: none;
   }
