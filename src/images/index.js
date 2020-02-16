@@ -4,6 +4,7 @@ import galleryText from './text'
 const imgUrl = `${process.env.PUBLIC_URL}/img`
 
 const sizes = {
+  srilanka: 65,
   motovun: 13,
   kamacnik: 16,
   tara: 20,
@@ -198,6 +199,13 @@ export const galleries = [
 ]
 
 export const blogs = [
+  {
+    img: { src: '/img/covers/cards/srilanka.jpg' },
+    title: 'Otok Ceylon',
+    subtitle: '4. – 18.01.2020.',
+    description: 'Volite čaj, začine, kokose, hramove i plaže? Zanima vas kako izgleda otok koji nije vidio snijeg? Dodajte ovo mjesto na svoj popis!',
+    url: '/blogs/srilanka'
+  },
   {
     img: { src: '/img/covers/cards/motovun.jpg' },
     title: 'Magloviti Grad',
