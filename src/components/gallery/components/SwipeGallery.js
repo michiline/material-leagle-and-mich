@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import { galleryImageBundle, arrow } from '../../../images'
+import { arrow } from '../../../images'
 import styled, { css } from 'styled-components'
 import axios from 'axios'
 
@@ -130,7 +130,7 @@ class SwipeGallery extends Component {
 		}
 	}
 
-	 stopAni = () => {
+	stopAni = () => {
     cancelAnimationFrame(this.state.rID)
     this.state.rID = null
   }
@@ -207,7 +207,6 @@ const BackgroundContainer = styled.div`
   height: 100vh;
   background-color: #24272EC8;
   z-index: 5;
-
 `
 
 const Container = styled.div.attrs({

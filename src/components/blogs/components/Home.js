@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CoverImgCenterText, CardGrid } from '../../general'
-import { blogsCover, blogs } from '../../../images'
+import { getCovers, getCardsImages } from '../../../images'
 import { shadow, padding } from '../../../style'
 
 const Home = () => {
+  const coverImage = getCovers({ type: 'blogs', name: 'index' })
+  const cardsImages = getCardsImages()
   return (
     <Container>
-      <CoverImgCenterText h1={'Putopisi'} h2={'Za one koji žele znati više...'} img={blogsCover}/>
-      <CardGrid header={'Putopisi'} url={'/blogs'} content={blogs}/>
+      <CoverImgCenterText h1={'Putopisi'} h2={'Za one koji žele znati više...'} img={coverImage}/>
+      <CardGrid header={'Putopisi'} url={'/blogs'} content={cardsImages}/>
     </Container>
   )
 }

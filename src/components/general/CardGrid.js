@@ -21,7 +21,7 @@ const CardGrid = ({ history, header, url, content }) => {
 //
 
 const Container = styled(FlexColumnCenterContainer)`
-  
+
 `
 
 const Header = styled.p`

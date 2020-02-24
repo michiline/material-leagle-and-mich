@@ -1,4 +1,9 @@
 export default {
+  'srilanka': {
+    h1: 'Šri Lanka',
+    h2: '4. – 18.01.2020.',
+    h3: 'Suza Indije'
+  },
   'motovun': {
     h1: 'Motovun',
     h2: '8. – 10.11.2019.',

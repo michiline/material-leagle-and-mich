@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CoverImgCenterText, ImageGrid } from '../../general'
-import { galleryCover, galleries } from '../../../images'
+import { getCovers, getGalleryBoxesImages } from '../../../images'
 
 const Home = () => {
+  const coverImage = getCovers({ type: 'gallery', name: 'index' })
+  const boxesImages = getGalleryBoxesImages()
   return (
     <Container>
-      <CoverImgCenterText h1={'Galerija Fotografija'} h2={'Za one kojima su fotke sasvim dovoljne...'} img={galleryCover}/>
-      <ImageGrid text={'Galerija'} url={'/gallery'} content={galleries}/>
+      <CoverImgCenterText h1={'Galerija Fotografija'} h2={'Za one kojima su fotke sasvim dovoljne...'} img={coverImage}/>
+      <ImageGrid text={'Galerija'} url={'/gallery'} content={boxesImages}/>
     </Container>
   )
 }

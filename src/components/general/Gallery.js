@@ -7,7 +7,7 @@ import $ from 'jquery'
 import { FlexColumnCenterContainer } from './containers'
 import { H3 } from './text'
 import { padding, shadow } from '../../style'
-import { imageBundleRatioHome, refresh } from '../../images'
+import { getRandomImages, refresh } from '../../images'
 import { BigIcon } from './images'
 import { RippleComponent } from '../../hooks'
 
@@ -15,6 +15,7 @@ window.jQuery = $
 window.$ = $
 
 class Gallery extends Component {
+
   render () {
     const { history, url, text, images, setShow, setImageId, setImages } = this.props
     const refreshRef = React.createRef()
@@ -32,19 +33,6 @@ class Gallery extends Component {
       </Container>
     )
   }
-  // return (
-  //   <Container>
-  //     <HeaderContainer>
-  //       <Header onClick={ e => to({ history, url })}>{text}</Header>
-  //       {setImages && <RefreshIcon img={refresh} onClick={e => refreshClick({ setImages })} />}
-  //     </HeaderContainer>
-  //
-  //     {images.length > 0 &&
-  //     <GalleryContainer>
-  //       {this.renderImages({ images, setShow, setImageId, history })}
-  //     </GalleryContainer>}
-  //   </Container>
-  // )
 
   async componentDidMount() {
     window.addEventListener('resize', this.resizeListener.bind(this))
@@ -63,7 +51,7 @@ class Gallery extends Component {
   renderImages = ({ images, setShow, setImageId, history }) => images.map((image, index) => {
     if (setShow) {
       return (
-        <ImageContainer key={Date.now()} onClick={e => imageClick({ setShow, setImageId, id: index })}>
+        <ImageContainer key={index} onClick={e => imageClick({ setShow, setImageId, id: index })}>
           <Image img={image}/>
         </ImageContainer>
       )
@@ -89,7 +77,7 @@ const imageClick = ({ setShow, setImageId, id }) => {
 const refreshClick = async ({ setImages }) => {
   setImages([])
   await sleep(1)
-  setImages(imageBundleRatioHome({ length: 30 }))
+  setImages(getRandomImages({ length: 30 }))
   window.$('#gallery').justifiedGallery({ rowHeight: getRowHeight(), lastRow: 'hide', margins: 5 })
 }
 

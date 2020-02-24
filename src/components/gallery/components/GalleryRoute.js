@@ -2,11 +2,11 @@ import React, { useState, useEffect, createRef } from 'react'
 import { withRouter } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { CoverImgCenterText, ImageGrid, Gallery } from '../../general'
-import { galleryImageBundle } from '../../../images'
+import { getGalleryImages } from '../../../images'
 import SwipeGallery from './SwipeGallery'
 
 const GalleryRoute = ({ match, location, hide, setHide }) => {
-  const { cover, images, text: { h1, h2, h3}, ratios } = galleryImageBundle(match.params.galleryName)
+  const { cover, images, text: { h1, h2, h3}, ratios } = getGalleryImages(match.params.galleryName)
   let [show, setShow] = useState(false)
   let [imageId, setImageId] = useState(0)
   return (

@@ -1,24 +1,20 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { useSlide } from '../../../hooks'
-import { arrow, slideshow } from '../../../images'
+import { arrow, getSlideshowImages } from '../../../images'
 import { shadow, padding } from '../../../style'
 import * as G from '../../general'
 
-const Slideshow = ({ slideshowRef }) => {
-  const imagesCount = slideshow.length
-  const [activeId, setActiveId] = useSlide(imagesCount)
+const Slideshow = () => {
+  const images = getSlideshowImages()
+  const [activeId, setActiveId] = useSlide(images.length)
   return (
     <Container>
       <Text>
         <H1>Little Eagle & Mich</H1>
         <H2>Dobrodošli na našu putopisnu stranicu!</H2>
       </Text>
-      <Img img={slideshow[0]} activeId={activeId}/>
-      <Img img={slideshow[1]} activeId={activeId}/>
-      <Img img={slideshow[2]} activeId={activeId}/>
-      <Img img={slideshow[3]} activeId={activeId}/>
-      <Img img={slideshow[4]} activeId={activeId}/>
+      {renderImages({ images, activeId})}
       <GreyContainer />
       <ScrollDown />
     </Container>
@@ -164,5 +160,11 @@ const ScrollDown = styled.span`
   opacity: 1;
   z-index: 2;
 `
+
+const renderImages = ({ images, activeId }) => images.map(
+  (image, index) => {
+    return <Img img={image} activeId={activeId} key={index}/>
+  }
+)
 
 export default Slideshow

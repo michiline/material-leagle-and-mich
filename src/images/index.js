@@ -3,23 +3,53 @@ import galleryText from './text'
 
 const imgUrl = `${process.env.PUBLIC_URL}/img`
 
-const sizes = {
-  srilanka: 65,
-  motovun: 13,
-  kamacnik: 16,
-  tara: 20,
-  krka: 11,
-  soca: 40,
-  kuba: 41,
+const numberOfImages = {
+  slideshow: 5,
+  blogs: {
+    srilanka: 65,
+    motovun: 13,
+    kamacnik: 16,
+    tara: 20,
+    krka: 11,
+    soca: 40,
+    kuba: 41,
+  },
+  gallery: {
+    srilanka: 255,
+    motovun: 29,
+    kamacnik: 77,
+    tara: 52,
+    krka: 35,
+    cres: 42,
+    losinj: 105,
+    soca: 86,
+    istra: 60,
+    kalnik: 44,
+    gerlitzen: 10,
+    kuba: 247,
+    london: 59,
+    budimpesta: 65,
+    novi: 116,
+    mljet: 66,
+    lastovo: 40,
+    vransko: 11,
+    zagreb: 54,
+    tabor: 10,
+    plitvice: 30,
+    pariz: 110,
+    nassfeld: 19,
+    risnjak: 25,
+    trakoscan: 11,
+    barcelona: 55,
+    krupa: 25,
+    dugi: 82,
+    brijuni: 22,
+    mitrovica: 12,
+    fuzine: 6
+  }
 }
 
-
-export const imageBundle = ({ type, name }) => [...Array(sizes[name])].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}/swipe/${index}` }})
-
-export const imageBundleRatio = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`}})
-// export const imageBundleRatioHome = ({ type, name }) => [...Array(ratios[name].length)].map((elem, index) => { return { src: `${imgUrl}/${type}/${name}/img${index}.jpg`, url: `/gallery/${name}` }})
-
-export const imageBundleRatioHome = ({ length }) => {
+export const getRandomImages = ({ length }) => {
   const srcs = []
   const ratioEntries = Object.entries(ratios)
   const images = [...Array(length)].map(elem => {
@@ -35,193 +65,200 @@ export const imageBundleRatioHome = ({ length }) => {
   return images
 }
 
-export const covers = ({ type, name }) => {return { src: `${imgUrl}/covers/${type}/${name}.jpg` }}
+export const getCovers = ({ type, name }) => {return { src: `${imgUrl}/covers/${type}/${name}.jpg` }}
 
-export const blogsCover = {
-  src: `${imgUrl}/covers/blogs.jpg`
-}
+export const getBoxes = (name) => {return { src: `${imgUrl}/boxes/${name}.jpg` }}
 
-export const galleryCover = {
-  src: `${imgUrl}/covers/gallery.jpg`
-}
-
-export const galleries = [
+export const getGalleryBoxesImages = () => [
   {
-    img: covers({ type: 'gallery', name: 'motovun'}),
+    img: getBoxes('srilanka'),
+    title: 'Šri Lanka',
+    url: '/gallery/srilanka'
+  },
+  {
+    img: getBoxes('motovun'),
     title: 'Motovun',
     url: '/gallery/motovun'
   },
   {
-    img: covers({ type: 'gallery', name: 'kamacnik'}),
+    img: getBoxes('kamacnik'),
     title: 'Kamačnik',
     url: '/gallery/kamacnik'
   },
   {
-    img: covers({ type: 'gallery', name: 'tara'}),
+    img: getBoxes('tara'),
     title: 'Tara',
     url: '/gallery/tara'
   },
   {
-    img: covers({ type: 'gallery', name: 'krka'}),
+    img: getBoxes('krka'),
     title: 'Krka',
     url: '/gallery/krka'
   },
   {
-    img: covers({ type: 'gallery', name: 'cres'}),
+    img: getBoxes('cres'),
     title: 'Cres',
     url: '/gallery/cres'
   },
   {
-    img: covers({ type: 'gallery', name: 'losinj'}),
+    img: getBoxes('losinj'),
     title: 'Mali Lošinj',
     url: '/gallery/losinj'
   },
   {
-    img: covers({ type: 'gallery', name: 'soca'}),
+    img: getBoxes('soca'),
     title: 'Soča',
     url: '/gallery/soca'
   },
   {
-    img: covers({ type: 'gallery', name: 'istra'}),
+    img: getBoxes('istra'),
     title: 'Istra',
     url: '/gallery/istra'
   },
   {
-    img: covers({ type: 'gallery', name: 'kalnik'}),
+    img: getBoxes('kalnik'),
     title: 'Kalnik',
     url: '/gallery/kalnik'
   },
   {
-    img: covers({ type: 'gallery', name: 'gerlitzen'}),
+    img: getBoxes('gerlitzen'),
     title: 'Gerlitzen',
     url: '/gallery/gerlitzen'
   },
   {
-    img: covers({ type: 'gallery', name: 'kuba'}),
+    img: getBoxes('kuba'),
     title: 'Kuba',
     url: '/gallery/kuba'
   },
   {
-    img: covers({ type: 'gallery', name: 'london'}),
+    img: getBoxes('london'),
     title: 'London',
     url: '/gallery/london'
   },
   {
-    img: covers({ type: 'gallery', name: 'budimpesta'}),
+    img: getBoxes('budimpesta'),
     title: 'Budimpešta',
     url: '/gallery/budimpesta'
   },
   {
-    img: covers({ type: 'gallery', name: 'novi'}),
+    img: getBoxes('novi'),
     title: 'Novi Vinodolski',
     url: '/gallery/novi'
   },
   {
-    img: covers({ type: 'gallery', name: 'mljet'}),
+    img: getBoxes('mljet'),
     title: 'Mljet',
     url: '/gallery/mljet'
   },
   {
-    img: covers({ type: 'gallery', name: 'lastovo'}),
+    img: getBoxes('lastovo'),
     title: 'Lastovo',
     url: '/gallery/lastovo'
   },
   {
-    img: covers({ type: 'gallery', name: 'vransko'}),
+    img: getBoxes('vransko'),
     title: 'Vransko Jezero',
     url: '/gallery/vransko'
   },
   {
-    img: covers({ type: 'gallery', name: 'zagreb'}),
+    img: getBoxes('zagreb'),
     title: 'Zagreb',
     url: '/gallery/zagreb'
   },
   {
-    img: covers({ type: 'gallery', name: 'tabor'}),
+    img: getBoxes('tabor'),
     title: 'Veliki Tabor',
     url: '/gallery/tabor'
   },
   {
-    img: covers({ type: 'gallery', name: 'plitvice'}),
+    img: getBoxes('plitvice'),
     title: 'Plitvička Jezera',
     url: '/gallery/plitvice'
   },
   {
-    img: covers({ type: 'gallery', name: 'pariz'}),
+    img: getBoxes('pariz'),
     title: 'Pariz',
     url: '/gallery/pariz'
   },
   {
-    img: covers({ type: 'gallery', name: 'nassfeld'}),
+    img: getBoxes('nassfeld'),
     title: 'Nassfeld',
     url: '/gallery/nassfeld'
   },
   {
-    img: covers({ type: 'gallery', name: 'risnjak'}),
+    img: getBoxes('risnjak'),
     title: 'Risnjak',
     url: '/gallery/risnjak'
   },
   {
-    img: covers({ type: 'gallery', name: 'trakoscan'}),
+    img: getBoxes('trakoscan'),
     title: 'Trakošćan',
     url: '/gallery/trakoscan'
   },
   {
-    img: covers({ type: 'gallery', name: 'barcelona'}),
+    img: getBoxes('barcelona'),
     title: 'Barcelona',
     url: '/gallery/barcelona'
   },
   {
-    img: covers({ type: 'gallery', name: 'krupa'}),
+    img: getBoxes('krupa'),
     title: 'Krupa',
     url: '/gallery/krupa'
   },
   {
-    img: covers({ type: 'gallery', name: 'dugi'}),
+    img: getBoxes('dugi'),
     title: 'Dugi Otok',
     url: '/gallery/dugi'
   },
   {
-    img: covers({ type: 'gallery', name: 'brijuni'}),
+    img: getBoxes('brijuni'),
     title: 'Brijuni',
     url: '/gallery/brijuni'
   },
   {
-    img: covers({ type: 'gallery', name: 'mitrovica'}),
+    img: getBoxes('mitrovica'),
     title: 'Sremska Mitrovica',
     url: '/gallery/mitrovica'
   },
   {
-    img: covers({ type: 'gallery', name: 'fuzine'}),
+    img: getBoxes('fuzine'),
     title: 'Fužine',
     url: '/gallery/fuzine'
   },
 ]
 
-export const blogs = [
+export const getCardsImages = () => [
   {
-    img: { src: '/img/covers/cards/srilanka.jpg' },
-    title: 'Otok Ceylon',
+    img: {
+      src: '/img/cards/srilanka.jpg'
+    },
+    title: 'Suza Indije',
     subtitle: '4. – 18.01.2020.',
     description: 'Volite čaj, začine, kokose, hramove i plaže? Zanima vas kako izgleda otok koji nije vidio snijeg? Dodajte ovo mjesto na svoj popis!',
     url: '/blogs/srilanka'
   },
   {
-    img: { src: '/img/covers/cards/motovun.jpg' },
+    img: {
+      src: '/img/cards/motovun.jpg'
+    },
     title: 'Magloviti Grad',
     subtitle: '8. – 10.11.2019.',
     description: 'Ako još niste svjedočili pogledu na dolinu potpuno prekrivenu maglom, ne znate što propuštate!',
     url: '/blogs/motovun'
   },
   {
-    img: imageBundle({ type: 'blogs', name: 'kamacnik'})[15],
+    img: {
+      src: '/img/cards/kamacnik.jpg'
+    },
     title: 'Jesenski Kanjon',
     subtitle: '27.10.2019.',
     description: 'Pitate se što raditi za jesenski vikend? Predlažemo vam savršenu destinacija za laganu šetnju kroz prirodu.',
     url: '/blogs/kamacnik'
   },
   {
-    img: imageBundle({ type: 'blogs', name: 'tara'})[19],
+    img: {
+      src: '/img/cards/tara.jpg'
+    },
     title: 'Najlepša Planina',
     subtitle: '6. – 8.10.2019.',
     description: 'Ima li smisla voziti se 1500 km da bi se proveo jedan dan u najljepšoj prirodi Srbije? Ne brinite, mi smo istražili za vas. Pronađite odgovor u nastavku.',
@@ -229,21 +266,27 @@ export const blogs = [
   },
   // description: 'Five days of camping in the valley of river Soca. Whether you are an adrenaline seeker or relaxed hiker, you should come and witness the color of Soca for yourself!',
   {
-    img: imageBundle({ type: 'blogs', name: 'krka'})[10],
+    img: {
+      src: '/img/cards/krka.jpg'
+    },
     title: 'Sedam Veličanstvenih',
     subtitle: '13. – 15.9.2019.',
     description: 'Saznajte zašto smo odgađali posjet ovom prirodnom dragulju za sam kraj sezone. Odmor za dušu i tijelo. Nema ništa ljepše od toga!',
     url: '/blogs/krka'
   },
   {
-    img: imageBundle({ type: 'blogs', name: 'soca'})[5],
+    img: {
+      src: '/img/cards/soca.jpg'
+    },
     title: 'Smaragdna Rijeka',
     subtitle: '20. – 25.6.2019.',
     description: 'Bilo da ste u potrazi za avanturom ili opuštenom šetnjom, Soča ima nešto za vas. Uvjerite se sami da je boja stvarna!',
     url: '/blogs/soca'
   },
   {
-    img: { src: '/img/covers/cards/kuba.jpg' },
+    img: {
+      src: '/img/cards/kuba.jpg'
+    },
     title: 'Kubanski Top 10',
     subtitle: '5. – 19.1.2019.',
     description: 'Dvotjedni roadtrip po najvećem karipskom otoku. Upoznajte zemlju u kojoj je vrijeme stalo. Salsa, mojito, kokosi i sreća.',
@@ -251,36 +294,42 @@ export const blogs = [
   }
 ]
 
-export const blogImageBundle = (name) => {
+export const getImages = ({ type, name, url }) => [...Array(numberOfImages[type][name])].map((elem, index) => {
+    if (!url) {
+      return {
+        src: `${imgUrl}/${type}/${name}/img${index}.jpg`
+      }
+    } else {
+      return {
+        src: `${imgUrl}/${type}/${name}/img${index}.jpg`,
+        url: `/gallery/${name}/swipe/${index}`
+      }
+    }
+
+  })
+
+export const getBlogImages = (name) => {
   return {
-    cover: covers({ type: 'blogs', name: name }),
-    images: imageBundle({ type: 'blogs', name: name }),
-    text: blogs[name]
+    cover: getCovers({ type: 'blogs', name: name }),
+    images: getImages({ type: 'blogs', name: name , url: false })
   }
 }
 
-export const galleryImageBundle = (name) => {
+export const getGalleryImages = (name) => {
   return {
-    cover: covers({ type: 'gallery', name: name }),
-    images: imageBundleRatio({ type: 'gallery', name: name }),
+    cover: getCovers({ type: 'gallery', name: name }),
+    images: getImages({ type: 'gallery', name: name, url: true }),
     text: galleryText[name],
     ratios: ratios[name]
   }
 }
 
-export const galleryImageBundleHome = ({ length }) => {
+export const getSlideshowImages = () => [...Array(numberOfImages.slideshow)].map((elem, index) => {
   return {
-    images: imageBundleRatioHome({ length })
+    id: index,
+    src: `${imgUrl}/slideshow/img${index}.jpg`
   }
-}
-
-export const slideshow = [
-  { id: 0, src: `${imgUrl}/slideshow/img0.jpg` },
-  { id: 1, src: `${imgUrl}/slideshow/img1.jpg` },
-  { id: 2, src: `${imgUrl}/slideshow/img2.jpg` },
-  { id: 3, src: `${imgUrl}/slideshow/img3.jpg` },
-  { id: 4, src: `${imgUrl}/slideshow/img4.jpg` },
-]
+})
 
 export const about = {
   cover: { src: `${imgUrl}/covers/about.jpg` },
