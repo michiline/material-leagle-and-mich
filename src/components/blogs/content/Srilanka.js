@@ -95,7 +95,7 @@ const Blog = () => {
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Evo mene evo mene</ImgOverlay>
               <Img img={images[7]}/>
             </ImgWrap>
           </ImgRow>
@@ -107,7 +107,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Sveti tuljac</ImgOverlay>
               <Img img={images[8]}/>
             </ImgWrap>
           </ImgRow>
@@ -119,7 +119,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Dumbo</ImgOverlay>
               <Img img={images[9]}/>
             </ImgWrap>
           </ImgRow>
@@ -132,7 +132,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Prvi i četvrti su najbolji</ImgOverlay>
               <Img img={images[10]}/>
             </ImgWrap>
           </ImgRow>
@@ -150,37 +150,37 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Čaja im ne fali</ImgOverlay>
               <Img img={images[11]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Ah ta boja</ImgOverlay>
+              <ImgOverlay>Vodopad nedaleko smještaja</ImgOverlay>
               <ImgPortraitHalf img={images[12]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
-              <ImgOverlay>Idealno za kupanac</ImgOverlay>
+              <ImgOverlay>Letim</ImgOverlay>
               <ImgPortraitHalf img={images[13]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Aj da se malo sjednemo</ImgOverlay>
               <Img img={images[14]}/>
             </ImgWrap>
           </ImgRow>
           <Text>
-            Kišica je rominjala i dala dodatnu čar, a sunce koje se javilo nakon toga je dalo predivne boje.
+            Kišica je rominjala i pružala dodatnu čar, a sunce koje se javilo nakon toga je dalo predivne boje.
             Ovo mjesto nam je bilo dokaz da se spontanost nekad posebno isplati.
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Odmor za dušu i tijelo</ImgOverlay>
               <ImgLandscapeHalf img={images[15]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Kišica se povlači</ImgOverlay>
               <ImgLandscapeHalf img={images[16]}/>
             </ImgWrapLandscape>
           </ImgRow>
@@ -199,17 +199,17 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Pazi pazi</ImgOverlay>
               <Img img={images[17]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Pogled u daljinu</ImgOverlay>
               <ImgLandscapeHalf img={images[18]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Dobar dan za hike</ImgOverlay>
               <ImgLandscapeHalf img={images[19]}/>
             </ImgWrapLandscape>
           </ImgRow>
@@ -224,18 +224,18 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Malo me trta</ImgOverlay>
               <Img img={images[20]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
-              <ImgLandscapeHalf img={images[21]}/>
+              <ImgOverlay>Pogled na vrh od jučer</ImgOverlay>
+              <ImgLandscapeHalf img={images[22]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
-              <ImgLandscapeHalf img={images[22]}/>
+              <ImgOverlay>Pogled na drugu stranu</ImgOverlay>
+              <ImgLandscapeHalf img={images[21]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <Text>
@@ -248,13 +248,13 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Zabranjeno hodanje po tračnicama</ImgOverlay>
               <Img img={images[23]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Pa ti reci da nije piktoreskno</ImgOverlay>
               <Img img={images[24]}/>
             </ImgWrap>
           </ImgRow>
@@ -269,17 +269,17 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Ima jedno sto metara do dole</ImgOverlay>
               <ImgLandscapeHalf img={images[25]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Op cup</ImgOverlay>
               <ImgLandscapeHalf img={images[26]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Užicali lokalca za sliku</ImgOverlay>
               <Img img={images[27]}/>
             </ImgWrap>
           </ImgRow>
@@ -288,7 +288,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Još jedan vodopad na putu</ImgOverlay>
               <Img img={images[28]}/>
             </ImgWrap>
           </ImgRow>
@@ -304,33 +304,33 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Naš dom narednih dana</ImgOverlay>
               <ImgLandscapeHalf img={images[29]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Ide zeka izdaleka</ImgOverlay>
               <ImgLandscapeHalf img={images[30]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Ah ta boja</ImgOverlay>
+              <ImgOverlay>Uf kolko ima ove plaže</ImgOverlay>
               <ImgPortraitHalf img={images[31]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
-              <ImgOverlay>Idealno za kupanac</ImgOverlay>
+              <ImgOverlay>Stigao sam u raj</ImgOverlay>
               <ImgPortraitHalf img={images[32]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Šta reći, opće veselje</ImgOverlay>
               <Img img={images[33]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Obvezan zalazak</ImgOverlay>
               <Img img={images[34]}/>
             </ImgWrap>
           </ImgRow>
@@ -340,63 +340,63 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Obvezan izlazak</ImgOverlay>
               <ImgLandscapeHalf img={images[35]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Jutro</ImgOverlay>
               <ImgLandscapeHalf img={images[36]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Ča je lipo (i vruće)</ImgOverlay>
               <Img img={images[37]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Svježe zagarantirano</ImgOverlay>
               <ImgLandscapeHalf img={images[38]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Kolko oš, 10, 20?</ImgOverlay>
               <ImgLandscapeHalf img={images[39]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Ah ta boja</ImgOverlay>
+              <ImgOverlay>Brodica</ImgOverlay>
               <ImgPortraitHalf img={images[40]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
-              <ImgOverlay>Idealno za kupanac</ImgOverlay>
+              <ImgOverlay>Palmica</ImgOverlay>
               <ImgPortraitHalf img={images[41]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Vole uličnu umjetnost</ImgOverlay>
               <ImgLandscapeHalf img={images[42]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Flota</ImgOverlay>
               <ImgLandscapeHalf img={images[43]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrapPortraitLeft>
-              <ImgOverlay>Ah ta boja</ImgOverlay>
+              <ImgOverlay>Opljačkan sam al nisu bili loši</ImgOverlay>
               <ImgPortraitHalf img={images[44]}/>
             </ImgWrapPortraitLeft>
             <ImgWrapPortrait>
-              <ImgOverlay>Idealno za kupanac</ImgOverlay>
+              <ImgOverlay>Dolac</ImgOverlay>
               <ImgPortraitHalf img={images[45]}/>
             </ImgWrapPortrait>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Mitch Buchannon</ImgOverlay>
               <Img img={images[46]}/>
             </ImgWrap>
           </ImgRow>
@@ -409,37 +409,37 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Oblačno jutro</ImgOverlay>
               <ImgLandscapeHalf img={images[47]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Nigdje žive duše</ImgOverlay>
               <ImgLandscapeHalf img={images[48]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Odlična plaža</ImgOverlay>
               <ImgLandscapeHalf img={images[49]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Samo da mi prođemo</ImgOverlay>
               <ImgLandscapeHalf img={images[50]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Surferski raj</ImgOverlay>
               <Img img={images[51]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Pauza</ImgOverlay>
               <ImgLandscapeHalf img={images[52]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Obvezan zalazak</ImgOverlay>
               <ImgLandscapeHalf img={images[53]}/>
             </ImgWrapLandscape>
           </ImgRow>
@@ -455,17 +455,17 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Nisam dugo čekao smoothie</ImgOverlay>
               <ImgLandscapeHalf img={images[54]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Mali otočić po putu</ImgOverlay>
               <ImgLandscapeHalf img={images[55]}/>
             </ImgWrapLandscape>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Popularna plaža</ImgOverlay>
               <Img img={images[56]}/>
             </ImgWrap>
           </ImgRow>
@@ -476,7 +476,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Brdo kokosa na brdu</ImgOverlay>
               <Img img={images[57]}/>
             </ImgWrap>
           </ImgRow>
@@ -491,13 +491,13 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Svjetionik u Galleu</ImgOverlay>
               <Img img={images[58]}/>
             </ImgWrap>
           </ImgRow>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Obvezan zalazak</ImgOverlay>
               <Img img={images[59]}/>
             </ImgWrap>
           </ImgRow>
@@ -507,11 +507,11 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Surferi čekaju val</ImgOverlay>
               <ImgLandscapeHalf img={images[60]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Mogli bi doma polako</ImgOverlay>
               <ImgLandscapeHalf img={images[61]}/>
             </ImgWrapLandscape>
           </ImgRow>
@@ -523,7 +523,7 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrap>
-              <ImgOverlay>Aleja kokosa</ImgOverlay>
+              <ImgOverlay>Samo hlad buraz</ImgOverlay>
               <Img img={images[62]}/>
             </ImgWrap>
           </ImgRow>
@@ -538,14 +538,19 @@ const Blog = () => {
           </Text>
           <ImgRow>
             <ImgWrapLandscapeLeft>
-              <ImgOverlay>Upijanje sunca</ImgOverlay>
+              <ImgOverlay>Pogled na jednu stranu</ImgOverlay>
               <ImgLandscapeHalf img={images[63]}/>
             </ImgWrapLandscapeLeft>
             <ImgWrapLandscape>
-              <ImgOverlay>Prizori uz rijeku</ImgOverlay>
+              <ImgOverlay>Pogled na drugu stranu</ImgOverlay>
               <ImgLandscapeHalf img={images[64]}/>
             </ImgWrapLandscape>
           </ImgRow>
+          <Intro>
+            Naše drugo duže putovanje došlo je svom kraju.
+            Proglašavamo ga uspješnim.
+            A sada slijedi povratak u stvarnost i maštanje o sljedećoj vrućoj zimskoj destinaciji.
+          </Intro>
         </BlogContainer>
       </Container>
     </>
