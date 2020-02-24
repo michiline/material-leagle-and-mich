@@ -6,6 +6,7 @@ const imgUrl = `${process.env.PUBLIC_URL}/img`
 const numberOfImages = {
   slideshow: 5,
   blogs: {
+    'srilanka-beaches': 25,
     srilanka: 65,
     motovun: 13,
     kamacnik: 16,

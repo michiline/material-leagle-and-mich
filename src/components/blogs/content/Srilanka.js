@@ -9,13 +9,12 @@ const Blog = () => {
   return (
     <>
       <Container>
-        <CoverImgCenterText h1={'Otok Ceylon'} h2={'Dva tjedna u zemlji čaja, cimeta i kokosa - Šri Lanka'} img={cover}/>
+        <CoverImgCenterText h1={'Suza Indije'} h2={'Dva tjedna u zemlji čaja, cimeta i kokosa - Šri Lanka'} img={cover}/>
         <BlogContainer>
-          <Header>Otok Ceylon</Header>
+          <Header>Suza Indije</Header>
           <Intro>
-            Kako je izgledao naš dvotjedni plan i što smo sve odlučili vidjeti?
-            Što nas je oduševilo, a bez čega smo ipak mogli?
-            Donosimo u nastavku teksta. :)
+            Budući da je Ana pravi zaljubljenik u more i plaže, jedan post odlučili smo posvetiti baš njima, kako biste znali što vas čeka na kojoj ako se Šri Lanka ikad nađe na vašem putu.
+            Ovo uključuje samo kronološki popis plaža koje smo mi posjetili u okolici Tangallea i Mirisse.
           </Intro>
           <Header2>1. dan - Aerodrom / Kandy</Header2>
           <Text>
