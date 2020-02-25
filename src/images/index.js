@@ -233,14 +233,16 @@ export const getCardsImages = () => [
     img: {
       src: '/img/cards/srilanka-10.jpg'
     },
-    title: '10 stvari koje (možda) niste znali o Šri Lanci',
-    description: 'Zanimaju vas na koje plaže se isplati svratiti, a koje možete zaobići? Na pravom ste mjestu! U nastavku je detaljan pregled najboljih južnih plaža.',
+    subtitle: '15.02.2020.',
+    title: '10 zanimljivosti o Šri Lanci',
+    description: 'Što možete vidjeti na svakom koraku, a što ne smijete raditi na ulici? Čega se morate paziti a što trebate tražiti?',
     url: '/blogs/srilanka-10'
   },
   {
     img: {
       src: '/img/cards/srilanka-beaches.jpg'
     },
+    subtitle: '24.01.2020.',
     title: 'Plaže Šri Lanke',
     description: 'Zanimaju vas na koje plaže se isplati svratiti, a koje možete zaobići? Na pravom ste mjestu! U nastavku je detaljan pregled najboljih južnih plaža.',
     url: '/blogs/srilanka-beaches'

@@ -9,9 +9,9 @@ const Blog = () => {
   return (
     <>
       <Container>
-        <CoverImgCenterText h1={'Deset zanimljivosti o Šri Lanci'} h2={'Čaj, Buda i Safari'} img={cover}/>
+        <CoverImgCenterText h1={'10 zanimljivosti o Šri Lanci'} h2={'Čaj, Buda i Safari'} img={cover}/>
         <BlogContainer>
-          <Header>Deset zanimljivosti o Šri Lanci</Header>
+          <Header>10 zanimljivosti o Šri Lanci</Header>
           <Intro>
             Neke smo znali otprije, neke smo otkrili na putovanju, ali sada su sve na jednom mjestu.
             Nakon 2 tjedna Šri Lanke ovo su neke od zanimljivosti koje želimo podijeliti s vama.
