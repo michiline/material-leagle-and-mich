@@ -231,10 +231,17 @@ export const getGalleryBoxesImages = () => [
 export const getCardsImages = () => [
   {
     img: {
+      src: '/img/cards/srilanka-10.jpg'
+    },
+    title: '10 stvari koje (možda) niste znali o Šri Lanci',
+    description: 'Zanimaju vas na koje plaže se isplati svratiti, a koje možete zaobići? Na pravom ste mjestu! U nastavku je detaljan pregled najboljih južnih plaža.',
+    url: '/blogs/srilanka-10'
+  },
+  {
+    img: {
       src: '/img/cards/srilanka-beaches.jpg'
     },
     title: 'Plaže Šri Lanke',
-    subtitle: '4. – 18.01.2020.',
     description: 'Zanimaju vas na koje plaže se isplati svratiti, a koje možete zaobići? Na pravom ste mjestu! U nastavku je detaljan pregled najboljih južnih plaža.',
     url: '/blogs/srilanka-beaches'
   },

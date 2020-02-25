@@ -34,13 +34,6 @@ const Blog = () => {
               <ImgLandscapeHalf img={images[1]}/>
             </ImgWrapLandscape>
           </ImgRow>
-          <Text>
-            Nakon toga slijedila je jako lijepa šetnja oko jezera, za koju si trebate odvojiti barem sat vremena.
-            Šetnja je lijepa i svakako se isplati.
-            Usput prođete i pored Temple of the Sacred Tooth, a nakon toga smo šetnju nastavili po centru i našli mjesto za jesti u kojem smo se hranili i ostale dane.
-            Kandy Muslim Hotel je restoran u kojem jedu i lokalci, što znači da cijene nisu za strance, a hrana je jako spicy.
-            Obilazak grada smo završili u Kandy Central Marketu.
-          </Text>
           <ImgRow>
             <ImgWrap>
               <ImgOverlay>Šetnja u suton</ImgOverlay>
@@ -114,7 +107,7 @@ const Blog = () => {
           <Header2>Blue Beach</Header2>
           <Text>
             Za 300 rupija uzeli smo tuktuk od Hiriketiye do jednog skrivenog i manje poznatog mjesta – Blue Beach Island.
-            Slatki otočić spojen kopnom s pješćanom plažu i okružen brojnim šarenim ribarskim brodovima tipičnima za Šri Lanku.
+            Slatki otočić spojen s kopnom pješćanom plažom i okružen brojnim šarenim ribarskim brodovima tipičnima za Šri Lanku.
             Mjesto možete iskoristiti za kupanje ili kao i mi za gledanje zalaska na stijenama otoka.
           </Text>
           <ImgRow>
