@@ -13,8 +13,8 @@ const Blog = () => {
         <BlogContainer>
           <Header>Suza Indije</Header>
           <Intro>
-            Budući da je Ana pravi zaljubljenik u more i plaže, jedan post odlučili smo posvetiti baš njima, kako biste znali što vas čeka na kojoj ako se Šri Lanka ikad nađe na vašem putu.
-            Ovo uključuje samo kronološki popis plaža koje smo mi posjetili u okolici Tangallea i Mirisse.
+            Kako je izgledao naš dvotjedni plan i što smo sve odlučili vidjeti?
+            Što nas je oduševilo a bez čega smo ipak mogli. Potražite u nastavku.
           </Intro>
           <Header2>1. dan - Aerodrom / Kandy</Header2>
           <Text>

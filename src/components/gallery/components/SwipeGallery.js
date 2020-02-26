@@ -137,10 +137,15 @@ class SwipeGallery extends Component {
 
   ani = (cf = 0) => {
 		const i = this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf)
+		console.log(`##############${cf}#############`)
+		console.log(`ini: ${this.state.ini}`)
+		console.log(`fin: ${this.state.fin}`)
+		console.log(`cf: ${cf}`)
+		console.log(`anf: ${this.state.anf}`)
+		console.log(`newI: ${i}`)
 		if (i) {
 			 this.state._C.style.setProperty('--i', this.state.ini + ( this.state.fin -  this.state.ini)*TFN['ease-in-out'](cf/ this.state.anf))
 		}
-
     if(cf ===  this.state.anf) {
       this.stopAni()
       return
