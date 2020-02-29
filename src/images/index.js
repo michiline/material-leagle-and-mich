@@ -8,6 +8,7 @@ const numberOfImages = {
   blogs: {
     'srilanka-beaches': 25,
     srilanka: 65,
+    'srilanka-10': 16,
     motovun: 13,
     kamacnik: 16,
     tara: 20,
