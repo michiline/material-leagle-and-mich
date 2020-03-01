@@ -314,6 +314,22 @@ export const getCardsImages = () => [
   }
 ]
 
+export const getGalleryPreviewImages = (name) => {
+  const pickedIds = []
+  return (
+    [...Array(10)].map((elem) => {
+      let index = Math.floor(Math.random() * (numberOfImages.gallery[name] - 1))
+      while (pickedIds.includes(index)) {
+        index = Math.floor(Math.random() * (numberOfImages.gallery[name] - 1))
+      }
+      pickedIds.push(index)
+      return (
+         `${imgUrl}/gallery/${name}/img${index}.jpg`
+      )
+    })
+  )
+}
+
 export const getImages = ({ type, name, url }) => [...Array(numberOfImages[type][name])].map((elem, index) => {
     if (!url) {
       return {

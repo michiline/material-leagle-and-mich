@@ -7,5 +7,6 @@ import useScrolledOffset from './useScrolledOffset'
 import useSlide from './useSlide'
 import useIntersection from './useIntersection'
 import useRipples from './useRipples'
+import useJustifiedImages from './useJustifiedImages'
 
-export { RippleComponent, RippleComponentLink, useClicked, useScrolled, useScrolledDirection, useSlide, useIntersection, ScrollToTop, useRipples }
+export { RippleComponent, RippleComponentLink, useClicked, useScrolled, useScrolledDirection, useSlide, useIntersection, ScrollToTop, useRipples, useJustifiedImages }

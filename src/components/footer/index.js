@@ -18,7 +18,7 @@ const Footer = ({ history, hide }) => {
           <RippleComponentLink Component={InstagramIcon} img={instagram} color={'#FFFFFF'} componentRef={instagramIconRef} url={'https://www.instagram.com/littleeaglephoto'}/>
           <RippleComponentLink Component={GithubIcon} img={github} color={'#FFFFFF'} componentRef={githubIconRef} url={'https://github.com/equidistant/material-leagle-and-mich'}/>
         </IconContainer>
-        <Title>© 2019 Little Eagle & Mich </Title>
+        <Title>© 2020 Little Eagle & Mich </Title>
       </Container>
     )
   } else {

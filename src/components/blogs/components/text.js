@@ -15,6 +15,7 @@ export const Header = styled.p`
     transform: translateY(2px);
   }
   cursor: pointer;
+  text-align: center;
 `
 
 export const Intro = styled(Body1)`

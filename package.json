@@ -6,10 +6,11 @@
     "axios": "0.19.0",
     "jquery": "3.4.1",
     "justified-layout": "3.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "5.0.1",
-    "react-scripts": "3.0.1",
+    "lodash.debounce": "4.0.8",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.0",
     "styled-components": "4.3.2"
   },
   "scripts": {
