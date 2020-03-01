@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImgCenterText } from '../../general'
+import { useHistory } from 'react-router-dom'
+import { CoverImgCenterText, JustifiedGallery } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { getBlogImages } from '../../../images'
+import { getBlogImages, getGalleryPreviewImages } from '../../../images'
 
 const Blog = () => {
+  const history = useHistory()
   const { cover, images } = getBlogImages('krka')
+  const galleryPreviewImages = getGalleryPreviewImages('krka')
   return (
     <>
       <Container>
@@ -105,6 +108,8 @@ const Blog = () => {
           <Intro>
             Još jedan uspješan vikend iza nas. Često čujemo komentare da stalno putujemo. A kako ne bi kad imamo toliko toga za vidjeti i doživjeti a tako malo vremena.
           </Intro>
+          <Header2>Za ostatak slika s putovanja, posjetite fotogaleriju!</Header2>
+          <JustifiedGallery imgUrls={galleryPreviewImages} rowHeight={150} onImgClick={() => history.push('/gallery/krka')}/>
         </BlogContainer>
       </Container>
     </>

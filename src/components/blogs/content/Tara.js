@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImgCenterText } from '../../general'
+import { useHistory } from 'react-router-dom'
+import { CoverImgCenterText, JustifiedGallery } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { getBlogImages } from '../../../images'
+import { getBlogImages, getGalleryPreviewImages } from '../../../images'
 
 const Blog = () => {
+  const history = useHistory()
   const { cover, images } = getBlogImages('tara')
+  const galleryPreviewImages = getGalleryPreviewImages('tara')
   return (
     <>
       <Container>
@@ -165,6 +168,8 @@ const Blog = () => {
             Zanimljiv izlet, pun predivnih lokacija, a čuli smo da ih ima još puno u blizini.
             Stoga jedno je sigurno – vraćamo se opet. („Mislaveee kad ćemo opet na Taru?!“)
           </Intro>
+          <Header2>Za ostatak slika s putovanja, posjetite fotogaleriju!</Header2>
+          <JustifiedGallery imgUrls={galleryPreviewImages} rowHeight={150} onImgClick={() => history.push('/gallery/tara')}/>
         </BlogContainer>
       </Container>
     </>

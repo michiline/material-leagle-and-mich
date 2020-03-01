@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImgCenterText } from '../../general'
+import { useHistory } from 'react-router-dom'
+import { CoverImgCenterText, JustifiedGallery } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { getBlogImages } from '../../../images'
+import { getBlogImages, getGalleryPreviewImages } from '../../../images'
 
 const Blog = () => {
+  const history = useHistory()
   const { cover, images } = getBlogImages('kuba')
+  const galleryPreviewImages = getGalleryPreviewImages('kuba')
   return (
     <>
       <Container>
@@ -348,6 +351,8 @@ const Blog = () => {
             To onda više neće biti Kuba o kojoj svi pričaju i koju bi mi voljeli doživjeti.
             Nije nas razočarala i predlažemo svima koje zanima da ju posjete što prije.
           </Intro>
+          <Header2>Za ostatak slika s putovanja, posjetite fotogaleriju!</Header2>
+          <JustifiedGallery imgUrls={galleryPreviewImages} rowHeight={150} onImgClick={() => history.push('/gallery/kuba')}/>
         </BlogContainer>
       </Container>
     </>

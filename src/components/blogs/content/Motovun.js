@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverImgCenterText } from '../../general'
+import { useHistory } from 'react-router-dom'
+import { CoverImgCenterText, JustifiedGallery } from '../../general'
 import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
-import { getBlogImages } from '../../../images'
+import { getBlogImages, getGalleryPreviewImages } from '../../../images'
 
 const Blog = () => {
+  const history = useHistory()
   const { cover, images } = getBlogImages('motovun')
+  const galleryPreviewImages = getGalleryPreviewImages('motovun')
   return (
     <>
       <Container>
@@ -115,6 +118,8 @@ const Blog = () => {
             Mislim da ti mnogi gradovi zavide.
             A zavidimo ti malo i mi, stoga se vidimo uskoro opet...
           </Intro>
+          <Header2>Za ostatak slika s putovanja, posjetite fotogaleriju!</Header2>
+          <JustifiedGallery imgUrls={galleryPreviewImages} rowHeight={150} onImgClick={() => history.push('/gallery/motovun')}/>
         </BlogContainer>
       </Container>
     </>
