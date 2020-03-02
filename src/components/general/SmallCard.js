@@ -14,7 +14,9 @@ const Card = ({ history, img, title, subtitle, description, url }) => {
     <Container ref={cardRef}>
       <Img img={img}/>
         <Title>{title}</Title>
-        <Button>Pročitaj više</Button>
+        <Actions>
+          <Button>Pročitaj više</Button>
+        </Actions>
       {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
     </Container>
   )
@@ -48,7 +50,7 @@ const Container = styled.div`
 
 
 const Title = styled.p`
-  padding-top: ${padding.small};
+  padding-top: ${padding.medium};
   padding-left: ${padding.small};
   padding-right: ${padding.small};
   font-family: 'Montserrat';
@@ -62,8 +64,15 @@ const Title = styled.p`
   height: min-content;
 `
 
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: ${padding.small};
+`
+
 const Button = styled(ButtonTransparent)`
-  height: 50px;
+  height: 40px;
   padding: ${padding.small};
   overflow: hidden;
   font-family: 'Montserrat';
