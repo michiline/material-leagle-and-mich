@@ -9,7 +9,7 @@ const Component = () => {
 
   return (
     <Root>
-      <SmallCardGrid header={'Nije ti dosta?'} url={'/blogs'} content={blogPreviews} />
+      <SmallCardGrid header={'Želiš još?'} url={'/blogs'} content={blogPreviews} />
     </Root>
   )
 }
