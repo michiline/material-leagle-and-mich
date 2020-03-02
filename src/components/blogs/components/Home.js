@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <Container>
       <CoverImgCenterText h1={'Putopisi'} h2={'Za one koji žele znati više...'} img={coverImage}/>
-      <CardGrid header={'Putopisi'} url={'/blogs'} content={cardsImages}/>
+      <CardGrid header={'Putopisi'} url={'/blogs'} content={cardsImages} />
     </Container>
   )
 }

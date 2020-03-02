@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const BlogContainer = styled(FlexColumnCenterContainer)`
   padding: ${padding.small};
-  max-width: 66rem;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 `

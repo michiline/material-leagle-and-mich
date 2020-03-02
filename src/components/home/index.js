@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <Container>
       <Slideshow />
-      <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={cardsImages.slice(0,4)}/>
+      <CardGrid header={'Najnoviji Putopisi'} url={'/blogs'} content={cardsImages.slice(0,4)} responsive={true}/>
       <Gallery text={'Nasumične fotke'} url={'/gallery'} galleryName={'home'} images={images} hide={true} setImages={setImages}/>
       <About />
     </Container>

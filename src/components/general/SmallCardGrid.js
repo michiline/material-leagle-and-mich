@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import styled, { css, keyframes } from 'styled-components'
 import { RippleComponent, useClicked } from '../../hooks'
 import { padding, shadow } from '../../style'
-import Card from './Card'
+import SmallCard from './SmallCard'
 import { H3 } from './text'
 import { FlexColumnCenterContainer } from './containers'
 
@@ -12,15 +12,14 @@ const CardGrid = ({ history, header, url, content }) => {
     <Container>
       <Header onClick={ e => to({ history, url })}>{header}</Header>
       <Grid>
-        {content.map((cardContent, index) => <Card {...cardContent} key={index} />)}
+        {content.map((cardContent, index) => <SmallCard {...cardContent} key={index}/>)}
       </Grid>
     </Container>
   )
 }
-          // <RippleComponent Component={ShareIcon} img={{ src: `${process.env.PUBLIC_URL}/img/share-24px.svg`}} />
-//
 
 const Container = styled(FlexColumnCenterContainer)`
+  padding-bottom: ${padding.medium};
 `
 
 const Header = styled.p`
@@ -37,16 +36,9 @@ const Header = styled.p`
 `
 
 const Grid = styled.div`
-  padding-top: ${padding.small};
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content;
-  @media only screen and (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media only screen and (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
   grid-gap: 1rem;
   align-items: center;
   justify-content: center;

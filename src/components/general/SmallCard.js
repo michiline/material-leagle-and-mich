@@ -13,16 +13,10 @@ const Card = ({ history, img, title, subtitle, description, url }) => {
   return (
     <Container ref={cardRef}>
       <Img img={img}/>
-      <PrimaryTitle>
         <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-      </PrimaryTitle>
-      <Secondary>
-        <SupportingText>{description}</SupportingText>
         <Actions>
           <Button>Pročitaj više</Button>
         </Actions>
-      </Secondary>
       {ripples.length > 0 && ripples.map((ripple, index) => <Ripple {...ripple} color={color} key={index}/>)}
     </Container>
   )
@@ -34,7 +28,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-between;
   align-items: left;
   box-shadow: ${shadow.dp1};
   border-radius: 4px;
@@ -54,52 +48,30 @@ const Container = styled.div`
   }
 `
 
-const PrimaryTitle = styled.div`
-  padding: ${padding.medium};
-`
 
-const Secondary = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  justify-content: space-between;
-  transition: max-height 0.4s ease-in-out;
-`
-
-const Title = styled(H6)`
+const Title = styled.p`
+  padding: ${padding.small};
   font-family: 'Montserrat';
-`
-
-const Subtitle = styled(Subtitle2)`
-  color: rgba(0, 0, 0, 0.54);
+  font-size: 20px;
   font-weight: 500;
-  font-family: 'Montserrat';
-`
-
-const SupportingText = styled(Body2)`
-  color: rgba(0, 0, 0, 0.54);
-  font-family: 'Montserrat';
-  text-align: justify;
-  padding-left: ${padding.medium};
-  padding-right: ${padding.medium};
+  letter-spacing: 0.025rem;
+  @media only screen and (min-width: 800px) {
+    font-size: 24px;
+  }
+  text-align: center;
   height: min-content;
-`
-
-const Tags = styled(Body2)`
 `
 
 const Actions = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: ${padding.small};
 `
 
 const Button = styled(ButtonTransparent)`
-  padding-left: ${padding.small};
-  padding-right: ${padding.small};
-  height: calc(3.4rem + ${padding.small});
+  height: 40px;
+  padding: ${padding.small};
   overflow: hidden;
   font-family: 'Montserrat';
 `

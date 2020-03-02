@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import { CoverImgCenterText, JustifiedGallery } from '../../general'
-import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img } from '../components'
+import { Container, BlogContainer, Header, Header2, Header3, Intro, Text, BulletHeaderContainer, StarBullet, ImgRow, ImgWrap, ImgWrapPortrait, ImgWrapLandscape, ImgWrapPortraitLeft, ImgWrapLandscapeLeft, ImgPortraitHalf, ImgLandscapeHalf, ImgOverlay, Img, BlogPreview } from '../components'
 import { getBlogImages, getGalleryPreviewImages } from '../../../images'
 
 const Blog = () => {
@@ -120,6 +120,7 @@ const Blog = () => {
           </Intro>
           <Header2>Za ostatak slika s putovanja, posjetite fotogaleriju!</Header2>
           <JustifiedGallery imgUrls={galleryPreviewImages} rowHeight={150} onImgClick={() => history.push('/gallery/motovun')}/>
+          <BlogPreview />
         </BlogContainer>
       </Container>
     </>
