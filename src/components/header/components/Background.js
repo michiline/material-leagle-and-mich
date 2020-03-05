@@ -60,7 +60,7 @@ const Background = ({ history, show, setToggled }) =>
       <Link onClick={e => to({ history, url: '/', setToggled})}>Početna</Link>
       <Link onClick={e => to({ history, url: '/blogs', setToggled})}>Putopisi</Link>
       <Link onClick={e => to({ history, url: '/gallery', setToggled})}>Galerija</Link>
-      <Link>Anin portfolio</Link>
+      <Link onClick={e => externalTo('http://www.littleeaglephoto.com')}>Anin portfolio</Link>
       <Link onClick={e => to({ history, url: '/about', setToggled})}>O Nama</Link>
     </Center>
   </BackgroundContainer>
@@ -70,5 +70,7 @@ const to = ({ history, url, setToggled}) => {
   // window.scrollTo({ top: 0, behavior: 'smooth' })
   setToggled(false)
 }
+
+export const externalTo = (url) => Object.assign(document.createElement('a'), { target: '_blank', href: url }).click()
 
 export default withRouter(Background)
