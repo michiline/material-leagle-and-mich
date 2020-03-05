@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "leagle-and-mich-client",
+            "name": "leagle-and-mich",
             "script": "npm",
             "args" : "run run-production"
         }
