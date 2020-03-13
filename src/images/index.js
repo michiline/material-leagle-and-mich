@@ -27,7 +27,7 @@ const numberOfImages = {
     soca: 86,
     istra: 60,
     kalnik: 44,
-    gerlitzen: 10,
+    gerlitzen: 9,
     kuba: 247,
     london: 59,
     budimpesta: 65,
